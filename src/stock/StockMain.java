@@ -14,7 +14,7 @@ public class StockMain extends Application {
 		Parent root = loader.load();
 		Scene scene = new Scene(root);
 
-		Stock_Controller ctl = new Stock_Controller();
+		Stock_Controller ctl = loader.getController();
 		ctl.setRoot(root);
 
 		arg0.setScene(scene);

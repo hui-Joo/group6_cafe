@@ -9,7 +9,7 @@
 <?import javafx.scene.text.Font?>
 
 
-<AnchorPane prefHeight="606.0" prefWidth="913.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/16">
+<AnchorPane prefHeight="606.0" prefWidth="913.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/16" fx:controller="stock.Stock_Controller">
    <children>
       <ImageView fitHeight="61.0" fitWidth="39.0" layoutX="49.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -31,25 +31,25 @@
             <Image url="@바나나시럽.png" />
          </image>
       </ImageView>
-      <TextField layoutX="136.0" layoutY="54.0" prefHeight="22.0" prefWidth="94.0" />
-      <TextField layoutX="141.0" layoutY="353.0" prefHeight="22.0" prefWidth="94.0" />
-      <TextField layoutX="140.0" layoutY="209.0" prefHeight="22.0" prefWidth="94.0" />
-      <TextField layoutX="142.0" layoutY="485.0" prefHeight="22.0" prefWidth="94.0" />
-      <Button layoutX="264.0" layoutY="53.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="96.0" text="채우기" />
-      <Button layoutX="268.0" layoutY="209.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="96.0" text="채우기" />
-      <Button layoutX="269.0" layoutY="353.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="96.0" text="채우기" />
-      <Button layoutX="264.0" layoutY="483.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="96.0" text="채우기" />
+      <TextField fx:id="beantext" layoutX="136.0" layoutY="54.0" prefHeight="22.0" prefWidth="94.0" />
+      <TextField fx:id="watertext" layoutX="141.0" layoutY="353.0" prefHeight="22.0" prefWidth="94.0" />
+      <TextField fx:id="milktext" layoutX="140.0" layoutY="209.0" prefHeight="22.0" prefWidth="94.0" />
+      <TextField fx:id="vanilatext" layoutX="142.0" layoutY="485.0" prefHeight="22.0" prefWidth="94.0" />
+      <Button layoutX="264.0" layoutY="53.0" mnemonicParsing="false" onAction="#beanbtn" prefHeight="17.0" prefWidth="96.0" text="채우기" />
+      <Button layoutX="268.0" layoutY="209.0" mnemonicParsing="false" onAction="#milkbtn" prefHeight="17.0" prefWidth="96.0" text="채우기" />
+      <Button layoutX="269.0" layoutY="353.0" mnemonicParsing="false" onAction="#waterbtn" prefHeight="17.0" prefWidth="96.0" text="채우기" />
+      <Button layoutX="264.0" layoutY="483.0" mnemonicParsing="false" onAction="#syrupbtn" prefHeight="17.0" prefWidth="96.0" text="채우기" />
       <Label fx:id="beanlabel" layoutX="47.0" layoutY="115.0" prefHeight="24.0" prefWidth="71.0" text="보유중: ">
          <font>
             <Font size="20.0" />
          </font>
       </Label>
-      <Label layoutX="47.0" layoutY="555.0" prefHeight="24.0" prefWidth="71.0" text="보유중: ">
+      <Label fx:id="vanilalabel" layoutX="47.0" layoutY="555.0" prefHeight="24.0" prefWidth="71.0" text="보유중: ">
          <font>
             <Font size="20.0" />
          </font>
       </Label>
-      <Label layoutX="47.0" layoutY="412.0" prefHeight="24.0" prefWidth="71.0" text="보유중: ">
+      <Label fx:id="waterlabel" layoutX="47.0" layoutY="412.0" prefHeight="24.0" prefWidth="71.0" text="보유중: ">
          <font>
             <Font size="20.0" />
          </font>
