@@ -11,7 +11,12 @@ public class Admin_DTO {
 	private int Latte;
 	private int Capucino;
 	private int VanilaL;
+	private String Pass;
 	
+	
+	public String getPass() {
+		return Pass;
+	}
 	public int getBean() {
 		return Bean;
 	}
