@@ -1,4 +1,4 @@
-package admin;
+package manager.commonMA;
 
 public class Admin_DTO {
 	
