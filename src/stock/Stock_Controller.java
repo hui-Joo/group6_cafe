@@ -1,26 +1,23 @@
-package manager.admin;
+package stock;
 
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import commonDB.DBClass;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 
-public class Admin_Controller implements Initializable {
+public class Stock_Controller implements Initializable {
+	public static DBClass db;
 	private Parent root;
 
 	public void setRoot(Parent root) {
 		this.root = root;
-	};
+	}
 
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
+		db = new DBClass();
 	}
 
-	public void StockBtn() {
-System.out.println("재고버튼");
-	}
-
-	public void ChartBtn() {
-	}
 }
