@@ -1,5 +1,7 @@
 package manager.stock;
 
+import java.util.ArrayList;
+
 import javafx.scene.Parent;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
@@ -70,15 +72,27 @@ public class Stock_serviceimpl {
 	}
 
 	public void setlabel(Parent root) {
+		// 일단 출력은 됨 근데 이전 값을 못 불러오니 arraylist 이용해서 dto값을 넣어준 후 다시 접근하자
+
+		ArrayList<Integer> arr = new ArrayList<>();
+		
 		Label beanlabel = (Label) root.lookup("#beanlabel");
 		Label waterlabel = (Label) root.lookup("#waterlabel");
-		Label milkabel = (Label) root.lookup("#milklabel");
+		Label milklabel = (Label) root.lookup("#milklabel");
 		Label vanilalabel = (Label) root.lookup("#vanilalabel");
 		dto = db.selectstock();
 
+		
+
+
+		Integer bean = dto.getBean();
+		beanlabel.setText("보유량 :" + bean.toString() + " g");
 		Integer water = dto.getWater();
-		System.out.println(dto.getWater());
-		waterlabel.setText(water.toString());
+		waterlabel.setText("보유량 :" + water.toString() + " ML");
+		Integer milk = dto.getMilk();
+		milklabel.setText("보유량 :" + milk.toString() + " ML");
+		Integer vanila = dto.getVanilaSyrup();
+		vanilalabel.setText("보유량 :" + vanila.toString() + " ML");
 
 	}
 

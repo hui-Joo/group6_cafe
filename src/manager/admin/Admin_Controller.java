@@ -24,7 +24,6 @@ public class Admin_Controller implements Initializable {
 	}
 
 	public void StockBtn() {
-System.out.println("재고버튼");
 try {
 	sm.start(stage);
 } catch (Exception e) {

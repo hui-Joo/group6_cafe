@@ -43,7 +43,7 @@
             <Font size="20.0" />
          </font>
       </Label>
-      <Label fx:id="vanilalabel" layoutX="47.0" layoutY="555.0" prefHeight="24.0" prefWidth="143.0" text="보유중: ">
+      <Label fx:id="vanilalabel" layoutX="47.0" layoutY="555.0" prefHeight="24.0" prefWidth="183.0" text="보유중: ">
          <font>
             <Font size="20.0" />
          </font>
