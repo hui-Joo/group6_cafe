@@ -14,6 +14,7 @@ public class Chart_Main extends Application {
 
 	@Override
 	public void start(Stage arg0) throws Exception {
+		
 		FXMLLoader loader = new FXMLLoader(getClass().getResource("chart_Main.fxml"));
 		Parent root = loader.load();
 		Scene scene = new Scene(root);
@@ -21,8 +22,8 @@ public class Chart_Main extends Application {
 		Chart_Controller ctl = loader.getController();
 		ctl.setRoot(root);
 
-		arg0.setTitle("카페 차트");
 		arg0.setScene(scene);
+		arg0.setTitle("카페 차트");
 		arg0.show();
 	}
 }
