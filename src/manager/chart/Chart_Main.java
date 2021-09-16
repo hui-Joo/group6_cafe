@@ -18,7 +18,7 @@ public class Chart_Main extends Application {
 		FXMLLoader loader = new FXMLLoader(getClass().getResource("chart_Main.fxml"));
 		Parent root = loader.load();
 		Scene scene = new Scene(root);
-
+		
 		Chart_Controller ctl = loader.getController();
 		ctl.setRoot(root);
 

@@ -15,6 +15,8 @@ public class Chart_Impl implements Chart {
 	private int price_latte = 3000;
 	private int price_capucino = 3000;
 	private int price_vanilaLatte = 4000;
+	private PieChart menuSalesChart;
+	private BarChart menuPriceChart;
 	
 	public Chart_Impl() {
 		db = new Chart_DB();
@@ -25,8 +27,8 @@ public class Chart_Impl implements Chart {
 		
 		ManagerDTO dto = db.getTotalMenu();
 	
-		PieChart menuSalesChart = (PieChart)root.lookup("#menuSalesChart");
-		BarChart menuPriceChart = (BarChart)root.lookup("#menuPriceChart");
+		menuSalesChart = (PieChart)root.lookup("#menuSalesChart");
+		menuPriceChart = (BarChart)root.lookup("#menuPriceChart");
 		
 		menuSalesChart.setData(FXCollections.observableArrayList(
 				new PieChart.Data("Americano",dto.getAmericano()), new PieChart.Data("Latte", dto.getLatte()),

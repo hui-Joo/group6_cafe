@@ -16,13 +16,14 @@ public class Chart_Controller implements Initializable {
 
 	public void setRoot(Parent root) {
 		this.root = root;
+		chartImpl.chart(root);
 	}
 
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		db = new DBClass();
 		chartImpl = new Chart_Impl();
-		chartImpl.chart(root);
+		
 	}
 
 }
