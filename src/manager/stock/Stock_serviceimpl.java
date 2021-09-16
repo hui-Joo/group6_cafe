@@ -1,8 +1,10 @@
 package manager.stock;
 
 import javafx.scene.Parent;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.control.Alert.AlertType;
 import manager.commonMA.ManagerDTO;
 
 public class Stock_serviceimpl {
@@ -39,9 +41,7 @@ public class Stock_serviceimpl {
 
 	}
 
-	public void insertBean(Parent root) {
-		chkStock(root);
-
+	public void updatebean(Parent root) {
 		TextField beantext = (TextField) root.lookup("#beantext");
 		Label beanlabel = (Label) root.lookup("#beanlabel");
 
@@ -49,20 +49,18 @@ public class Stock_serviceimpl {
 		Integer intbeanLa = Integer.parseInt(beanlabel.getText());
 		Integer bean = intbeanTx + intbeanLa;
 		beanlabel.setText(Integer.toString(bean));
+
 		dto.setBean(bean);
-
-		int resultbean = db.insert(dto);
-		if (resultbean == 1) {
+		int result = db.update(dto);
+		if (result == 1) {
 			System.out.println("원두 추가 성공");
-
 		} else {
 			System.out.println("원두 추가 실패");
 		}
 
 	}
 
-	public void insertWater(Parent root) {
-		chkStock(root);
+	public void updateWater(Parent root) {
 
 		TextField watertext = (TextField) root.lookup("#watertext");
 		Label waterlabel = (Label) root.lookup("#waterlabel");
@@ -73,7 +71,7 @@ public class Stock_serviceimpl {
 		waterlabel.setText(Integer.toString(water));
 		dto.setWater(water);
 
-		int resultwater = db.insert(dto);
+		int resultwater = db.update(dto);
 		if (resultwater == 1) {
 			System.out.println("물 추가 성공");
 
@@ -83,8 +81,7 @@ public class Stock_serviceimpl {
 
 	}
 
-	public void insertMilk(Parent root) {
-		chkStock(root);
+	public void updateMilk(Parent root) {
 
 		TextField milktext = (TextField) root.lookup("#milktext");
 		Label milklabel = (Label) root.lookup("#milklabel");
@@ -95,7 +92,7 @@ public class Stock_serviceimpl {
 		milklabel.setText(Integer.toString(milk));
 		dto.setMilk(milk);
 
-		int resultmilk = db.insert(dto);
+		int resultmilk = db.update(dto);
 		if (resultmilk == 1) {
 			System.out.println("우유 추가 성공");
 
@@ -105,8 +102,7 @@ public class Stock_serviceimpl {
 
 	}
 
-	public void insertvanila(Parent root) {
-		chkStock(root);
+	public void updatevanila(Parent root) {
 		TextField vanilatext = (TextField) root.lookup("#vanilatext");
 		Label vanilalabel = (Label) root.lookup("#vanilalabel");
 
@@ -116,7 +112,7 @@ public class Stock_serviceimpl {
 		vanilalabel.setText(Integer.toString(vanila));
 		dto.setVanilaSyrup(vanila);
 
-		int resultvanila = db.insert(dto);
+		int resultvanila = db.update(dto);
 		if (resultvanila == 1) {
 			System.out.println("바닐라시럽 추가 성공");
 
@@ -144,6 +140,33 @@ public class Stock_serviceimpl {
 		Integer vanila = dto.getVanilaSyrup();
 		vanilalabel.setText(vanila.toString());
 
+	}
+
+	public void warning() {
+		Alert alert = new Alert(AlertType.WARNING);
+		if (db.selectstock().getBean() < 200) {
+			alert.setTitle("잔여 재고 경고");
+			alert.setHeaderText("잔여 원두 경고");
+			alert.setContentText("원두가 얼마 남지 않았습니다");
+			
+		}
+		if (db.selectstock().getWater() < 200) {
+			alert.setTitle("잔여 재고 경고");
+			alert.setHeaderText("잔여 물 경고");
+			alert.setContentText("물이 얼마 남지 않았습니다");
+		}
+		if (db.selectstock().getMilk() < 200) {
+			alert.setTitle("잔여 재고 경고");
+			alert.setHeaderText("잔여 우유 경고");
+			alert.setContentText("우유가 얼마 남지 않았습니다");
+		}
+		if (db.selectstock().getVanilaSyrup() < 200) {
+			alert.setTitle("잔여 재고 경고");
+			alert.setHeaderText("잔여시럽 경고");
+			alert.setContentText("바닐라 시럽이 얼마 남지 않았습니다");
+		}
+
+		alert.show();
 	}
 
 }

@@ -15,7 +15,10 @@ public class Stock_Controller implements Initializable {
 	public void setRoot(Parent root) {
 		this.root = root;
 		sv.selectlabel(root);
-		sv.chkStock(root);
+	}
+
+	public void warningalert() {
+		sv.warning();
 	}
 
 	@Override
@@ -25,22 +28,22 @@ public class Stock_Controller implements Initializable {
 	}
 
 	public void beanbtn() {
-		sv.insertBean(root);
+		sv.updatebean(root);
 		sv.chkStock(root);
 	}
 
 	public void milkbtn() {
-		sv.insertMilk(root);
+		sv.updateMilk(root);
 		sv.chkStock(root);
 	}
 
 	public void waterbtn() {
-		sv.insertWater(root);
+		sv.updateWater(root);
 		sv.chkStock(root);
 	}
 
 	public void syrupbtn() {
-		sv.insertvanila(root);
+		sv.updatevanila(root);
 		sv.chkStock(root);
 	}
 

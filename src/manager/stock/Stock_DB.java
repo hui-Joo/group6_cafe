@@ -52,4 +52,25 @@ public class Stock_DB {
 		return result;
 	}
 
+	public int update(ManagerDTO dto) {
+		int result = 0;
+
+		String sql = "update STOCKDB set bean=?,water=?,milk=?,vanilasyrup=? where num=1 ";
+
+		try {
+			PreparedStatement ps = DBClass.conn.prepareStatement(sql);
+			ps.setInt(1, dto.getBean());
+			ps.setInt(2, dto.getWater());
+			ps.setInt(3, dto.getMilk());
+			ps.setInt(4, dto.getVanilaSyrup());
+
+			result = ps.executeUpdate();
+
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+
+		return result;
+	}
+
 }
