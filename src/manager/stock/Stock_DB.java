@@ -5,7 +5,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-import commonDB.DBClass;
+import common.commonDB.DBClass;
 import manager.commonMA.ManagerDTO;
 
 public class Stock_DB {
@@ -33,57 +33,16 @@ public class Stock_DB {
 		return dto;
 	}
 
-	public int insertbean(int mg) {
-		String sql = "insert into STOCKDB(bean) values(?)";
+	public int insert(ManagerDTO dto) {
+		String sql = "insert into STOCKDB(bean,water,milk,vanilaSyrup) values(?,?,?,?)";
 		int result = 0;
 		try {
+
 			PreparedStatement ps = DBClass.conn.prepareStatement(sql);
-			ps.setInt(1, mg);
-
-			result = ps.executeUpdate();
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
-
-		return result;
-	}
-
-	public int insertwater(int mg) {
-		String sql = "insert into STOCKDB(water) values(?)";
-		int result = 0;
-		try {
-			PreparedStatement ps = DBClass.conn.prepareStatement(sql);
-			ps.setInt(1, mg);
-
-			result = ps.executeUpdate();
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
-
-		return result;
-	}
-
-	public int insertmilk(int mg) {
-		String sql = "insert into STOCKDB(milk) values(?)";
-		int result = 0;
-		try {
-			PreparedStatement ps = DBClass.conn.prepareStatement(sql);
-			ps.setInt(1, mg);
-
-			result = ps.executeUpdate();
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
-
-		return result;
-	}
-
-	public int insertvanila(int mg) {
-		String sql = "insert into STOCKDB(vanilaSyrup) values(?)";
-		int result = 0;
-		try {
-			PreparedStatement ps = DBClass.conn.prepareStatement(sql);
-			ps.setInt(1, mg);
+			ps.setInt(1, dto.getBean());
+			ps.setInt(2, dto.getWater());
+			ps.setInt(3, dto.getMilk());
+			ps.setInt(4, dto.getVanilaSyrup());
 
 			result = ps.executeUpdate();
 		} catch (SQLException e) {

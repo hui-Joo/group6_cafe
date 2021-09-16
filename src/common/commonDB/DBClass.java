@@ -1,4 +1,4 @@
-package commonDB;
+package common.commonDB;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

@@ -18,6 +18,7 @@ public class StockMain extends Application {
 		ctl.setRoot(root);
 
 		arg0.setScene(scene);
+		arg0.setTitle("재고 관리창");
 		arg0.show();
 	}
 

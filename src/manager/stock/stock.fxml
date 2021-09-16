@@ -15,12 +15,12 @@
             <Image url="@원두.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="69.0" fitWidth="38.0" layoutX="45.0" layoutY="188.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="69.0" fitWidth="38.0" layoutX="50.0" layoutY="330.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@우유.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="62.0" fitWidth="37.0" layoutX="50.0" layoutY="321.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="62.0" fitWidth="37.0" layoutX="53.0" layoutY="179.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@물방울.png" />
          </image>
@@ -31,29 +31,69 @@
          </image>
       </ImageView>
       <TextField fx:id="beantext" layoutX="141.0" layoutY="53.0" prefHeight="22.0" prefWidth="94.0" />
-      <TextField fx:id="watertext" layoutX="141.0" layoutY="353.0" prefHeight="22.0" prefWidth="94.0" />
-      <TextField fx:id="milktext" layoutX="140.0" layoutY="209.0" prefHeight="22.0" prefWidth="94.0" />
+      <TextField fx:id="watertext" layoutX="139.0" layoutY="209.0" prefHeight="22.0" prefWidth="94.0" />
+      <TextField fx:id="milktext" layoutX="143.0" layoutY="353.0" prefHeight="22.0" prefWidth="94.0" />
       <TextField fx:id="vanilatext" layoutX="142.0" layoutY="485.0" prefHeight="22.0" prefWidth="94.0" />
       <Button layoutX="264.0" layoutY="53.0" mnemonicParsing="false" onAction="#beanbtn" prefHeight="17.0" prefWidth="96.0" text="채우기" />
-      <Button layoutX="268.0" layoutY="209.0" mnemonicParsing="false" onAction="#milkbtn" prefHeight="17.0" prefWidth="96.0" text="채우기" />
-      <Button layoutX="269.0" layoutY="353.0" mnemonicParsing="false" onAction="#waterbtn" prefHeight="17.0" prefWidth="96.0" text="채우기" />
+      <Button layoutX="264.0" layoutY="353.0" mnemonicParsing="false" onAction="#milkbtn" prefHeight="17.0" prefWidth="96.0" text="채우기" />
+      <Button layoutX="264.0" layoutY="209.0" mnemonicParsing="false" onAction="#waterbtn" prefHeight="17.0" prefWidth="96.0" text="채우기" />
       <Button layoutX="264.0" layoutY="483.0" mnemonicParsing="false" onAction="#syrupbtn" prefHeight="17.0" prefWidth="96.0" text="채우기" />
-      <Label fx:id="beanlabel" layoutX="47.0" layoutY="115.0" prefHeight="24.0" prefWidth="143.0" text="보유중: ">
+      <Label fx:id="beanlabel" layoutX="84.0" layoutY="115.0" prefHeight="24.0" prefWidth="54.0" text="값">
          <font>
             <Font size="20.0" />
          </font>
       </Label>
-      <Label fx:id="vanilalabel" layoutX="47.0" layoutY="555.0" prefHeight="24.0" prefWidth="183.0" text="보유중: ">
+      <Label fx:id="vanilalabel" layoutX="84.0" layoutY="555.0" prefHeight="24.0" prefWidth="54.0" text="값">
          <font>
             <Font size="20.0" />
          </font>
       </Label>
-      <Label fx:id="waterlabel" layoutX="47.0" layoutY="412.0" prefHeight="24.0" prefWidth="143.0" text="보유중: ">
+      <Label fx:id="waterlabel" layoutX="85.0" layoutY="269.0" prefHeight="24.0" prefWidth="54.0" text="값">
          <font>
             <Font size="20.0" />
          </font>
       </Label>
-      <Label fx:id="milklabel" layoutX="47.0" layoutY="275.0" prefHeight="24.0" prefWidth="143.0" text="보유중: ">
+      <Label fx:id="milklabel" layoutX="84.0" layoutY="413.0" prefHeight="24.0" prefWidth="54.0" text="값">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="23.0" layoutY="117.0" text="보유중 :">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="19.0" layoutY="271.0" text="보유중 :">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="19.0" layoutY="415.0" text="보유중 :">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="9.0" layoutY="557.0" text="보유중 :">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="152.0" layoutY="113.0" text="g">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="143.0" layoutY="269.0" text="ML">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="143.0" layoutY="413.0" text="ML">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="143.0" layoutY="555.0" text="ML">
          <font>
             <Font size="20.0" />
          </font>

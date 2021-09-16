@@ -1,7 +1,5 @@
 package manager.stock;
 
-import java.util.ArrayList;
-
 import javafx.scene.Parent;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
@@ -15,11 +13,45 @@ public class Stock_serviceimpl {
 		db = new Stock_DB();
 	}
 
-	public void insertBean(Parent root) {
-		TextField beantext = (TextField) root.lookup("#beantext");
+	public void chkStock(Parent root) {
+		// 라벨값 유지 시켜주는 메서드 DTO 객체 생성함
+		dto = new ManagerDTO();
+		Label beanlabel = (Label) root.lookup("#beanlabel");
+		Label waterlabel = (Label) root.lookup("#waterlabel");
+		Label milklabel = (Label) root.lookup("#milklabel");
+		Label vanilalabel = (Label) root.lookup("#vanilalabel");
 
-		Integer intbean = Integer.parseInt(beantext.getText());
-		int resultbean = db.insertbean(intbean);
+		Integer chkbean = Integer.parseInt(beanlabel.getText());
+		beanlabel.setText(Integer.toString(chkbean));
+		dto.setBean(chkbean);
+
+		Integer chkwater = Integer.parseInt(waterlabel.getText());
+		waterlabel.setText(Integer.toString(chkwater));
+		dto.setWater(chkwater);
+
+		Integer chkmilk = Integer.parseInt(milklabel.getText());
+		milklabel.setText(Integer.toString(chkmilk));
+		dto.setMilk(chkmilk);
+
+		Integer chkvanila = Integer.parseInt(vanilalabel.getText());
+		vanilalabel.setText(Integer.toString(chkvanila));
+		dto.setVanilaSyrup(chkvanila);
+
+	}
+
+	public void insertBean(Parent root) {
+		chkStock(root);
+
+		TextField beantext = (TextField) root.lookup("#beantext");
+		Label beanlabel = (Label) root.lookup("#beanlabel");
+
+		Integer intbeanTx = Integer.parseInt(beantext.getText());
+		Integer intbeanLa = Integer.parseInt(beanlabel.getText());
+		Integer bean = intbeanTx + intbeanLa;
+		beanlabel.setText(Integer.toString(bean));
+		dto.setBean(bean);
+
+		int resultbean = db.insert(dto);
 		if (resultbean == 1) {
 			System.out.println("원두 추가 성공");
 
@@ -30,10 +62,18 @@ public class Stock_serviceimpl {
 	}
 
 	public void insertWater(Parent root) {
-		TextField watertext = (TextField) root.lookup("#watertext");
+		chkStock(root);
 
-		Integer intwater = Integer.parseInt(watertext.getText());
-		int resultwater = db.insertwater(intwater);
+		TextField watertext = (TextField) root.lookup("#watertext");
+		Label waterlabel = (Label) root.lookup("#waterlabel");
+
+		Integer intwaterTx = Integer.parseInt(watertext.getText());
+		Integer intwaterLa = Integer.parseInt(waterlabel.getText());
+		Integer water = intwaterTx + intwaterLa;
+		waterlabel.setText(Integer.toString(water));
+		dto.setWater(water);
+
+		int resultwater = db.insert(dto);
 		if (resultwater == 1) {
 			System.out.println("물 추가 성공");
 
@@ -44,10 +84,18 @@ public class Stock_serviceimpl {
 	}
 
 	public void insertMilk(Parent root) {
-		TextField milktext = (TextField) root.lookup("#milktext");
+		chkStock(root);
 
-		Integer intmilk = Integer.parseInt(milktext.getText());
-		int resultmilk = db.insertmilk(intmilk);
+		TextField milktext = (TextField) root.lookup("#milktext");
+		Label milklabel = (Label) root.lookup("#milklabel");
+
+		Integer intmilkTx = Integer.parseInt(milktext.getText());
+		Integer intmilkLa = Integer.parseInt(milklabel.getText());
+		Integer milk = intmilkTx + intmilkLa;
+		milklabel.setText(Integer.toString(milk));
+		dto.setMilk(milk);
+
+		int resultmilk = db.insert(dto);
 		if (resultmilk == 1) {
 			System.out.println("우유 추가 성공");
 
@@ -58,10 +106,17 @@ public class Stock_serviceimpl {
 	}
 
 	public void insertvanila(Parent root) {
+		chkStock(root);
 		TextField vanilatext = (TextField) root.lookup("#vanilatext");
+		Label vanilalabel = (Label) root.lookup("#vanilalabel");
 
-		Integer intvanila = Integer.parseInt(vanilatext.getText());
-		int resultvanila = db.insertvanila(intvanila);
+		Integer intvanilaTx = Integer.parseInt(vanilatext.getText());
+		Integer intvanilaLa = Integer.parseInt(vanilalabel.getText());
+		Integer vanila = intvanilaTx + intvanilaLa;
+		vanilalabel.setText(Integer.toString(vanila));
+		dto.setVanilaSyrup(vanila);
+
+		int resultvanila = db.insert(dto);
 		if (resultvanila == 1) {
 			System.out.println("바닐라시럽 추가 성공");
 
@@ -71,28 +126,23 @@ public class Stock_serviceimpl {
 
 	}
 
-	public void setlabel(Parent root) {
-		// 일단 출력은 됨 근데 이전 값을 못 불러오니 arraylist 이용해서 dto값을 넣어준 후 다시 접근하자
+	public void selectlabel(Parent root) {
 
-		ArrayList<Integer> arr = new ArrayList<>();
-		
 		Label beanlabel = (Label) root.lookup("#beanlabel");
 		Label waterlabel = (Label) root.lookup("#waterlabel");
 		Label milklabel = (Label) root.lookup("#milklabel");
 		Label vanilalabel = (Label) root.lookup("#vanilalabel");
+
 		dto = db.selectstock();
 
-		
-
-
 		Integer bean = dto.getBean();
-		beanlabel.setText("보유량 :" + bean.toString() + " g");
+		beanlabel.setText(bean.toString());
 		Integer water = dto.getWater();
-		waterlabel.setText("보유량 :" + water.toString() + " ML");
+		waterlabel.setText(water.toString());
 		Integer milk = dto.getMilk();
-		milklabel.setText("보유량 :" + milk.toString() + " ML");
+		milklabel.setText(milk.toString());
 		Integer vanila = dto.getVanilaSyrup();
-		vanilalabel.setText("보유량 :" + vanila.toString() + " ML");
+		vanilalabel.setText(vanila.toString());
 
 	}
 
