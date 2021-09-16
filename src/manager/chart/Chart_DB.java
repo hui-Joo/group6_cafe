@@ -9,7 +9,7 @@ import manager.commonMA.ManagerDTO;
 public class Chart_DB {
 
 	public ManagerDTO getTotalMenu() {
-		String sql = "select * from \"MENUDB\"";
+		String sql = "select * from \"MENUDB\" where num=1";
 		ManagerDTO dto = null;
 		
 		try {
