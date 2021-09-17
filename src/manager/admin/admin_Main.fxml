@@ -2,9 +2,13 @@
 
 <?import javafx.scene.layout.Pane?>
 
+<<<<<<< HEAD
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" />
 <AnchorPane prefHeight="314.0" prefWidth="734.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ex02.Controller">
+=======
+<AnchorPane prefHeight="463.0" prefWidth="747.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="manager.admin.Admin_Controller">
+>>>>>>> ea8b8e1d7678ff52f2f5c4bb77d2e347aaee65c6
    <children>
       <MediaView fx:id="fxMediaView" fitHeight="250.0" fitWidth="400.0" layoutX="29.0" layoutY="21.0" />
       <Button fx:id="btnPlay" layoutX="520.0" layoutY="35.0" mnemonicParsing="false" onAction="#myPlay" prefHeight="33.0" prefWidth="180.0" text="재  생">

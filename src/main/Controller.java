@@ -15,18 +15,18 @@ public class Controller implements Initializable{
 	}
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
-		ms = new MediaServiceImpl();
+		loading = new MediaServiceImpl();
 	}
 	public void myPlay() {
-		ms.myStart();
+		loading.myStart();
 	}
 	public void myPause() {
-		ms.myPause();
+		loading.myPause();
 	}
 	public void myStop() {
-		ms.myStop();
+		loading.myStop();
 	}
 	public void volumeControl() {
-		ms.volumeControl();
+		loading.volumeControl();
 	}
 }
