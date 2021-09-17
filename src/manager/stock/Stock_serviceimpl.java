@@ -14,32 +14,7 @@ public class Stock_serviceimpl {
 	public Stock_serviceimpl() {
 		db = new Stock_DB();
 	}
-
-	public void chkStock(Parent root) {
-		// 라벨값 유지 시켜주는 메서드 DTO 객체 생성함
-		dto = new ManagerDTO();
-		Label beanlabel = (Label) root.lookup("#beanlabel");
-		Label waterlabel = (Label) root.lookup("#waterlabel");
-		Label milklabel = (Label) root.lookup("#milklabel");
-		Label vanilalabel = (Label) root.lookup("#vanilalabel");
-
-		Integer chkbean = Integer.parseInt(beanlabel.getText());
-		beanlabel.setText(Integer.toString(chkbean));
-		dto.setBean(chkbean);
-
-		Integer chkwater = Integer.parseInt(waterlabel.getText());
-		waterlabel.setText(Integer.toString(chkwater));
-		dto.setWater(chkwater);
-
-		Integer chkmilk = Integer.parseInt(milklabel.getText());
-		milklabel.setText(Integer.toString(chkmilk));
-		dto.setMilk(chkmilk);
-
-		Integer chkvanila = Integer.parseInt(vanilalabel.getText());
-		vanilalabel.setText(Integer.toString(chkvanila));
-		dto.setVanilaSyrup(chkvanila);
-
-	}
+//내일textfield 에null값주면경고창같은거띄우고차트랑합쳐서구동시켜보자그리고씬이쁘게만들면될듯
 
 	public void updatebean(Parent root) {
 		TextField beantext = (TextField) root.lookup("#beantext");
@@ -148,25 +123,29 @@ public class Stock_serviceimpl {
 			alert.setTitle("잔여 재고 경고");
 			alert.setHeaderText("잔여 원두 경고");
 			alert.setContentText("원두가 얼마 남지 않았습니다");
-			
+			alert.show();
+
 		}
 		if (db.selectstock().getWater() < 200) {
 			alert.setTitle("잔여 재고 경고");
 			alert.setHeaderText("잔여 물 경고");
 			alert.setContentText("물이 얼마 남지 않았습니다");
+			alert.show();
+
 		}
 		if (db.selectstock().getMilk() < 200) {
 			alert.setTitle("잔여 재고 경고");
 			alert.setHeaderText("잔여 우유 경고");
 			alert.setContentText("우유가 얼마 남지 않았습니다");
+			alert.show();
+
 		}
 		if (db.selectstock().getVanilaSyrup() < 200) {
 			alert.setTitle("잔여 재고 경고");
 			alert.setHeaderText("잔여시럽 경고");
 			alert.setContentText("바닐라 시럽이 얼마 남지 않았습니다");
+			alert.show();
 		}
-
-		alert.show();
 	}
 
 }
