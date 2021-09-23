@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
 	<classpathentry kind="src" path="src"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-16">
-		<attributes>
-			<attribute name="module" value="true"/>
-		</attributes>
-	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-16"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/JavaFx"/>
-<<<<<<< HEAD
-=======
-	<classpathentry kind="lib" path="C:/Users/82108/Desktop/jun/ojdbc6.jar"/>
->>>>>>> 13b49320d16001d8d8c672efec5de5dd6a05cb44
 	<classpathentry kind="output" path="bin"/>
 </classpath>
