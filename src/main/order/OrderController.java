@@ -53,6 +53,9 @@ public class OrderController implements Initializable{
 		System.out.println("주문하기");
 	}
 	
+	public void clickAdmin() {
+		
+	}
 
 
 	

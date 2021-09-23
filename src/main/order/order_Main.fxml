@@ -44,7 +44,7 @@
             <Image url="@menu.jpg" />
          </image>
       </ImageView>
-      <ImageView fitHeight="31.0" fitWidth="31.0" layoutX="732.0" layoutY="744.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="31.0" fitWidth="31.0" layoutX="732.0" layoutY="744.0" onMouseClicked="#clickAdmin" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@set.png" />
          </image>
