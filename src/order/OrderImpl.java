@@ -6,8 +6,10 @@ import javafx.scene.control.TextArea;
 
 public class OrderImpl implements Order {
 
+	private Order_DB db;
 	
 	OrderDTO dto = new OrderDTO();
+	
 	Parent root;
 	
 	@Override
@@ -15,7 +17,9 @@ public class OrderImpl implements Order {
 		this.root = root;
 	}
 
-	
+	public OrderImpl() {
+		db = new Order_DB();
+	}
 	
 	
 	@Override
