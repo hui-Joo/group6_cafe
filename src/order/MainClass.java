@@ -14,7 +14,7 @@ public class MainClass extends Application {
 
 	@Override
 	public void start(Stage arg0) throws Exception {
-		
+
 		FXMLLoader loader = new FXMLLoader(getClass().getResource("menuPan.fxml"));
 		Parent root = loader.load();
 		Scene scene = new Scene(root);
@@ -25,4 +25,5 @@ public class MainClass extends Application {
 		arg0.setTitle("orderpage");
 		arg0.show();
 	}
+
 }

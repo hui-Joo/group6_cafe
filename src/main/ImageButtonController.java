@@ -1,22 +1,16 @@
 package main;
 
-import javafx.application.Application;
-import javafx.scene.Scene;
-import javafx.stage.Stage;
+import java.net.URL;
+import java.util.ResourceBundle;
 
-public class ImageButtonController extends Application{
+import javafx.fxml.Initializable;
+
+public class ImageButtonController implements Initializable {
+
 	
-	public void start(Stage primaryStage) throws Exception{
-	
-		ImageButtonController imageController = new ImageButtonController();
-		primaryStage.setScene(new Scene(imageController));
-		primaryStage.setTitle("Image Button Test");
-		primaryStage.show();
+	@Override
+	public void initialize(URL arg0, ResourceBundle arg1) {
+
 	}
 
-
-	public void button() {
-		launch();
-	}
 }
-
