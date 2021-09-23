@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="688.0" prefWidth="785.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="admin.Admin_Controller">
+   <children>
+      <ImageView fitHeight="257.0" fitWidth="361.0" layoutX="19.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/AmericanoButton.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="257.0" fitWidth="361.0" layoutX="399.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/CaffelatteButton.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="257.0" fitWidth="361.0" layoutX="20.0" layoutY="294.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/CappuccinoButton.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="257.0" fitWidth="361.0" layoutX="399.0" layoutY="294.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/VanillalatteButton.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="85.0" fitWidth="100.0" layoutX="538.0" layoutY="586.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/baguniButton.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="85.0" fitWidth="100.0" layoutX="660.0" layoutY="586.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/cardButton.jpg" />
+         </image>
+      </ImageView>
+      <Separator layoutX="50.0" layoutY="567.0" prefHeight="0.0" prefWidth="685.0" />
+   </children>
+</AnchorPane>
