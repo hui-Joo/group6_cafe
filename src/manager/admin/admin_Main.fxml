@@ -5,7 +5,16 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
+<<<<<<< HEAD
 <AnchorPane prefHeight="463.0" prefWidth="747.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="manager.admin.Admin_Controller">
+=======
+
+
+
+
+<AnchorPane prefHeight="463.0" prefWidth="747.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="manager.admin.Admin_Controller">
+
+>>>>>>> 13b49320d16001d8d8c672efec5de5dd6a05cb44
    <children>
       <AnchorPane layoutX="20.0" layoutY="10.0" prefHeight="442.0" prefWidth="706.0" style="-fx-border-radius: 30; -fx-background-color: #FFFFF0;">
          <children>

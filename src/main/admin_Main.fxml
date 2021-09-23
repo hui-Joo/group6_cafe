@@ -7,29 +7,29 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="783.0" prefWidth="785.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="admin.Admin_Controller">
+<AnchorPane prefHeight="783.0" prefWidth="785.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.ImageButtonController">
    <children>
-      <ImageView fitHeight="257.0" fitWidth="361.0" layoutX="22.0" layoutY="83.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="257.0" fitWidth="361.0" layoutX="22.0" layoutY="83.0" onMouseDragged="#button" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@img/AmericanoButton.jpg" />
          </image>
       </ImageView>
-      <ImageView fitHeight="257.0" fitWidth="361.0" layoutX="402.0" layoutY="83.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="257.0" fitWidth="361.0" layoutX="402.0" layoutY="83.0" onMouseDragged="#button" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@img/CaffelatteButton.jpg" />
          </image>
       </ImageView>
-      <ImageView fitHeight="257.0" fitWidth="361.0" layoutX="23.0" layoutY="363.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="257.0" fitWidth="361.0" layoutX="23.0" layoutY="363.0" onMouseDragged="#button" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@img/CappuccinoButton.jpg" />
          </image>
       </ImageView>
-      <ImageView fitHeight="257.0" fitWidth="361.0" layoutX="402.0" layoutY="363.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="257.0" fitWidth="361.0" layoutX="402.0" layoutY="363.0" onMouseDragged="#button" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@img/VanillalatteButton.jpg" />
          </image>
       </ImageView>
-      <ImageView fitHeight="85.0" fitWidth="100.0" layoutX="664.0" layoutY="646.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="85.0" fitWidth="100.0" layoutX="664.0" layoutY="646.0" onMouseDragged="#button" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@img/cardButton.jpg" />
          </image>
@@ -39,5 +39,10 @@
       <Separator layoutX="271.0" layoutY="351.0" prefHeight="3.0" prefWidth="244.0" />
       <Separator layoutX="390.0" layoutY="237.0" orientation="VERTICAL" prefHeight="250.0" prefWidth="0.0" />
       <Button layoutX="687.0" layoutY="747.0" mnemonicParsing="false" text="관리자모드" textFill="#c65b5b" />
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="284.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/menu.jpg" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>
