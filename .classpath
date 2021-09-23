@@ -1,13 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-	<classpathentry kind="src" path="src"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-16">
+	<classpathentry excluding="src/common/commonDB/|src/main/|src/main/img/|src/manager/admin/|src/manager/chart/|src/manager/commonMA/|src/manager/stock/|src/media/|src/order/" kind="src" path=""/>
+	<classpathentry kind="src" path="src/common/commonDB"/>
+	<classpathentry excluding="img/" kind="src" path="src/main"/>
+	<classpathentry kind="src" path="src/main/img"/>
+	<classpathentry kind="src" path="src/manager/admin"/>
+	<classpathentry kind="src" path="src/manager/chart"/>
+	<classpathentry kind="src" path="src/manager/commonMA"/>
+	<classpathentry kind="src" path="src/manager/stock"/>
+	<classpathentry kind="src" path="src/media"/>
+	<classpathentry kind="src" path="src/order"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-11">
 		<attributes>
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/javaFx"/>
-	<classpathentry kind="lib" path="D:/IT/java/commons-lang3-3.12.0.jar"/>
-	<classpathentry kind="lib" path="D:/IT/java/ojdbc8.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
