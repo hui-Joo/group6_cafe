@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ButtonBar?>
 <?import javafx.scene.control.Separator?>
 <?import javafx.scene.image.Image?>
@@ -11,37 +10,41 @@
    <children>
       <ImageView fitHeight="257.0" fitWidth="361.0" layoutX="22.0" layoutY="83.0" onMouseDragged="#button" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@img/AmericanoButton.jpg" />
+            <Image url="@AmericanoButton.jpg" />
          </image>
       </ImageView>
       <ImageView fitHeight="257.0" fitWidth="361.0" layoutX="402.0" layoutY="83.0" onMouseDragged="#button" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@img/CaffelatteButton.jpg" />
+            <Image url="@CaffelatteButton.jpg" />
          </image>
       </ImageView>
       <ImageView fitHeight="257.0" fitWidth="361.0" layoutX="23.0" layoutY="363.0" onMouseDragged="#button" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@img/CappuccinoButton.jpg" />
+            <Image url="@CappuccinoButton.jpg" />
          </image>
       </ImageView>
       <ImageView fitHeight="257.0" fitWidth="361.0" layoutX="402.0" layoutY="363.0" onMouseDragged="#button" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@img/VanillalatteButton.jpg" />
+            <Image url="@VanillalatteButton.jpg" />
          </image>
       </ImageView>
       <ImageView fitHeight="85.0" fitWidth="100.0" layoutX="664.0" layoutY="646.0" onMouseDragged="#button" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@img/cardButton.jpg" />
+            <Image url="@cardButton.jpg" />
          </image>
       </ImageView>
       <Separator layoutX="104.0" layoutY="628.0" prefHeight="3.0" prefWidth="572.0" />
       <ButtonBar layoutX="91.0" layoutY="70.0" prefHeight="40.0" prefWidth="200.0" />
       <Separator layoutX="271.0" layoutY="351.0" prefHeight="3.0" prefWidth="244.0" />
       <Separator layoutX="390.0" layoutY="237.0" orientation="VERTICAL" prefHeight="250.0" prefWidth="0.0" />
-      <Button layoutX="687.0" layoutY="747.0" mnemonicParsing="false" text="관리자모드" textFill="#c65b5b" />
       <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="284.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@img/menu.jpg" />
+            <Image url="@menu.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="31.0" fitWidth="31.0" layoutX="732.0" layoutY="744.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@set.png" />
          </image>
       </ImageView>
    </children>

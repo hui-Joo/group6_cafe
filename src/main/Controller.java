@@ -6,6 +6,7 @@ import javax.print.DocFlavor.URL;
 
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
+import main_loading.MediaServiceImpl;
 
 //동영상
 public class Controller implements Initializable{

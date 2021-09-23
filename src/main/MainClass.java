@@ -23,4 +23,3 @@ public class MainClass extends Application{
 		launch(args);
 	}
 }
-////

@@ -1,4 +1,4 @@
-package main;
+package main_login;
 
 import java.awt.Label;
 
@@ -35,8 +35,9 @@ public class LoginController {
 			e.printStackTrace();
 		}
 	}
+	/*
 	public void main(String[] args) {
 		launch(args);
 	}
-	
+	*/
 }

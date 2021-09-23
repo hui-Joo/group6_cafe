@@ -1,10 +1,11 @@
-package main;
+package main_Main;
 
 import javafx.application.Application;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-public class ImageButtonController extends Application{
+public class ImageButtonController extends Initializable{
 	
 	public void start(Stage primaryStage) throws Exception{
 	
