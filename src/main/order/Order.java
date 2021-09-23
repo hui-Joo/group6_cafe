@@ -10,4 +10,7 @@ public interface Order {
 	public void clickCapuccino();
 	public void clickVanilaLatte();
 	public void total();
+	
+	//일단 생성
+	public void clickPay();
 }

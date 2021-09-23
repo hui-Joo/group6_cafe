@@ -15,7 +15,7 @@ public class OrderController implements Initializable{
 	
 	Parent root;
 	Order order;
-	
+	OrderDB db;
 
 
 	public void setRoot(Parent root) {
@@ -26,6 +26,7 @@ public class OrderController implements Initializable{
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		order = new OrderImpl();
+		db=new OrderDB();
 	}
 	
 
@@ -50,7 +51,7 @@ public class OrderController implements Initializable{
 	}
 	
 	public void clickPay() {
-		System.out.println("주문하기");
+		order.clickPay();
 	}
 	
 	public void clickAdmin() {

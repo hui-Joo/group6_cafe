@@ -2,27 +2,31 @@ package main.order;
 
 import javafx.scene.Parent;
 import javafx.scene.control.Label;
-import javafx.scene.control.TextArea;
+import manager.commonMA.ManagerDTO;
 
 public class OrderImpl implements Order {
 
-	
-	OrderDTO dto = new OrderDTO();
+	OrderDB db;
+	OrderDTO orderDto;
+	ManagerDTO managerDto;
 	Parent root;
+	
+	public OrderImpl() {
+		db = new OrderDB();
+		orderDto = new OrderDTO();
+		managerDto = new ManagerDTO();
+	}
 	
 	@Override
 	public void setRoot(Parent root) {
 		this.root = root;
 	}
-
-	
-	
 	
 	@Override
 	public void clickAmericano() {
-		dto.cntA++;
+		orderDto.cntA++;
 		Label LabelCntA = (Label)root.lookup("#LabelCntA");
-		LabelCntA.setText(dto.getCntA() + "ea");
+		LabelCntA.setText(orderDto.getCntA() + "ea");
 		
 		total();
 
@@ -30,38 +34,50 @@ public class OrderImpl implements Order {
 
 	@Override
 	public void clickLatte() {				
-		dto.cntL++;
+		orderDto.cntL++;
 		Label LabelCntL = (Label)root.lookup("#LabelCntL");
-		LabelCntL.setText(dto.getCntL() + "ea");
+		LabelCntL.setText(orderDto.getCntL() + "ea");
 		
 		total();
 	}
 
 	@Override
 	public void clickCapuccino() {		
-		dto.cntC++;
+		orderDto.cntC++;
 		Label LabelCntC = (Label)root.lookup("#LabelCntC");
-		LabelCntC.setText(dto.getCntC() + "ea");
+		LabelCntC.setText(orderDto.getCntC() + "ea");
 
 		total();
 	}
 
 	@Override
 	public void clickVanilaLatte() {
-	
-		
-		dto.cntV++;
+		orderDto.cntV++;
 		Label LabelCntV = (Label)root.lookup("#LabelCntV");
-		LabelCntV.setText(dto.getCntV() + "ea");
+		LabelCntV.setText(orderDto.getCntV() + "ea");
 		
 		total();
 	}
 
 	@Override
 	public void total() {
-		dto.setSum( dto.getAmericano() * dto.getCntA() + dto.getLatte() * dto.getCntL() + dto.getCapuccino()*dto.getCntC() + dto.getVanilaLatte() * dto.getCntV());
+		orderDto.setSum( orderDto.getAmericano() * orderDto.getCntA() + orderDto.getLatte() * orderDto.getCntL() + orderDto.getCapuccino()*orderDto.getCntC() +orderDto.getVanilaLatte() * orderDto.getCntV());
 		Label LabelPrice = (Label)root.lookup("#LabelPrice");
-		LabelPrice.setText(dto.getSum() + "won");
+		LabelPrice.setText(orderDto.getSum() + "won");
+	}
+
+
+
+
+	@Override
+	public void clickPay() {
+		
+		int result = db.updateMenu(managerDto,orderDto);
+		if (result == 1) {
+			System.out.println("DB연동 성공");
+		} else {
+			System.out.println("DB연동 실패");
+		}
 	}
 
 	
