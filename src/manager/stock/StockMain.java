@@ -1,14 +1,13 @@
 package manager.stock;
 
-import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-public class StockMain extends Application {
+public class StockMain {
 
-	@Override
+	
 	public void start(Stage arg0) throws Exception {
 		FXMLLoader loader = new FXMLLoader(getClass().getResource("stock.fxml"));
 		Parent root = loader.load();
@@ -24,7 +23,4 @@ public class StockMain extends Application {
 		
 	}
 
-	public static void main(String[] args) {
-		launch(args);
-	}
 }
