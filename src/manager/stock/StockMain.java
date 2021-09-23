@@ -7,7 +7,6 @@ import javafx.stage.Stage;
 
 public class StockMain {
 
-	
 	public void start(Stage arg0) throws Exception {
 		FXMLLoader loader = new FXMLLoader(getClass().getResource("stock.fxml"));
 		Parent root = loader.load();
@@ -20,7 +19,7 @@ public class StockMain {
 		arg0.setTitle("재고 관리창");
 		arg0.show();
 		ctl.warningalert();
-		
+
 	}
 
 }

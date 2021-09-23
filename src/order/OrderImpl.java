@@ -7,115 +7,74 @@ import javafx.scene.control.TextArea;
 public class OrderImpl implements Order {
 
 	Parent root;
-	int americano=2000,latte=3000,capuccino=3000,vanilaLatte=4000;
-	int cntA=0,cntL=0,cntC=0,cntV=0,sum=0;
-	
-	public int getSum() {
-		return sum;
-	}
 
-	public void setSum(int sum) {
-		this.sum = sum;
-	}
+	OrderDTO dto = new OrderDTO();
 
-	public int getCntA() {
-		return cntA;
-	}
-
-	public void setCntA(int cntA) {
-		this.cntA = cntA;
-	}
-
-	public int getCntL() {
-		return cntL;
-	}
-
-	public void setCntL(int cntL) {
-		this.cntL = cntL;
-	}
-
-	public int getCntC() {
-		return cntC;
-	}
-
-	public void setCntC(int cntC) {
-		this.cntC = cntC;
-	}
-
-	public int getCntV() {
-		return cntV;
-	}
-
-	public void setCntV(int cntV) {
-		this.cntV = cntV;
-	}
-
-	@Override
 	public void setRoot(Parent root) {
-		this.root=root;
+		this.root = root;
+
 	}
-	
+
 	@Override
 	public void clickAmericano() {
-		TextArea taMenu = (TextArea)root.lookup("#taMenu");
+		TextArea taMenu = (TextArea) root.lookup("#taMenu");
 		taMenu.appendText("아메리카노\n");
-		cntA++;
-		setCntA(cntA);
-		System.out.println("A:"+getCntA());
+		dto.cntA++;
+		dto.setCntA(dto.cntA);
+		System.out.println("A:" + dto.getCntA());
 //		TextField tfPrice = (TextField)root.lookup("#tfPrice");
 //		tfPrice.setText("2000원");
-		Label labelPrice = (Label)root.lookup("#labelPrice");
-		sum+=getCntA()*americano;
-		setCntA(0);
-		labelPrice.setText(sum+"원");
+		Label labelPrice = (Label) root.lookup("#labelPrice");
+		dto.sum += dto.getCntA() * dto.americano;
+		dto.setCntA(0);
+		labelPrice.setText(dto.sum + "원");
 	}
 
 	@Override
 	public void clickLatte() {
-		TextArea taMenu = (TextArea)root.lookup("#taMenu");
+		TextArea taMenu = (TextArea) root.lookup("#taMenu");
 		taMenu.appendText("카페라떼\n");
-		cntL++;
-		setCntL(cntL);
-		System.out.println("L:"+getCntL());
-		Label labelPrice = (Label)root.lookup("#labelPrice");
-		sum+=getCntL()*latte;
-		setCntL(0);
-		labelPrice.setText(sum+"원");
-		
+		dto.cntL++;
+		dto.setCntL(dto.cntL);
+		System.out.println("L:" + dto.getCntL());
+		Label labelPrice = (Label) root.lookup("#labelPrice");
+		dto.sum += dto.getCntL() * dto.latte;
+		dto.setCntL(0);
+		labelPrice.setText(dto.sum + "원");
+
 	}
 
 	@Override
 	public void clickCapuccino() {
-		TextArea taMenu = (TextArea)root.lookup("#taMenu");
+		TextArea taMenu = (TextArea) root.lookup("#taMenu");
 		taMenu.appendText("카푸치노\n");
-		cntC++;
-		setCntC(cntC);
-		Label labelPrice = (Label)root.lookup("#labelPrice");
-		sum+=getCntC()*capuccino;
-		setCntC(0);
-		labelPrice.setText(sum+"원");
+		dto.cntC++;
+		dto.setCntC(dto.cntC);
+		System.out.println("C:" + dto.getCntC());
+		Label labelPrice = (Label) root.lookup("#labelPrice");
+		dto.sum += dto.getCntC() * dto.capuccino;
+		dto.setCntC(0);
+		labelPrice.setText(dto.sum + "원");
 
 	}
 
 	@Override
 	public void clickVanilaLatte() {
-		TextArea taMenu = (TextArea)root.lookup("#taMenu");
+		TextArea taMenu = (TextArea) root.lookup("#taMenu");
 		taMenu.appendText("바닐라라떼\n");
-		cntV++;
-		setCntV(cntV);
-		Label labelPrice = (Label)root.lookup("#labelPrice");
-		sum+=getCntV()*vanilaLatte;
-		setCntV(0);
-		labelPrice.setText(sum+"원");
+		dto.cntV++;
+		dto.setCntV(dto.cntV);
+		System.out.println("V:" + dto.getCntV());
+		Label labelPrice = (Label) root.lookup("#labelPrice");
+		dto.sum += dto.getCntV() * dto.vanilaLatte;
+		dto.setCntV(0);
+		labelPrice.setText(dto.sum + "원");
 	}
 
 	@Override
 	public void total() {
 		// TODO Auto-generated method stub
-		
+
 	}
 
-
-
-	
 }
