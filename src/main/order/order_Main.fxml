@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="783.0" prefWidth="785.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.order.OrderController">
+   <children>
+      <ImageView fitHeight="257.0" fitWidth="361.0" layoutX="22.0" layoutY="83.0" onMouseClicked="#clickAmericano" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@AmericanoButton.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="257.0" fitWidth="361.0" layoutX="402.0" layoutY="83.0" onMouseClicked="#clickLatte" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@CaffelatteButton.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="257.0" fitWidth="361.0" layoutX="23.0" layoutY="363.0" onMouseClicked="#clickCapuccino" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@CappuccinoButton.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="257.0" fitWidth="361.0" layoutX="402.0" layoutY="363.0" onMouseClicked="#clickVanilaLatte" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@VanillalatteButton.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="85.0" fitWidth="100.0" layoutX="664.0" layoutY="646.0" onMouseClicked="#clickPay" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@cardButton.jpg" />
+         </image>
+      </ImageView>
+      <Separator layoutX="104.0" layoutY="628.0" prefHeight="3.0" prefWidth="572.0" />
+      <ButtonBar layoutX="91.0" layoutY="70.0" prefHeight="40.0" prefWidth="200.0" />
+      <Separator layoutX="271.0" layoutY="351.0" prefHeight="3.0" prefWidth="244.0" />
+      <Separator layoutX="390.0" layoutY="237.0" orientation="VERTICAL" prefHeight="250.0" prefWidth="0.0" />
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="284.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@menu.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="31.0" fitWidth="31.0" layoutX="732.0" layoutY="744.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@set.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="102.0" layoutY="647.0" text="Americano">
+         <font>
+            <Font name="Segoe UI Black" size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="102.0" layoutY="698.0" text="Cappuccino">
+         <font>
+            <Font name="Segoe UI Black" size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="102.0" layoutY="725.0" text="Vanila Latte">
+         <font>
+            <Font name="Segoe UI Black" size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="101.0" layoutY="673.0" text="Cafe Latte">
+         <font>
+            <Font name="Segoe UI Black" size="21.0" />
+         </font>
+      </Label>
+      <Label fx:id="LabelCntA" layoutX="276.0" layoutY="650.0" text="0ea">
+         <font>
+            <Font name="Segoe UI Black" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="LabelCntL" layoutX="276.0" layoutY="676.0" text="0ea">
+         <font>
+            <Font name="Segoe UI Black" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="LabelCntC" layoutX="276.0" layoutY="702.0" text="0ea">
+         <font>
+            <Font name="Segoe UI Black" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="LabelCntV" layoutX="276.0" layoutY="728.0" text="0ea">
+         <font>
+            <Font name="Segoe UI Black" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="428.0" layoutY="682.0" text="total">
+         <font>
+            <Font name="Segoe UI Black" size="21.0" />
+         </font>
+      </Label>
+      <Label fx:id="LabelPrice" layoutX="542.0" layoutY="685.0" text="0 won">
+         <font>
+            <Font name="Segoe UI Black" size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

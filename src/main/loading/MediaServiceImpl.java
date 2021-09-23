@@ -1,4 +1,4 @@
-package main;
+package main.loading;
 
 import javafx.scene.Parent;
 import javafx.scene.control.Button;
