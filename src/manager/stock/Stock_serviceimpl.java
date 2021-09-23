@@ -7,7 +7,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.Alert.AlertType;
 import manager.commonMA.ManagerDTO;
 
-public class Stock_serviceimpl {
+public class Stock_serviceimpl implements Stock_service {
 	Stock_DB db;
 	ManagerDTO dto;
 
@@ -16,7 +16,7 @@ public class Stock_serviceimpl {
 	}
 //내일textfield 에null값주면경고창같은거띄우고차트랑합쳐서구동시켜보자그리고씬이쁘게만들면될듯
 
-	public void updatebean(Parent root) {
+	public void updateBean(Parent root) {
 		TextField beantext = (TextField) root.lookup("#beantext");
 		Label beanlabel = (Label) root.lookup("#beanlabel");
 
@@ -77,7 +77,7 @@ public class Stock_serviceimpl {
 
 	}
 
-	public void updatevanila(Parent root) {
+	public void updateVanila(Parent root) {
 		TextField vanilatext = (TextField) root.lookup("#vanilatext");
 		Label vanilalabel = (Label) root.lookup("#vanilalabel");
 

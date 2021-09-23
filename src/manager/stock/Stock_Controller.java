@@ -29,7 +29,7 @@ public class Stock_Controller implements Initializable {
 
 	public void beanbtn() {
 //		sv.insertBean(root);
-		sv.updatebean(root);
+		sv.updateBean(root);
 	}
 
 	public void milkbtn() {
@@ -44,7 +44,7 @@ public class Stock_Controller implements Initializable {
 
 	public void syrupbtn() {
 //		sv.insertvanila(root);
-		sv.updatevanila(root);
+		sv.updateVanila(root);
 	}
 
 }
