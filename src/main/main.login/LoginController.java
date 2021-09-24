@@ -35,13 +35,9 @@ public class LoginController {
 			e.printStackTrace();
 		}
 	}
-<<<<<<< HEAD:src/main_login/LoginController.java
 	/*
 	public void main(String[] args) {
 		launch(args);
 	}
 	*/
-=======
-
->>>>>>> e664a404303716519fc4ffce39ff3cfba8354e4d:src/main/LoginController.java
 }
