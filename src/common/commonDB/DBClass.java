@@ -7,7 +7,7 @@ public class DBClass {
 
 	public static Connection conn;
 	
-	public DBClass() {
+	static {		//생성자에서 static으로 변경 : 객체를 만들지 않아도 실행
 		try {
 			Class.forName("oracle.jdbc.driver.OracleDriver");
 			conn = DriverManager.getConnection(

@@ -18,10 +18,10 @@ public class OrderDB {
 		
 		try {
 			PreparedStatement ps = common.commonDB.DBClass.conn.prepareStatement(sql);
-			ps.setInt(1, orderDto.getAmericano());
-			ps.setInt(2, orderDto.getLatte());
-			ps.setInt(3, orderDto.getCapuccino());
-			ps.setInt(4, orderDto.getVanilaLatte());
+			ps.setInt(1, orderDto.getCntA());
+			ps.setInt(2, orderDto.getCntL());
+			ps.setInt(3, orderDto.getCntC());
+			ps.setInt(4, orderDto.getCntV());
 			
 			result = ps.executeUpdate();
 			
