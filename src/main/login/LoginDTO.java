@@ -1,4 +1,4 @@
-package main_Login;
+package main.login;
 
 public class LoginDTO {
 	private String pw;

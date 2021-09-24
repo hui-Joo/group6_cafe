@@ -1,9 +1,11 @@
-package main_Login;
+package main.login;
 
 import java.net.URL;
 import java.util.ResourceBundle;
 
 import common.commonDB.DBClass;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.control.PasswordField;
@@ -11,7 +13,6 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 import javafx.stage.Stage;
 import manager.admin.Admin_Main;
-import manager.stock.StockMain;
 
 public class LoginController implements Initializable {
 	private Parent root;
@@ -41,9 +42,10 @@ public class LoginController implements Initializable {
 		alert.show();
 	}
 
-	public void Login() {
+	public void Login(ActionEvent event) {
 
 		PasswordField pwf = (PasswordField) root.lookup("#adminpw");
+
 		dto = ldb.selectPw();
 		String pw = dto.getPw();
 
@@ -58,6 +60,7 @@ public class LoginController implements Initializable {
 		} else {
 			PwAlert();
 			pwf.requestFocus();
+			pwf.clear();
 
 		}
 

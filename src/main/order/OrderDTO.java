@@ -1,12 +1,19 @@
-package order;
+package main.order;
 
 import javafx.scene.Parent;
 
 public class OrderDTO {
+	Parent root;
 	int americano = 2000, latte = 3000, capuccino = 3000, vanilaLatte = 4000;
 	int cntA = 0, cntL = 0, cntC = 0, cntV = 0, sum = 0;
 
+	public Parent getRoot() {
+		return root;
+	}
 
+	public void setRoot(Parent root) {
+		this.root = root;
+	}
 
 	public int getAmericano() {
 		return americano;
@@ -52,7 +59,9 @@ public class OrderDTO {
 		return cntL;
 	}
 
-	public void setCntL(int cntL) {
+	public void setCntL(int cntL)
+
+	{
 		this.cntL = cntL;
 	}
 
@@ -79,5 +88,7 @@ public class OrderDTO {
 	public void setSum(int sum) {
 		this.sum = sum;
 	}
+
+	
 
 }

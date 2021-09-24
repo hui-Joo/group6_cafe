@@ -1,4 +1,4 @@
-package main_Login;
+package main.login;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -18,6 +18,7 @@ public class Login_Main extends Application {
 		ctl.setRoot(root);
 
 		arg0.setScene(scene);
+		arg0.setTitle("관리자 로그인");
 		arg0.show();
 
 	}

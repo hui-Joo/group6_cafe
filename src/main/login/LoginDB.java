@@ -1,4 +1,4 @@
-package main_Login;
+package main.login;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;

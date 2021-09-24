@@ -5,18 +5,20 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import main_Login.LoginController;
+import main.order.OrderController;
 
 public class MainClass extends Application {
 
 	public void start(Stage primaryStage) throws Exception {
-		FXMLLoader loader = new FXMLLoader(getClass().getResource("menupan.fxml"));
+		FXMLLoader loader = new FXMLLoader(getClass().getResource("./order/order_Main.fxml"));
 		Parent root = loader.load();
 
-		LoginController ctl =loader.getController();
-		ctl.setRoot(root);
+		OrderController con = loader.getController();
+		con.setRoot(root);
+
 		Scene scene = new Scene(root);
 		primaryStage.setScene(scene);
+		primaryStage.setTitle("orderpage");
 		primaryStage.show();
 	}
 
