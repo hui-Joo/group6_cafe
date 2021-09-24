@@ -14,7 +14,6 @@ public class Stock_serviceimpl implements Stock_service {
 	public Stock_serviceimpl() {
 		db = new Stock_DB();
 	}
-//내일textfield 에null값주면경고창같은거띄우고차트랑합쳐서구동시켜보자그리고씬이쁘게만들면될듯
 
 	public void updateBean(Parent root) {
 		TextField beantext = (TextField) root.lookup("#beantext");
@@ -27,11 +26,9 @@ public class Stock_serviceimpl implements Stock_service {
 
 		dto.setBean(bean);
 		int result = db.update(dto);
-		if (result == 1) {
-			System.out.println("원두 추가 성공");
-		} else {
+		if (result == 0) {
 			System.out.println("원두 추가 실패");
-		}
+		} 
 
 	}
 
@@ -47,12 +44,11 @@ public class Stock_serviceimpl implements Stock_service {
 		dto.setWater(water);
 
 		int resultwater = db.update(dto);
-		if (resultwater == 1) {
-			System.out.println("물 추가 성공");
-
-		} else {
+		if (resultwater == 0) {
 			System.out.println("물 추가 실패");
 		}
+
+			
 
 	}
 
@@ -68,10 +64,7 @@ public class Stock_serviceimpl implements Stock_service {
 		dto.setMilk(milk);
 
 		int resultmilk = db.update(dto);
-		if (resultmilk == 1) {
-			System.out.println("우유 추가 성공");
-
-		} else {
+		if (resultmilk == 0) {
 			System.out.println("우유 추가 실패");
 		}
 
@@ -88,11 +81,8 @@ public class Stock_serviceimpl implements Stock_service {
 		dto.setVanilaSyrup(vanila);
 
 		int resultvanila = db.update(dto);
-		if (resultvanila == 1) {
-			System.out.println("바닐라시럽 추가 성공");
-
-		} else {
-			System.out.println("바닐라시럽 추가  실패");
+		if (resultvanila == 0) {
+			System.out.println("바닐라시럽 추가 실패");
 		}
 
 	}
@@ -142,7 +132,7 @@ public class Stock_serviceimpl implements Stock_service {
 		}
 		if (db.selectstock().getVanilaSyrup() < 200) {
 			alert.setTitle("잔여 재고 경고");
-			alert.setHeaderText("잔여시럽 경고");
+			alert.setHeaderText("잔여 시럽 경고");
 			alert.setContentText("바닐라 시럽이 얼마 남지 않았습니다");
 			alert.show();
 		}

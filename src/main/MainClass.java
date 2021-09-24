@@ -1,8 +1,6 @@
 
 package main;
 
-import java.lang.ModuleLayer.Controller;
-
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -18,6 +16,7 @@ public class MainClass extends Application {
 
 		OrderController con = loader.getController();
 		con.setRoot(root);
+
 		Scene scene = new Scene(root);
 		primaryStage.setScene(scene);
 		primaryStage.setTitle("orderpage");

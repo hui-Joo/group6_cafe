@@ -32,8 +32,6 @@ public class OrderDB {
 	
 	public int updateMenu(ManagerDTO dto, OrderDTO orderDto) {
 		
-		//dto = new ManagerDTO();
-		
 		
 		String sql = "update \"MENUDB\" set americano=?, latte=?, capucino=?, vanilaLatte=? where num=1";
 		int result = 0;

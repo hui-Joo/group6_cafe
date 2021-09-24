@@ -8,16 +8,16 @@
 <?import javafx.scene.layout.TilePane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="356.0" prefWidth="620.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.LoginController">
-   <children>
-      <TilePane layoutX="233.0" layoutY="158.0" prefHeight="244.0" prefWidth="387.0" />
-      <TextField alignment="CENTER" layoutX="227.0" layoutY="139.0" onDragDropped="#Login" onMouseDragged="#Login" promptText="Username" />
-      <PasswordField alignment="CENTER" layoutX="227.0" layoutY="176.0" onDragDropped="#Login" promptText="Password" />
-      <Button layoutX="276.0" layoutY="257.0" mnemonicParsing="false" onAction="#Login" onDragDropped="#Login" text="Login" />
-      <Label layoutX="236.0" layoutY="51.0" text="Admin mode">
-         <font>
-            <Font name="Segoe UI Black" size="21.0" />
-         </font>
-      </Label>
-   </children>
+<AnchorPane prefHeight="356.0" prefWidth="620.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.login.LoginController">
+	<children>
+		<TilePane layoutX="233.0" layoutY="158.0" prefHeight="244.0" prefWidth="387.0" />
+		<TextField alignment="CENTER" focusTraversable="false" layoutX="227.0" layoutY="139.0" text="group6" />
+		<PasswordField fx:id="adminpw" alignment="CENTER" layoutX="227.0" layoutY="176.0" promptText="Password" />
+		<Button defaultButton="true" layoutX="276.0" layoutY="257.0" mnemonicParsing="false" onAction="#Login" text="Login" />
+		<Label layoutX="236.0" layoutY="51.0" text="Admin mode">
+			<font>
+				<Font name="Segoe UI Black" size="21.0" />
+			</font>
+		</Label>
+	</children>
 </AnchorPane>

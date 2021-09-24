@@ -1,45 +1,69 @@
 package main.login;
 
-import java.awt.Label;
+import java.net.URL;
+import java.util.ResourceBundle;
 
+import common.commonDB.DBClass;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.scene.control.TextField;
+import javafx.scene.control.PasswordField;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 import javafx.stage.Stage;
+import manager.admin.Admin_Main;
 
-public class LoginController {
+public class LoginController implements Initializable {
+	private Parent root;
+	public DBClass db;
+	LoginDB ldb;
+	LoginDTO dto;
+	Admin_Main am;
+	Stage stage;
 
-	@FXML
-	private Label lblStatus;
+	public void setRoot(Parent root) {
+		this.root = root;
+		db = new DBClass();
+		ldb = new LoginDB();
+	}
 
-	private TextField txtUserName;
+	public void initialize(URL arg0, ResourceBundle arg1) {
+		stage = new Stage();
+		am = new Admin_Main();
 
-	private TextField txtPassword;
+	}
 
-	public void Login(ActionEvent event) throws Exception {
-		try {
+	public void PwAlert() {
+		Alert alert = new Alert(AlertType.ERROR);
+		alert.setTitle("로그인 오류");
+		alert.setHeaderText("비밀번호   오류");
+		alert.setContentText("비밀번호가 틀립니다.");
+		alert.show();
+	}
 
-			if (txtUserName.getText().equals("user") && txtPassword.getText().equals("pass")) {
-				lblStatus.setText("Login Success");
-				Stage primaryStage = new Stage();
-				Parent root = FXMLLoader.load(getClass().getResource("/main/admin_login.fxml"));
-				Scene scene = new Scene(root);
-				scene.getStylesheets().add(getClass().getResource("main.css").toExternalForm());
-				primaryStage.setScene(scene);
-				primaryStage.show();
+	public void Login(ActionEvent event) {
+
+		PasswordField pwf = (PasswordField) root.lookup("#adminpw");
+
+		dto = ldb.selectPw();
+		String pw = dto.getPw();
+
+		pwf.requestFocus();
+		if (pw.equals(pwf.getText())) {
+			try {
+				System.out.println("로그인 성공");
+				am.start(stage);
+			} catch (Exception e) {
+				e.printStackTrace();
 			}
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-	}
+		} else {
+			PwAlert();
+			pwf.requestFocus();
+			pwf.clear();
 
-	/*
-	public void main(String[] args) {
-		launch(args);
+		}
+
 	}
-	*/
 
 }
