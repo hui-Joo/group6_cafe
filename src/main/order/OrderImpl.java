@@ -1,4 +1,4 @@
-package order;
+package main.order;
 
 import javafx.scene.Parent;
 import javafx.scene.control.Label;
@@ -22,7 +22,7 @@ public class OrderImpl implements Order {
 	public void clickAmericano() {
 		dto.cntA++;
 		Label LabelCntA = (Label)root.lookup("#LabelCntA");
-		LabelCntA.setText(dto.getCntA() + "잔");
+		LabelCntA.setText(dto.getCntA() + "ea");
 		
 		total();
 
@@ -32,7 +32,7 @@ public class OrderImpl implements Order {
 	public void clickLatte() {				
 		dto.cntL++;
 		Label LabelCntL = (Label)root.lookup("#LabelCntL");
-		LabelCntL.setText(dto.getCntL() + "잔");
+		LabelCntL.setText(dto.getCntL() + "ea");
 		
 		total();
 	}
@@ -41,7 +41,7 @@ public class OrderImpl implements Order {
 	public void clickCapuccino() {		
 		dto.cntC++;
 		Label LabelCntC = (Label)root.lookup("#LabelCntC");
-		LabelCntC.setText(dto.getCntC() + "잔");
+		LabelCntC.setText(dto.getCntC() + "ea");
 
 		total();
 	}
@@ -52,7 +52,7 @@ public class OrderImpl implements Order {
 		
 		dto.cntV++;
 		Label LabelCntV = (Label)root.lookup("#LabelCntV");
-		LabelCntV.setText(dto.getCntV() + "잔");
+		LabelCntV.setText(dto.getCntV() + "ea");
 		
 		total();
 	}
@@ -61,7 +61,7 @@ public class OrderImpl implements Order {
 	public void total() {
 		dto.setSum( dto.getAmericano() * dto.getCntA() + dto.getLatte() * dto.getCntL() + dto.getCapuccino()*dto.getCntC() + dto.getVanilaLatte() * dto.getCntV());
 		Label LabelPrice = (Label)root.lookup("#LabelPrice");
-		LabelPrice.setText(dto.getSum() + "원");
+		LabelPrice.setText(dto.getSum() + "won");
 	}
 
 	

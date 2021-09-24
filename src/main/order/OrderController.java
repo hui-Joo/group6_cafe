@@ -1,14 +1,17 @@
-package order;
+package main.order;
+
+
+import javafx.application.Application;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
 
 import java.net.URL;
 import java.util.ResourceBundle;
 
 import javafx.fxml.Initializable;
-import javafx.scene.Parent;
-import javafx.scene.control.TextField;
 
-public class Controller implements Initializable {
-
+public class OrderController implements Initializable{
 	
 	Parent root;
 	Order order;
