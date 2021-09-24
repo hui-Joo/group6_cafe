@@ -1,22 +1,18 @@
 package waiting;
 
-import java.io.File;
-
 import javafx.scene.Parent;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
 import javafx.scene.control.ProgressBar;
-import javafx.scene.control.ProgressIndicator;
-import javafx.scene.control.Slider;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 import javafx.scene.media.MediaView;
+import javafx.stage.Window;
 
 public class MediaServiceImpl implements MediaService {
-	
+
 	MediaPlayer mediaPlayer;
 	MediaView mediaView;
 	boolean endOfMedia;
+	Controller cont = new Controller();
 
 	ProgressBar progressBar;
 
@@ -27,29 +23,35 @@ public class MediaServiceImpl implements MediaService {
 
 	public void setMedia(Parent root) {
 		setControl(root);
-		Media media = new Media(getClass().getResource("/media/video.m4v").toString());
+		Media media = new Media(getClass().getResource("/media/coffee_mv.mp4").toString());
 		mediaPlayer = new MediaPlayer(media);
 		mediaView.setMediaPlayer(mediaPlayer);
 		mediaPlayer.setOnReady(new Runnable() {
-			
+
 			public void run() {
 
 				mediaPlayer.currentTimeProperty().addListener((a, b, c) -> {
 					double progress = mediaPlayer.getCurrentTime().toSeconds()
 							/ mediaPlayer.getTotalDuration().toSeconds();
 					progressBar.setProgress(progress);
-					
-					
+
 				});
 			}
+			
+
+			});
+		
+		mediaPlayer.setOnEndOfMedia(()->{
+			cont.setNewStage();
 			
 		});
 
 	}
-	
+
 	public void myPlay() {
-		mediaPlayer.play(); 
+		mediaPlayer.play();
 	}
+	
 	public void myStop() {
 		mediaPlayer.stop();
 	}
