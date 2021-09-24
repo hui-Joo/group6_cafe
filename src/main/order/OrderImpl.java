@@ -72,7 +72,7 @@ public class OrderImpl implements Order {
 	@Override
 	public void clickPay() {
 		
-		int result = db.updateMenu(managerDto,orderDto);
+		int result = db.updateMenu(db.setManagerDTO(),orderDto);
 		if (result == 1) {
 			System.out.println("DB연동 성공");
 		} else {
