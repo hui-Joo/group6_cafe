@@ -1,9 +1,17 @@
-package main_Main;
+package main.pay;
 
 
 import java.util.ResourceBundle;
 
+import javax.print.DocFlavor.URL;
+
 import javafx.application.Application;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
 
 public class PayController implements Initializable {
 
@@ -42,4 +50,9 @@ public class PayController implements Initializable {
 		  }
 
 		}
+	@Override
+	public void initialize(java.net.URL arg0, ResourceBundle arg1) {
+		// TODO Auto-generated method stub
+		
+	}
 }
