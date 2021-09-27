@@ -3,10 +3,9 @@ package manager.stock;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.ArrayList;
-
 import common.commonDB.DBClass;
 import manager.commonMA.ManagerDTO;
+
 
 public class Stock_DB {
 	ManagerDTO dto;
@@ -72,5 +71,7 @@ public class Stock_DB {
 
 		return result;
 	}
+	
+	
 
 }

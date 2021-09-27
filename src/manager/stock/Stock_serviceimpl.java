@@ -7,16 +7,15 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.Alert.AlertType;
 import manager.commonMA.ManagerDTO;
 
-public class Stock_serviceimpl {
+public class Stock_serviceimpl implements Stock_service {
 	Stock_DB db;
 	ManagerDTO dto;
 
 	public Stock_serviceimpl() {
 		db = new Stock_DB();
 	}
-//내일textfield 에null값주면경고창같은거띄우고차트랑합쳐서구동시켜보자그리고씬이쁘게만들면될듯
 
-	public void updatebean(Parent root) {
+	public void updateBean(Parent root) {
 		TextField beantext = (TextField) root.lookup("#beantext");
 		Label beanlabel = (Label) root.lookup("#beanlabel");
 
@@ -27,11 +26,9 @@ public class Stock_serviceimpl {
 
 		dto.setBean(bean);
 		int result = db.update(dto);
-		if (result == 1) {
-			System.out.println("원두 추가 성공");
-		} else {
+		if (result == 0) {
 			System.out.println("원두 추가 실패");
-		}
+		} 
 
 	}
 
@@ -47,12 +44,11 @@ public class Stock_serviceimpl {
 		dto.setWater(water);
 
 		int resultwater = db.update(dto);
-		if (resultwater == 1) {
-			System.out.println("물 추가 성공");
-
-		} else {
+		if (resultwater == 0) {
 			System.out.println("물 추가 실패");
 		}
+
+			
 
 	}
 
@@ -68,16 +64,13 @@ public class Stock_serviceimpl {
 		dto.setMilk(milk);
 
 		int resultmilk = db.update(dto);
-		if (resultmilk == 1) {
-			System.out.println("우유 추가 성공");
-
-		} else {
+		if (resultmilk == 0) {
 			System.out.println("우유 추가 실패");
 		}
 
 	}
 
-	public void updatevanila(Parent root) {
+	public void updateVanila(Parent root) {
 		TextField vanilatext = (TextField) root.lookup("#vanilatext");
 		Label vanilalabel = (Label) root.lookup("#vanilalabel");
 
@@ -88,11 +81,8 @@ public class Stock_serviceimpl {
 		dto.setVanilaSyrup(vanila);
 
 		int resultvanila = db.update(dto);
-		if (resultvanila == 1) {
-			System.out.println("바닐라시럽 추가 성공");
-
-		} else {
-			System.out.println("바닐라시럽 추가  실패");
+		if (resultvanila == 0) {
+			System.out.println("바닐라시럽 추가 실패");
 		}
 
 	}
@@ -117,6 +107,7 @@ public class Stock_serviceimpl {
 
 	}
 
+	//경고창 타이밍
 	public void warning() {
 		Alert alert = new Alert(AlertType.WARNING);
 		if (db.selectstock().getBean() < 200) {
@@ -142,7 +133,7 @@ public class Stock_serviceimpl {
 		}
 		if (db.selectstock().getVanilaSyrup() < 200) {
 			alert.setTitle("잔여 재고 경고");
-			alert.setHeaderText("잔여시럽 경고");
+			alert.setHeaderText("잔여 시럽 경고");
 			alert.setContentText("바닐라 시럽이 얼마 남지 않았습니다");
 			alert.show();
 		}
