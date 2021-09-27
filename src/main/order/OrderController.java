@@ -89,6 +89,9 @@ public class OrderController implements Initializable{
 		}
 	}
 
+	public void clickReset() {
+		order.resetMenu();
+	}
 
 	
 }

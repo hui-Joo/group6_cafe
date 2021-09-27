@@ -10,4 +10,5 @@ public interface Order {
 	public void clickCapuccino();
 	public void clickVanilaLatte();
 	public void total();
+	public void resetMenu();
 }
