@@ -65,4 +65,10 @@ public class OrderImpl implements Order {
 		Label LabelPrice = (Label)root.lookup("#LabelPrice");
 		LabelPrice.setText(orderDto.getSum() + "won");
 	}
+
+	@Override
+	public void resetMenu() {
+		System.out.println("reset");
+		
+	}
 }
