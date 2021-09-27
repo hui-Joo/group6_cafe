@@ -30,9 +30,10 @@ public class OrderImpl implements Order {
 		boolean AmeBean = StChk.ChkBean();
 		boolean AmeWater = StChk.ChkWater();
 
-		if (AmeBean = false || AmeWater == false) {
+		if (AmeBean == true || AmeWater == true) {
 			OrderDTO.cntA--;
 		}
+
 		LabelCntA.setText(orderDto.getCntA() + "ea");
 		total();
 
@@ -45,7 +46,7 @@ public class OrderImpl implements Order {
 		boolean LatteBean = StChk.ChkBean();
 		boolean LatteMilk = StChk.ChkMilk();
 
-		if (LatteBean == false || LatteMilk == false) {
+		if (LatteBean == true || LatteMilk == true) {
 			OrderDTO.cntL--;
 
 		}
@@ -61,7 +62,7 @@ public class OrderImpl implements Order {
 		boolean CapuBean = StChk.ChkBean();
 		boolean CapuMilk = StChk.ChkMilk();
 
-		if (CapuBean == false || CapuMilk == false) {
+		if (CapuBean == true || CapuMilk == true) {
 			OrderDTO.cntC--;
 
 		}
@@ -78,7 +79,7 @@ public class OrderImpl implements Order {
 		boolean VaBean = StChk.ChkBean();
 		boolean VaMilk = StChk.ChkMilk();
 		boolean VaSyrup = StChk.ChkVanilaSyrup();
-		if (VaBean == false || VaMilk == false || VaSyrup == false) {
+		if (VaBean == true || VaMilk == true || VaSyrup == true) {
 			OrderDTO.cntV--;
 		}
 
