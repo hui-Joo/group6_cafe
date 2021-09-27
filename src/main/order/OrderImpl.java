@@ -65,4 +65,60 @@ public class OrderImpl implements Order {
 		Label LabelPrice = (Label)root.lookup("#LabelPrice");
 		LabelPrice.setText(orderDto.getSum() + "won");
 	}
+
+	@Override
+	public void resetMenu() { // 고른 메뉴 초기화
+		orderDto.setCntA(0);
+		orderDto.setCntL(0);
+		orderDto.setCntC(0);
+		orderDto.setCntV(0);
+		
+		Label LabelCntA = (Label)root.lookup("#LabelCntA");
+		LabelCntA.setText(orderDto.getCntA() + "ea");
+		
+		Label LabelCntL = (Label)root.lookup("#LabelCntL");
+		LabelCntL.setText(orderDto.getCntL() + "ea");
+		
+		Label LabelCntC = (Label)root.lookup("#LabelCntC");
+		LabelCntC.setText(orderDto.getCntC() + "ea");
+		
+		Label LabelCntV = (Label)root.lookup("#LabelCntV");
+		LabelCntV.setText(orderDto.getCntV() + "ea");
+		
+		total();
+	}
+
+	@Override
+	public void clickMinA() {
+		orderDto.cntA--;
+		Label LabelCntA = (Label)root.lookup("#LabelCntA");
+		LabelCntA.setText(orderDto.getCntA() + "ea");
+		
+		if(orderDto.cntA == 0) {
+			
+		}
+			
+		total();
+		
+	}
+
+	@Override
+	public void clickMinL() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void clickMinC() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void clickMinV() {
+		// TODO Auto-generated method stub
+		
+	}
+	
+	
 }
