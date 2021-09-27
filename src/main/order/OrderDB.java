@@ -11,6 +11,7 @@ public class OrderDB {
 	
 	OrderDTO orderDto ;
 	ManagerDTO dto = OrderDTO.dto;
+	int beanI;
 	
 	
 	public ManagerDTO setManagerDTO() {

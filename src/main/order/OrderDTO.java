@@ -7,10 +7,10 @@ public class OrderDTO {
 	Parent root;
 	public int americano = 2000, latte = 3000, capuccino = 3000, vanilaLatte = 4000;
 	public static int cntA = 0, cntL = 0, cntC = 0, cntV = 0;
-	public static int bean = 200, water = 200, milk = 100, VanilaSyrup = 50;
+	public static int bean = 50, water = 150, milk = 100, VanilaSyrup = 5;
 	public static int sum = 0;
-	public static ManagerDTO dto ;
-	
+	public static ManagerDTO dto;
+
 	public Parent getRoot() {
 		return root;
 	}
@@ -63,7 +63,7 @@ public class OrderDTO {
 		return cntL;
 	}
 
-	public void setCntL(int cntL){
+	public void setCntL(int cntL) {
 		this.cntL = cntL;
 	}
 
@@ -90,9 +90,5 @@ public class OrderDTO {
 	public void setSum(int sum) {
 		this.sum = sum;
 	}
-
-
-
-	
 
 }
