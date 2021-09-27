@@ -1,6 +1,9 @@
 package main.order;
 
 import javafx.scene.Parent;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import manager.commonMA.ManagerDTO;
 
@@ -10,6 +13,7 @@ public class OrderImpl implements Order {
 	OrderDTO orderDto;
 	ManagerDTO managerDto;
 	Parent root;
+	
 	
 	public OrderImpl() {
 		db = new OrderDB();
@@ -24,7 +28,12 @@ public class OrderImpl implements Order {
 	
 	@Override
 	public void clickAmericano() {
+		
 		orderDto.cntA++;
+		
+		Button minA = (Button)root.lookup("#minA");
+		minA.setDisable(false);
+		
 		Label LabelCntA = (Label)root.lookup("#LabelCntA");
 		LabelCntA.setText(orderDto.getCntA() + "ea");
 		
@@ -33,8 +42,13 @@ public class OrderImpl implements Order {
 	}
 
 	@Override
-	public void clickLatte() {				
+	public void clickLatte() {	
+		
 		orderDto.cntL++;
+		
+		Button minL = (Button)root.lookup("#minL");
+		minL.setDisable(false);
+		
 		Label LabelCntL = (Label)root.lookup("#LabelCntL");
 		LabelCntL.setText(orderDto.getCntL() + "ea");
 		
@@ -42,8 +56,13 @@ public class OrderImpl implements Order {
 	}
 
 	@Override
-	public void clickCapuccino() {		
+	public void clickCapuccino() {	
+		
 		orderDto.cntC++;
+		
+		Button minC = (Button)root.lookup("#minC");
+		minC.setDisable(false);
+		
 		Label LabelCntC = (Label)root.lookup("#LabelCntC");
 		LabelCntC.setText(orderDto.getCntC() + "ea");
 
@@ -52,7 +71,12 @@ public class OrderImpl implements Order {
 
 	@Override
 	public void clickVanilaLatte() {
+		
 		orderDto.cntV++;
+		
+		Button minV = (Button)root.lookup("#minV");
+		minV.setDisable(false);
+		
 		Label LabelCntV = (Label)root.lookup("#LabelCntV");
 		LabelCntV.setText(orderDto.getCntV() + "ea");
 		
@@ -90,13 +114,21 @@ public class OrderImpl implements Order {
 
 	@Override
 	public void clickMinA() {
-		orderDto.cntA--;
-		Label LabelCntA = (Label)root.lookup("#LabelCntA");
-		LabelCntA.setText(orderDto.getCntA() + "ea");
+
+		Button minA = (Button)root.lookup("#minA");
 		
-		if(orderDto.cntA == 0) {
+		if (orderDto.cntA>0) {
+			minA.setDisable(false);
+			orderDto.cntA--;
+		} else if (orderDto.cntA<=0) {
+			orderDto.setCntA(0);
+			errorAlert();
+			minA.setDisable(true);
 			
 		}
+
+		Label LabelCntA = (Label)root.lookup("#LabelCntA");
+		LabelCntA.setText(orderDto.getCntA() + "ea");
 			
 		total();
 		
@@ -104,20 +136,62 @@ public class OrderImpl implements Order {
 
 	@Override
 	public void clickMinL() {
-		// TODO Auto-generated method stub
+		
+		Button minL = (Button)root.lookup("#minL");
+		
+		if (orderDto.cntL>0) {
+			minL.setDisable(false);
+			orderDto.cntL--;
+		} else if (orderDto.cntL<=0) {
+			orderDto.setCntL(0);
+			errorAlert();
+			minL.setDisable(true);
+			
+		}
+
+		Label LabelCntL = (Label)root.lookup("#LabelCntL");
+		LabelCntL.setText(orderDto.getCntL() + "ea");
+			
+		total();
 		
 	}
 
 	@Override
 	public void clickMinC() {
-		// TODO Auto-generated method stub
-		
+		Button minC = (Button)root.lookup("#minC");
+		if (orderDto.cntC>0) {
+			minC.setDisable(false);
+			orderDto.cntL--;
+		} else if (orderDto.cntC <=0 ) {
+			orderDto.setCntC(0);
+			errorAlert();
+			minC.setDisable(true);
+		}
+		Label LabelCntC = (Label)root.lookup("#LabelCntC");
+		LabelCntC.setText(orderDto.getCntC()+"ea");
 	}
 
 	@Override
 	public void clickMinV() {
-		// TODO Auto-generated method stub
+		Button minV = (Button)root.lookup("#minV");
+		if(orderDto.cntV > 0) {
+			minV.setDisable(false);
+			orderDto.cntV--;
+		} else if (orderDto.cntV <=0 ){
+			orderDto.setCntV(0);
+			errorAlert();
+			minV.setDisable(true);
+		}
+		Label LabelCntV = (Label)root.lookup("#LabelCntV");
+		LabelCntV.setText(orderDto.getCntV()+"ea");
 		
+	}
+
+	@Override
+	public void errorAlert() {
+		Alert alert = new Alert(AlertType.WARNING);
+		alert.setContentText("주문 가능한 수량이 아닙니다");
+		alert.show();
 	}
 	
 }
