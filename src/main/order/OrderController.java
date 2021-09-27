@@ -92,6 +92,20 @@ public class OrderController implements Initializable{
 	public void clickReset() {
 		order.resetMenu();
 	}
-
 	
+	public void clickMinA() {
+		order.clickMinA();
+	}
+	
+	public void clickMinL() {
+		order.clickMinL();
+	}
+	
+	public void clickMinC() {
+		order.clickMinC();
+	}
+	
+	public void clickMinV() {
+		order.clickMinV();
+	}
 }

@@ -67,7 +67,7 @@ public class OrderImpl implements Order {
 	}
 
 	@Override
-	public void resetMenu() {
+	public void resetMenu() { // 고른 메뉴 초기화
 		orderDto.setCntA(0);
 		orderDto.setCntL(0);
 		orderDto.setCntC(0);
@@ -87,4 +87,38 @@ public class OrderImpl implements Order {
 		
 		total();
 	}
+
+	@Override
+	public void clickMinA() {
+		orderDto.cntA--;
+		Label LabelCntA = (Label)root.lookup("#LabelCntA");
+		LabelCntA.setText(orderDto.getCntA() + "ea");
+		
+		if(orderDto.cntA == 0) {
+			
+		}
+			
+		total();
+		
+	}
+
+	@Override
+	public void clickMinL() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void clickMinC() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void clickMinV() {
+		// TODO Auto-generated method stub
+		
+	}
+	
+	
 }

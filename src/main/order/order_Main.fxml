@@ -13,27 +13,27 @@
    <children>
       <ImageView fitHeight="257.0" fitWidth="361.0" layoutX="22.0" layoutY="83.0" onMouseClicked="#clickAmericano" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@AmericanoButton.jpg" />
+            <Image url="@../img/AmericanoButton.jpg" />
          </image>
       </ImageView>
       <ImageView fitHeight="257.0" fitWidth="361.0" layoutX="402.0" layoutY="83.0" onMouseClicked="#clickLatte" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@CaffelatteButton.jpg" />
+            <Image url="@../img/CaffelatteButton.jpg" />
          </image>
       </ImageView>
       <ImageView fitHeight="257.0" fitWidth="361.0" layoutX="23.0" layoutY="363.0" onMouseClicked="#clickCapuccino" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@CappuccinoButton.jpg" />
+            <Image url="@../img/CappuccinoButton.jpg" />
          </image>
       </ImageView>
       <ImageView fitHeight="257.0" fitWidth="361.0" layoutX="402.0" layoutY="363.0" onMouseClicked="#clickVanilaLatte" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@VanillalatteButton.jpg" />
+            <Image url="@../img/VanillalatteButton.jpg" />
          </image>
       </ImageView>
       <ImageView fitHeight="85.0" fitWidth="100.0" layoutX="664.0" layoutY="646.0" onMouseClicked="#clickPay" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@cardButton.jpg" />
+            <Image url="@../img/cardButton.jpg" />
          </image>
       </ImageView>
       <Separator layoutX="104.0" layoutY="628.0" prefHeight="3.0" prefWidth="572.0" />
@@ -42,12 +42,12 @@
       <Separator layoutX="390.0" layoutY="237.0" orientation="VERTICAL" prefHeight="250.0" prefWidth="0.0" />
       <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="284.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@menu.jpg" />
+            <Image url="@../img/menu.jpg" />
          </image>
       </ImageView>
       <ImageView fitHeight="31.0" fitWidth="31.0" layoutX="727.0" layoutY="739.0" onMouseClicked="#clickAdmin" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@set.png" />
+            <Image url="@../img/set.png" />
          </image>
       </ImageView>
       <Label layoutX="102.0" layoutY="647.0" text="Americano">
@@ -103,6 +103,26 @@
       <Button layoutX="664.0" layoutY="739.0" mnemonicParsing="false" onAction="#clickReset" prefHeight="29.0" prefWidth="54.0" style="-fx-background-color: #fb8ea5;" text="reset" textFill="WHITE">
          <font>
             <Font name="Segoe UI Black" size="13.0" />
+         </font>
+      </Button>
+      <Button layoutX="324.0" layoutY="648.0" mnemonicParsing="false" onAction="#clickMinA" prefHeight="29.0" prefWidth="19.0" text="ㅡ">
+         <font>
+            <Font name="Segoe UI Black" size="12.0" />
+         </font>
+      </Button>
+      <Button layoutX="324.0" layoutY="674.0" mnemonicParsing="false" onAction="#clickMinL" prefHeight="29.0" prefWidth="19.0" text="ㅡ">
+         <font>
+            <Font name="Segoe UI Black" size="12.0" />
+         </font>
+      </Button>
+      <Button layoutX="324.0" layoutY="700.0" mnemonicParsing="false" onAction="#clickMinC" prefHeight="29.0" prefWidth="19.0" text="ㅡ">
+         <font>
+            <Font name="Segoe UI Black" size="12.0" />
+         </font>
+      </Button>
+      <Button layoutX="324.0" layoutY="726.0" mnemonicParsing="false" onAction="#clickMinV" prefHeight="29.0" prefWidth="19.0" text="ㅡ">
+         <font>
+            <Font name="Segoe UI Black" size="12.0" />
          </font>
       </Button>
    </children>
