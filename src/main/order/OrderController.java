@@ -6,6 +6,8 @@ import java.util.ResourceBundle;
 
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 import javafx.stage.Stage;
 import main.StageStore;
 import main.login.*;
@@ -63,6 +65,9 @@ public class OrderController implements Initializable{
 	
 		if (sum == 0) {
 			//장바구니가 비었다는 경고창
+			Alert alert = new Alert(AlertType.CONFIRMATION);
+			alert.setContentText("메뉴를 선택 해주세요");
+			alert.show();
 		}else {
 		try {
 			stage.close();
@@ -87,20 +92,20 @@ public class OrderController implements Initializable{
 	public void clickReset() {
 		order.resetMenu();
 	}
-
+	
 	public void clickMinA() {
-		
+		order.clickMinA();
 	}
 	
 	public void clickMinL() {
-		
+		order.clickMinL();
 	}
 	
 	public void clickMinC() {
-		
+		order.clickMinC();
 	}
 	
 	public void clickMinV() {
-		
+		order.clickMinV();
 	}
 }
