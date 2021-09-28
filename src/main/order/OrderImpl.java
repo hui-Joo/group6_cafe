@@ -219,7 +219,7 @@ public class OrderImpl implements Order {
 		}
 		Label LabelCntC = (Label)root.lookup("#LabelCntC");
 		LabelCntC.setText(orderDto.getCntC()+"ea");
-		
+
 		total();
 	}
 
@@ -239,9 +239,9 @@ public class OrderImpl implements Order {
 		}
 		Label LabelCntV = (Label)root.lookup("#LabelCntV");
 		LabelCntV.setText(orderDto.getCntV()+"ea");
-		
+
 		total();
-		
+
 	}
 
 	@Override
