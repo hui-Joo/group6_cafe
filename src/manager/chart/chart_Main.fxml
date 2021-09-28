@@ -29,7 +29,7 @@
             <Font size="13.0" />
          </font>
       </Label>
-      <Label layoutX="40.0" layoutY="344.0" text="바닐라라떼">
+      <Label layoutX="164.0" layoutY="344.0" text="바닐라라떼">
          <font>
             <Font size="13.0" />
          </font>
@@ -39,7 +39,7 @@
             <Font size="13.0" />
          </font>
       </Label>
-      <Label fx:id="labelCupsVa" layoutX="117.0" layoutY="344.0" text="0잔">
+      <Label fx:id="labelCupsVa" layoutX="249.0" layoutY="344.0" text="0잔">
          <font>
             <Font size="13.0" />
          </font>
@@ -49,7 +49,7 @@
             <Font size="13.0" />
          </font>
       </Label>
-      <Label layoutX="179.0" layoutY="344.0" text="카푸치노">
+      <Label layoutX="47.0" layoutY="344.0" text="카푸치노">
          <font>
             <Font size="13.0" />
          </font>
@@ -59,7 +59,7 @@
             <Font size="13.0" />
          </font>
       </Label>
-      <Label fx:id="labelCupsCa" layoutX="250.0" layoutY="344.0" text="0잔">
+      <Label fx:id="labelCupsCa" layoutX="117.0" layoutY="344.0" text="0잔">
          <font>
             <Font size="13.0" />
          </font>
@@ -75,7 +75,7 @@
             <Font size="13.0" />
          </font>
       </Label>
-      <Label layoutX="337.0" layoutY="344.0" text="바닐라라떼">
+      <Label layoutX="461.0" layoutY="344.0" text="바닐라라떼">
          <font>
             <Font size="13.0" />
          </font>
@@ -85,7 +85,7 @@
             <Font size="13.0" />
          </font>
       </Label>
-      <Label layoutX="480.0" layoutY="344.0" text="카푸치노">
+      <Label layoutX="344.0" layoutY="344.0" text="카푸치노">
          <font>
             <Font size="13.0" />
          </font>
@@ -96,7 +96,7 @@
             <Font size="13.0" />
          </font>
       </Label>
-      <Label fx:id="labelPriceVa" layoutX="415.0" layoutY="344.0" text="0원">
+      <Label fx:id="labelPriceVa" layoutX="547.0" layoutY="344.0" text="0원">
          <font>
             <Font size="13.0" />
          </font>
@@ -106,7 +106,7 @@
             <Font size="13.0" />
          </font>
       </Label>
-      <Label fx:id="labelPriceCa" layoutX="547.0" layoutY="344.0" text="0원">
+      <Label fx:id="labelPriceCa" layoutX="415.0" layoutY="344.0" text="0원">
          <font>
             <Font size="13.0" />
          </font>

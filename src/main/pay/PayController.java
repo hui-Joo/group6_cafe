@@ -4,13 +4,13 @@ package main.pay;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import common.commonStage.StageStore;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import javafx.stage.Window;
-import main.StageStore;
 import main.loading.WaitingMain;
 import main.order.OrderDB;
 import main.order.OrderDTO;
@@ -26,6 +26,7 @@ public class PayController implements Initializable {
 	OrderDTO orderDto ;
 	ManagerDTO dto = OrderDTO.dto;
 	Stock_DB stock;
+	String fxmlName;
 	
 	public void setRoot(Parent root) {
 		this.root = root;
@@ -41,7 +42,7 @@ public class PayController implements Initializable {
 
 	public void newOpen() {
 		try {
-		FXMLLoader loader = new FXMLLoader(getClass().getResource("payment.fxml"));
+		FXMLLoader loader = new FXMLLoader(getClass().getResource(fxmlName));
 		Parent clickRoot = loader.load();
 		Scene scene = new Scene(clickRoot);
 		stage = StageStore.stage;
@@ -57,6 +58,7 @@ public class PayController implements Initializable {
 	//결제수단에 따라 팝업 내용 변경?
 	public void clickCard() {
 		try {
+			fxmlName = "payment.fxml";
 			stage.close();
 			stage = new Stage();
 			newOpen();
@@ -67,6 +69,7 @@ public class PayController implements Initializable {
 
 	public void clickKakao() {
 		try {
+			fxmlName = "payment_kakao.fxml";
 			stage.close();
 			stage = new Stage();
 			newOpen();
@@ -78,6 +81,7 @@ public class PayController implements Initializable {
 	
 	public void clickPayco() {
 		try {
+			fxmlName = "payment_payco.fxml";
 			stage.close();
 			stage = new Stage();
 			newOpen();
@@ -86,7 +90,6 @@ public class PayController implements Initializable {
 		}
 	}
 	
-	//재료 부족시 주문 불가능하게
 	public void clickLoading() {
 		
 		db.setManagerDTO();
