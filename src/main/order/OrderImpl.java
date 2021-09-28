@@ -190,7 +190,7 @@ public class OrderImpl implements Order {
 		Button minC = (Button)root.lookup("#minC");
 		if (orderDto.cntC>0) {
 			minC.setDisable(false);
-			orderDto.cntL--;
+			orderDto.cntC--;
 		} else if (orderDto.cntC <=0 ) {
 			orderDto.setCntC(0);
 			errorAlert();
