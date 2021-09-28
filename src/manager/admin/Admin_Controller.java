@@ -57,6 +57,8 @@ public class Admin_Controller implements Initializable {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+		
+		
 	}
 
 }

@@ -84,8 +84,6 @@ public class PayController implements Initializable {
 			e.printStackTrace();
 		}
 	}
-
-	// 재료 부족시 주문 불가능하게
 	public void clickLoading() {
 
 		db.setManagerDTO();
