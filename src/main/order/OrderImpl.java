@@ -55,6 +55,9 @@ public class OrderImpl implements Order {
 
 		if (AmeBean == true || AmeWater == true) {
 			OrderDTO.cntA--;
+			if (orderDto.cntA==0) {
+				minA.setDisable(true);
+			}
 		}
 
 		Label LabelCntA = (Label)root.lookup("#LabelCntA");
@@ -76,6 +79,9 @@ public class OrderImpl implements Order {
 
 		if (LatteBean == true || LatteMilk == true) {
 			OrderDTO.cntL--;
+			if (orderDto.cntL==0) {
+				minL.setDisable(true);
+			}
 		}
 		
 		Label LabelCntL = (Label) root.lookup("#LabelCntL");
@@ -95,6 +101,9 @@ public class OrderImpl implements Order {
 
 		if (CapuBean == true || CapuMilk == true) {
 			OrderDTO.cntC--;
+			if (orderDto.cntC==0) {
+				minC.setDisable(true);
+			}
 
 		}
 
@@ -117,6 +126,9 @@ public class OrderImpl implements Order {
 		boolean VaSyrup = StChk.ChkVanilaSyrup();
 		if (VaBean == true || VaMilk == true || VaSyrup == true) {
 			OrderDTO.cntV--;
+			if (orderDto.cntV==0) {
+				minV.setDisable(true);
+			}
 		}
 		
 		Label LabelCntV = (Label) root.lookup("#LabelCntV");
