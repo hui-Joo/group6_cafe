@@ -24,6 +24,18 @@ public class OrderImpl implements Order {
 	@Override
 	public void setRoot(Parent root) {
 		this.root = root;
+		buttonSetting();
+	}
+	
+	public void buttonSetting() {
+		Button minA = (Button)root.lookup("#minA");
+		Button minL = (Button)root.lookup("#minL");
+		Button minC = (Button)root.lookup("#minC");
+		Button minV = (Button)root.lookup("#minV");
+		minA.setDisable(true);
+		minL.setDisable(true);
+		minC.setDisable(true);
+		minV.setDisable(true);
 	}
 
 	@Override
@@ -149,6 +161,9 @@ public class OrderImpl implements Order {
 		if (orderDto.cntA>0) {
 			minA.setDisable(false);
 			orderDto.cntA--;
+			if (orderDto.cntA==0) {
+				minA.setDisable(true);
+			}
 		} else if (orderDto.cntA<=0) {
 			orderDto.setCntA(0);
 			errorAlert();
@@ -171,6 +186,9 @@ public class OrderImpl implements Order {
 		if (orderDto.cntL>0) {
 			minL.setDisable(false);
 			orderDto.cntL--;
+			if (orderDto.cntL==0) {
+				minL.setDisable(true);
+			}
 		} else if (orderDto.cntL<=0) {
 			orderDto.setCntL(0);
 			errorAlert();
@@ -191,6 +209,9 @@ public class OrderImpl implements Order {
 		if (orderDto.cntC>0) {
 			minC.setDisable(false);
 			orderDto.cntC--;
+			if (orderDto.cntC==0) {
+				minC.setDisable(true);
+			}
 		} else if (orderDto.cntC <=0 ) {
 			orderDto.setCntC(0);
 			errorAlert();
@@ -198,6 +219,8 @@ public class OrderImpl implements Order {
 		}
 		Label LabelCntC = (Label)root.lookup("#LabelCntC");
 		LabelCntC.setText(orderDto.getCntC()+"ea");
+		
+		total();
 	}
 
 	@Override
@@ -206,6 +229,9 @@ public class OrderImpl implements Order {
 		if(orderDto.cntV > 0) {
 			minV.setDisable(false);
 			orderDto.cntV--;
+			if (orderDto.cntV==0) {
+				minV.setDisable(true);
+			}
 		} else if (orderDto.cntV <=0 ){
 			orderDto.setCntV(0);
 			errorAlert();
@@ -213,6 +239,8 @@ public class OrderImpl implements Order {
 		}
 		Label LabelCntV = (Label)root.lookup("#LabelCntV");
 		LabelCntV.setText(orderDto.getCntV()+"ea");
+		
+		total();
 		
 	}
 
