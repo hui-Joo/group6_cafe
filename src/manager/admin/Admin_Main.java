@@ -6,10 +6,6 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-<<<<<<< HEAD
-=======
-import common.commonStage.*;
->>>>>>> 0cf6ff79f535b6bdaecfd306f65a9d43a18daea3
 
 public class Admin_Main extends Application {
 	@Override
@@ -26,10 +22,4 @@ public class Admin_Main extends Application {
 		arg0.setScene(scene);
 		arg0.show();
 	}
-	//씬빌더 수정 필요
-
-//	public static void main(String[] args) {
-//		launch(args);
-////////	}
-	//
 }

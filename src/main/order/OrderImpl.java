@@ -143,6 +143,13 @@ public class OrderImpl implements Order {
 		LabelPrice.setText(orderDto.getSum() + "won");
 	}
 
+	public void ZeroCnt() {// 메뉴 선택 중 관리자 모드 갔다가 다시 주문창으로 돌아오면 전에 주문했던 값 남아있어서 값 초기화 시켜줌
+		orderDto.setCntA(0);
+		orderDto.setCntL(0);
+		orderDto.setCntC(0);
+		orderDto.setCntV(0);
+	}
+
 	@Override
 	public void resetMenu() { // 고른 메뉴 초기화
 		orderDto.setCntA(0);
