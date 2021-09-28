@@ -1,4 +1,4 @@
-package main;
+package common.commonStage;
 
 import javafx.stage.Stage;
 
