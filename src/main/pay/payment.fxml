@@ -13,5 +13,10 @@
             <Image url="@../img/pay_completion_card.jpg" />
          </image>
       </ImageView>
+      <ImageView fitHeight="48.0" fitWidth="492.0" layoutX="74.0" layoutY="674.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/close.jpg" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>
