@@ -44,6 +44,7 @@ public class OrderImpl implements Order {
 		Button minA = (Button) root.lookup("#minA");
 		minA.setDisable(false);
 
+		Label LabelCntA = (Label) root.lookup("#LabelCntA");
 		boolean AmeBean = StChk.ChkBean();
 		boolean AmeWater = StChk.ChkWater();
 
@@ -51,7 +52,6 @@ public class OrderImpl implements Order {
 			OrderDTO.cntA--;
 		}
 
-		Label LabelCntA = (Label) root.lookup("#LabelCntA");
 		LabelCntA.setText(orderDto.getCntA() + "ea");
 		total();
 
@@ -65,6 +65,8 @@ public class OrderImpl implements Order {
 		Button minL = (Button) root.lookup("#minL");
 		minL.setDisable(false);
 
+		orderDto.cntL++;
+		Label LabelCntL = (Label) root.lookup("#LabelCntL");
 		boolean LatteBean = StChk.ChkBean();
 		boolean LatteMilk = StChk.ChkMilk();
 
@@ -72,9 +74,10 @@ public class OrderImpl implements Order {
 			OrderDTO.cntL--;
 		}
 
-		Label LabelCntL = (Label) root.lookup("#LabelCntL");
 		LabelCntL.setText(orderDto.getCntL() + "ea");
+
 		total();
+
 	}
 
 	@Override
@@ -84,15 +87,15 @@ public class OrderImpl implements Order {
 
 		Button minC = (Button) root.lookup("#minC");
 		minC.setDisable(false);
+		orderDto.cntC++;
+		Label LabelCntC = (Label) root.lookup("#LabelCntC");
 		boolean CapuBean = StChk.ChkBean();
 		boolean CapuMilk = StChk.ChkMilk();
 
 		if (CapuBean == true || CapuMilk == true) {
 			OrderDTO.cntC--;
-
 		}
 
-		Label LabelCntC = (Label) root.lookup("#LabelCntC");
 		LabelCntC.setText(orderDto.getCntC() + "ea");
 
 		total();
@@ -106,6 +109,7 @@ public class OrderImpl implements Order {
 		Button minV = (Button) root.lookup("#minV");
 		minV.setDisable(false);
 
+		Label LabelCntV = (Label) root.lookup("#LabelCntV");
 		boolean VaBean = StChk.ChkBean();
 		boolean VaMilk = StChk.ChkMilk();
 		boolean VaSyrup = StChk.ChkVanilaSyrup();
@@ -113,7 +117,6 @@ public class OrderImpl implements Order {
 			OrderDTO.cntV--;
 		}
 
-		Label LabelCntV = (Label) root.lookup("#LabelCntV");
 		LabelCntV.setText(orderDto.getCntV() + "ea");
 		total();
 	}
