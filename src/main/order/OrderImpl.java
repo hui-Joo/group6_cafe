@@ -190,7 +190,7 @@ public class OrderImpl implements Order {
 		Button minC = (Button)root.lookup("#minC");
 		if (orderDto.cntC>0) {
 			minC.setDisable(false);
-			orderDto.cntL--;
+			orderDto.cntC--;
 		} else if (orderDto.cntC <=0 ) {
 			orderDto.setCntC(0);
 			errorAlert();
@@ -198,6 +198,7 @@ public class OrderImpl implements Order {
 		}
 		Label LabelCntC = (Label)root.lookup("#LabelCntC");
 		LabelCntC.setText(orderDto.getCntC()+"ea");
+		total();
 	}
 
 	@Override
@@ -213,7 +214,7 @@ public class OrderImpl implements Order {
 		}
 		Label LabelCntV = (Label)root.lookup("#LabelCntV");
 		LabelCntV.setText(orderDto.getCntV()+"ea");
-		
+		total();
 	}
 
 	@Override
