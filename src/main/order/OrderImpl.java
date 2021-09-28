@@ -24,7 +24,20 @@ public class OrderImpl implements Order {
 	@Override
 	public void setRoot(Parent root) {
 		this.root = root;
+		buttonSetting();
 	}
+	
+	public void buttonSetting() {
+		Button minA = (Button)root.lookup("#minA");
+		Button minL = (Button)root.lookup("#minL");
+		Button minC = (Button)root.lookup("#minC");
+		Button minV = (Button)root.lookup("#minV");
+		minA.setDisable(true);
+		minL.setDisable(true);
+		minC.setDisable(true);
+		minV.setDisable(true);
+	}
+
 
 	@Override
 	public void clickAmericano() {
@@ -137,6 +150,7 @@ public class OrderImpl implements Order {
 		LabelCntV.setText(orderDto.getCntV() + "ea");
 
 		total();
+		buttonSetting();
 	}
 
 	@Override
@@ -147,11 +161,17 @@ public class OrderImpl implements Order {
 		if (orderDto.cntA > 0) {
 			minA.setDisable(false);
 			orderDto.cntA--;
+<<<<<<< HEAD
 		} else if (orderDto.cntA <= 0) {
 			orderDto.setCntA(0);
 			errorAlert();
 			minA.setDisable(true);
 
+=======
+			if (orderDto.cntA==0) {
+				minA.setDisable(true);
+			}
+>>>>>>> 7685aaa7e08326355d54cd7776fd6116b354d5c3
 		}
 
 		Label LabelCntA = (Label) root.lookup("#LabelCntA");
@@ -169,12 +189,19 @@ public class OrderImpl implements Order {
 		if (orderDto.cntL > 0) {
 			minL.setDisable(false);
 			orderDto.cntL--;
+<<<<<<< HEAD
 		} else if (orderDto.cntL <= 0) {
 			orderDto.setCntL(0);
 			errorAlert();
 			minL.setDisable(true);
 
 		}
+=======
+			if (orderDto.cntL==0) {
+				minL.setDisable(true);
+			}
+		} 
+>>>>>>> 7685aaa7e08326355d54cd7776fd6116b354d5c3
 
 		Label LabelCntL = (Label) root.lookup("#LabelCntL");
 		LabelCntL.setText(orderDto.getCntL() + "ea");
@@ -190,10 +217,16 @@ public class OrderImpl implements Order {
 		if (orderDto.cntC > 0) {
 			minC.setDisable(false);
 			orderDto.cntC--;
+<<<<<<< HEAD
 		} else if (orderDto.cntC <= 0) {
 			orderDto.setCntC(0);
 			errorAlert();
 			minC.setDisable(true);
+=======
+			if (orderDto.cntC==0) {
+				minC.setDisable(true);
+			}
+>>>>>>> 7685aaa7e08326355d54cd7776fd6116b354d5c3
 		}
 		Label LabelCntC = (Label) root.lookup("#LabelCntC");
 		LabelCntC.setText(orderDto.getCntC() + "ea");
@@ -206,6 +239,7 @@ public class OrderImpl implements Order {
 		if (orderDto.cntV > 0) {
 			minV.setDisable(false);
 			orderDto.cntV--;
+<<<<<<< HEAD
 		} else if (orderDto.cntV <= 0) {
 			orderDto.setCntV(0);
 			errorAlert();
@@ -224,3 +258,16 @@ public class OrderImpl implements Order {
 	}
 
 }
+=======
+			if (orderDto.cntV==0) {
+				minV.setDisable(true);
+			}
+		} 
+		Label LabelCntV = (Label)root.lookup("#LabelCntV");
+		LabelCntV.setText(orderDto.getCntV()+"ea");
+		total();
+	}
+
+	
+}///
+>>>>>>> 7685aaa7e08326355d54cd7776fd6116b354d5c3
