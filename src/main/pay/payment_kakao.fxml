@@ -10,7 +10,7 @@
       <Pane layoutX="440.0" layoutY="560.0" prefHeight="200.0" prefWidth="200.0" />
       <ImageView fitHeight="773.0" fitWidth="610.0" layoutX="14.0" layoutY="-6.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../img/pay_completion_card.jpg" />
+            <Image url="@../img/pay_completion_kakaopay.jpg" />
          </image>
       </ImageView>
       <ImageView accessibleRole="BUTTON" fitHeight="48.0" fitWidth="492.0" layoutX="74.0" layoutY="674.0" onMouseClicked="#clickLoading" pickOnBounds="true" preserveRatio="true">
