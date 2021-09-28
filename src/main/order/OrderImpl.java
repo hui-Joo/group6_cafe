@@ -65,7 +65,6 @@ public class OrderImpl implements Order {
 		Button minL = (Button) root.lookup("#minL");
 		minL.setDisable(false);
 
-		orderDto.cntL++;
 		Label LabelCntL = (Label) root.lookup("#LabelCntL");
 		boolean LatteBean = StChk.ChkBean();
 		boolean LatteMilk = StChk.ChkMilk();
@@ -87,7 +86,6 @@ public class OrderImpl implements Order {
 
 		Button minC = (Button) root.lookup("#minC");
 		minC.setDisable(false);
-		orderDto.cntC++;
 		Label LabelCntC = (Label) root.lookup("#LabelCntC");
 		boolean CapuBean = StChk.ChkBean();
 		boolean CapuMilk = StChk.ChkMilk();
