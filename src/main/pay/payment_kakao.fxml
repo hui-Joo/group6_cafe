@@ -13,7 +13,7 @@
             <Image url="@../img/pay_completion_kakaopay.jpg" />
          </image>
       </ImageView>
-      <ImageView fitHeight="48.0" fitWidth="492.0" layoutX="74.0" layoutY="674.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView accessibleRole="BUTTON" fitHeight="48.0" fitWidth="492.0" layoutX="74.0" layoutY="674.0" onMouseClicked="#clickLoading" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../img/close.jpg" />
          </image>
