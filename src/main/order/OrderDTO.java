@@ -51,7 +51,7 @@ public class OrderDTO {
 		this.vanilaLatte = vanilaLatte;
 	}
 
-	public int getCntA() {
+	public static int getCntA() {
 		return cntA;
 	}
 

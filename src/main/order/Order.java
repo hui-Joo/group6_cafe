@@ -16,5 +16,10 @@ public interface Order {
 	public void clickMinC();
 	public void clickMinV();
 	public void errorAlert();
+	public void clickPluA();
+	public void clickPluL();
+	public void clickPluC();
+	public void clickPluV();
+	
 	
 }

@@ -24,9 +24,9 @@ public class OrderImpl implements Order {
 	@Override
 	public void setRoot(Parent root) {
 		this.root = root;
-		buttonSetting();
+		//buttonSetting();
 	}
-	
+	/*
 	public void buttonSetting() {
 		Button minA = (Button)root.lookup("#minA");
 		Button minL = (Button)root.lookup("#minL");
@@ -37,15 +37,17 @@ public class OrderImpl implements Order {
 		minC.setDisable(true);
 		minV.setDisable(true);
 	}
-
+*/
 
 	@Override
 	public void clickAmericano() {
-
+		
+		
 		orderDto.cntA++;
-
+		
 		Button minA = (Button) root.lookup("#minA");
 		minA.setDisable(false);
+		
 
 		boolean AmeBean = StChk.ChkBean();
 		boolean AmeWater = StChk.ChkWater();
@@ -53,7 +55,7 @@ public class OrderImpl implements Order {
 		if (AmeBean == true || AmeWater == true) {
 			OrderDTO.cntA--;
 		}
-
+		
 		Label LabelCntA = (Label) root.lookup("#LabelCntA");
 		LabelCntA.setText(orderDto.getCntA() + "ea");
 
@@ -150,7 +152,7 @@ public class OrderImpl implements Order {
 		LabelCntV.setText(orderDto.getCntV() + "ea");
 
 		total();
-		buttonSetting();
+		//buttonSetting();
 	}
 
 	@Override
@@ -161,19 +163,13 @@ public class OrderImpl implements Order {
 		if (orderDto.cntA > 0) {
 			minA.setDisable(false);
 			orderDto.cntA--;
-<<<<<<< HEAD
 		} else if (orderDto.cntA <= 0) {
 			orderDto.setCntA(0);
 			errorAlert();
 			minA.setDisable(true);
 
-=======
-			if (orderDto.cntA==0) {
-				minA.setDisable(true);
-			}
->>>>>>> 7685aaa7e08326355d54cd7776fd6116b354d5c3
 		}
-
+		
 		Label LabelCntA = (Label) root.lookup("#LabelCntA");
 		LabelCntA.setText(orderDto.getCntA() + "ea");
 
@@ -189,20 +185,12 @@ public class OrderImpl implements Order {
 		if (orderDto.cntL > 0) {
 			minL.setDisable(false);
 			orderDto.cntL--;
-<<<<<<< HEAD
 		} else if (orderDto.cntL <= 0) {
 			orderDto.setCntL(0);
 			errorAlert();
 			minL.setDisable(true);
 
 		}
-=======
-			if (orderDto.cntL==0) {
-				minL.setDisable(true);
-			}
-		} 
->>>>>>> 7685aaa7e08326355d54cd7776fd6116b354d5c3
-
 		Label LabelCntL = (Label) root.lookup("#LabelCntL");
 		LabelCntL.setText(orderDto.getCntL() + "ea");
 
@@ -217,16 +205,10 @@ public class OrderImpl implements Order {
 		if (orderDto.cntC > 0) {
 			minC.setDisable(false);
 			orderDto.cntC--;
-<<<<<<< HEAD
 		} else if (orderDto.cntC <= 0) {
 			orderDto.setCntC(0);
 			errorAlert();
 			minC.setDisable(true);
-=======
-			if (orderDto.cntC==0) {
-				minC.setDisable(true);
-			}
->>>>>>> 7685aaa7e08326355d54cd7776fd6116b354d5c3
 		}
 		Label LabelCntC = (Label) root.lookup("#LabelCntC");
 		LabelCntC.setText(orderDto.getCntC() + "ea");
@@ -239,7 +221,6 @@ public class OrderImpl implements Order {
 		if (orderDto.cntV > 0) {
 			minV.setDisable(false);
 			orderDto.cntV--;
-<<<<<<< HEAD
 		} else if (orderDto.cntV <= 0) {
 			orderDto.setCntV(0);
 			errorAlert();
@@ -257,17 +238,43 @@ public class OrderImpl implements Order {
 		alert.show();
 	}
 
-}
-=======
-			if (orderDto.cntV==0) {
-				minV.setDisable(true);
-			}
-		} 
-		Label LabelCntV = (Label)root.lookup("#LabelCntV");
-		LabelCntV.setText(orderDto.getCntV()+"ea");
+	@Override
+	public void clickPluA() {
+		orderDto.cntA++;
+		
+		Label LabelCntA = (Label) root.lookup("#LabelCntA");
+		LabelCntA.setText(orderDto.getCntA() + "ea");
 		total();
+		
 	}
 
+	@Override
+	public void clickPluL() {
+		orderDto.cntL++;
+		
+		Label LabelCntL = (Label)root.lookup("#LabelCntL");
+		LabelCntL.setText(orderDto.getCntL() + "ea");
+		total();
+		
+	}
+
+	@Override
+	public void clickPluC() {
+		Label LabelCntC = (Label)root.lookup("#LabelCntC");
+		LabelCntC.setText(orderDto.getCntC() + "ea");
+		total();
+		
+	}
+
+	@Override
+	public void clickPluV() {
+		/*Label LabelCntV = (Label)root.lookup("#LabelCntV");
+		LabelCntV.setText(orderDto.getCntV() + "ea");
+		total();
+		*/
+	}
 	
-}///
->>>>>>> 7685aaa7e08326355d54cd7776fd6116b354d5c3
+
+
+}
+

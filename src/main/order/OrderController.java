@@ -103,4 +103,20 @@ public class OrderController implements Initializable {
 	public void clickMinV() {
 		order.clickMinV();
 	}
+	
+	public void clickPluA() {
+		order.clickPluA();
+	}
+	
+	public void clickPluL() {
+		order.clickPluL();
+	}
+	
+	public void clickPluC() {
+		order.clickPluC();
+	}
+	
+	public void clickPluV() {
+		order.clickPluV();
+	}
 }

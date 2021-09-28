@@ -12,7 +12,49 @@
 
 <AnchorPane prefHeight="783.0" prefWidth="785.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.order.OrderController">
    <children>
-      <Pane prefHeight="783.0" prefWidth="786.0"  style="-fx-border-radius: 30; -fx-background-color: #FFFFFF;"/>
+      <Pane prefHeight="783.0" prefWidth="786.0" style="-fx-border-radius: 30; -fx-background-color: #FFFFFF;">
+         <children>
+            <Button fx:id="minA" layoutX="240.0" layoutY="653.0" mnemonicParsing="false" onAction="#clickMinA" prefHeight="25.0" prefWidth="20.0" text="ㅡ">
+               <font>
+                  <Font name="Segoe UI Black" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="minL" layoutX="240.0" layoutY="678.0" mnemonicParsing="false" onAction="#clickMinL" prefHeight="25.0" prefWidth="28.0" text="ㅡ">
+               <font>
+                  <Font name="Segoe UI Black" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="minC" layoutX="240.0" layoutY="703.0" mnemonicParsing="false" onAction="#clickMinC" prefHeight="25.0" prefWidth="28.0" text="ㅡ">
+               <font>
+                  <Font name="Segoe UI Black" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="minV" layoutX="240.0" layoutY="728.0" mnemonicParsing="false" onAction="#clickMinV" prefHeight="25.0" prefWidth="28.0" text="ㅡ">
+               <font>
+                  <Font name="Segoe UI Black" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="pluA" layoutX="322.0" layoutY="652.0" mnemonicParsing="false" onAction="#clickPluA" prefHeight="25.0" prefWidth="20.0" text="+">
+               <font>
+                  <Font name="Segoe UI Black" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="pluL" layoutX="322.0" layoutY="678.0" mnemonicParsing="false" onAction="#clickPluL" prefHeight="25.0" prefWidth="20.0" text="+">
+               <font>
+                  <Font name="Segoe UI Black" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="pluC" layoutX="322.0" layoutY="703.0" mnemonicParsing="false" onAction="#clickPluC" prefHeight="25.0" prefWidth="20.0" text="+">
+               <font>
+                  <Font name="Segoe UI Black" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="pluV" layoutX="322.0" layoutY="728.0" mnemonicParsing="false" onAction="#clickPluV" prefHeight="25.0" prefWidth="20.0" text="+">
+               <font>
+                  <Font name="Segoe UI Black" size="12.0" />
+               </font>
+            </Button>
+         </children></Pane>
       <ImageView fitHeight="257.0" fitWidth="361.0" layoutX="22.0" layoutY="83.0" onMouseClicked="#clickAmericano" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../img/AmericanoButton.jpg" />
@@ -105,26 +147,6 @@
       <Button layoutX="664.0" layoutY="739.0" mnemonicParsing="false" onAction="#clickReset" prefHeight="29.0" prefWidth="54.0" style="-fx-background-color: #fb8ea5;" text="reset" textFill="WHITE">
          <font>
             <Font name="Segoe UI Black" size="13.0" />
-         </font>
-      </Button>
-      <Button fx:id="minA" layoutX="324.0" layoutY="648.0" mnemonicParsing="false" onAction="#clickMinA" prefHeight="29.0" prefWidth="19.0" text="ㅡ">
-         <font>
-            <Font name="Segoe UI Black" size="12.0" />
-         </font>
-      </Button>
-      <Button fx:id="minL" layoutX="324.0" layoutY="674.0" mnemonicParsing="false" onAction="#clickMinL" prefHeight="29.0" prefWidth="19.0" text="ㅡ">
-         <font>
-            <Font name="Segoe UI Black" size="12.0" />
-         </font>
-      </Button>
-      <Button fx:id="minC" layoutX="324.0" layoutY="700.0" mnemonicParsing="false" onAction="#clickMinC" prefHeight="29.0" prefWidth="19.0" text="ㅡ">
-         <font>
-            <Font name="Segoe UI Black" size="12.0" />
-         </font>
-      </Button>
-      <Button fx:id="minV" layoutX="324.0" layoutY="726.0" mnemonicParsing="false" onAction="#clickMinV" prefHeight="29.0" prefWidth="19.0" text="ㅡ">
-         <font>
-            <Font name="Segoe UI Black" size="12.0" />
          </font>
       </Button>
    </children>
