@@ -3,12 +3,12 @@ package main.loading;
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 
-import common.commonStage.StageStore;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import main.StageStore;
 
 public class WaitingMain extends Application {
 

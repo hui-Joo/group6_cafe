@@ -3,7 +3,6 @@ package main.loading;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-import common.commonStage.StageStore;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;

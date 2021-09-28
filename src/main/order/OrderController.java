@@ -3,12 +3,12 @@ package main.order;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-import common.commonStage.StageStore;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 import javafx.stage.Stage;
+import main.StageStore;
 import main.login.*;
 import main.pay.*;
 import manager.stock.Stock_DB;

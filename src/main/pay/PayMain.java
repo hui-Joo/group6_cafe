@@ -1,11 +1,11 @@
 package main.pay;
 
-import common.commonStage.StageStore;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import main.StageStore;
 
 public class PayMain extends Application {
 	public void start(Stage primaryStage) throws Exception {

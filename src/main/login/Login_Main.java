@@ -1,11 +1,11 @@
 package main.login;
 
-import common.commonStage.StageStore;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import main.StageStore;
 
 public class Login_Main extends Application {
 
