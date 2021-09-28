@@ -1,6 +1,8 @@
 package main.order;
 
 import javafx.scene.Parent;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import manager.commonMA.ManagerDTO;
@@ -53,6 +55,7 @@ public class OrderImpl implements Order {
 		}
 
 		LabelCntA.setText(orderDto.getCntA() + "ea");
+
 		total();
 
 	}
@@ -161,6 +164,10 @@ public class OrderImpl implements Order {
 			if (orderDto.cntA == 0) {
 				minA.setDisable(true);
 			}
+		} else if (orderDto.cntA <= 0) {
+			orderDto.setCntA(0);
+			minA.setDisable(true);
+
 		}
 
 		Label LabelCntA = (Label) root.lookup("#LabelCntA");
@@ -181,21 +188,27 @@ public class OrderImpl implements Order {
 			if (orderDto.cntL == 0) {
 				minL.setDisable(true);
 			}
-		}
+		} else if (orderDto.cntL <= 0) {
+			orderDto.setCntL(0);
+			minL.setDisable(true);
 
+		}
 		Label LabelCntL = (Label) root.lookup("#LabelCntL");
 		LabelCntL.setText(orderDto.getCntL() + "ea");
 
 		total();
-
 	}
 
 	@Override
 	public void clickMinC() {
 		Button minC = (Button) root.lookup("#minC");
+
 		if (orderDto.cntC > 0) {
 			minC.setDisable(false);
 			orderDto.cntC--;
+		} else if (orderDto.cntC <= 0) {
+			orderDto.setCntC(0);
+			minC.setDisable(true);
 			if (orderDto.cntC == 0) {
 				minC.setDisable(true);
 			}
@@ -214,16 +227,14 @@ public class OrderImpl implements Order {
 			if (orderDto.cntV == 0) {
 				minV.setDisable(true);
 			}
+		} else if (orderDto.cntV <= 0) {
+			orderDto.setCntV(0);
+			minV.setDisable(true);
 		}
 		Label LabelCntV = (Label) root.lookup("#LabelCntV");
 		LabelCntV.setText(orderDto.getCntV() + "ea");
 		total();
 	}
 
-	@Override
-	public void errorAlert() {
-		// TODO Auto-generated method stub
 
-	}
-
-}
+}///
