@@ -52,6 +52,9 @@ public class OrderImpl implements Order {
 
 		if (AmeBean == true || AmeWater == true) {
 			OrderDTO.cntA--;
+			if (orderDto.cntA == 0) {
+				minA.setDisable(true);
+			}
 		}
 
 		LabelCntA.setText(orderDto.getCntA() + "ea");
@@ -74,6 +77,9 @@ public class OrderImpl implements Order {
 
 		if (LatteBean == true || LatteMilk == true) {
 			OrderDTO.cntL--;
+			if (orderDto.cntL == 0) {
+				minL.setDisable(true);
+			}
 		}
 
 		LabelCntL.setText(orderDto.getCntL() + "ea");
@@ -95,6 +101,10 @@ public class OrderImpl implements Order {
 
 		if (CapuBean == true || CapuMilk == true) {
 			OrderDTO.cntC--;
+			if (orderDto.cntC == 0) {
+				minC.setDisable(true);
+			}
+
 		}
 
 		LabelCntC.setText(orderDto.getCntC() + "ea");
@@ -116,6 +126,9 @@ public class OrderImpl implements Order {
 		boolean VaSyrup = StChk.ChkVanilaSyrup();
 		if (VaBean == true || VaMilk == true || VaSyrup == true) {
 			OrderDTO.cntV--;
+			if (orderDto.cntV == 0) {
+				minV.setDisable(true);
+			}
 		}
 
 		LabelCntV.setText(orderDto.getCntV() + "ea");
@@ -193,10 +206,12 @@ public class OrderImpl implements Order {
 			minL.setDisable(true);
 
 		}
+
 		Label LabelCntL = (Label) root.lookup("#LabelCntL");
 		LabelCntL.setText(orderDto.getCntL() + "ea");
 
 		total();
+
 	}
 
 	@Override
@@ -213,6 +228,7 @@ public class OrderImpl implements Order {
 				minC.setDisable(true);
 			}
 		}
+
 		Label LabelCntC = (Label) root.lookup("#LabelCntC");
 		LabelCntC.setText(orderDto.getCntC() + "ea");
 		total();
@@ -221,6 +237,7 @@ public class OrderImpl implements Order {
 	@Override
 	public void clickMinV() {
 		Button minV = (Button) root.lookup("#minV");
+
 		if (orderDto.cntV > 0) {
 			minV.setDisable(false);
 			orderDto.cntV--;
@@ -231,10 +248,10 @@ public class OrderImpl implements Order {
 			orderDto.setCntV(0);
 			minV.setDisable(true);
 		}
+
 		Label LabelCntV = (Label) root.lookup("#LabelCntV");
 		LabelCntV.setText(orderDto.getCntV() + "ea");
 		total();
 	}
-
 
 }///
