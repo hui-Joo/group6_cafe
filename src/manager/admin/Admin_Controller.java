@@ -10,6 +10,7 @@ import javafx.stage.Stage;
 import manager.chart.Chart_Main;
 import manager.stock.StockMain;
 import main.*;
+import main.order.OrderImpl;
 
 public class Admin_Controller implements Initializable {
 
@@ -18,9 +19,11 @@ public class Admin_Controller implements Initializable {
 	Stage stage;
 	Chart_Main cm;
 	MainClass main;
+	OrderImpl od;
 
 	public void setRoot(Parent root) {
 		this.root = root;
+		od = new OrderImpl();
 	}
 
 	@Override

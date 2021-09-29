@@ -22,10 +22,4 @@ public class Admin_Main extends Application {
 		arg0.setScene(scene);
 		arg0.show();
 	}
-	//씬빌더 수정 필요
-
-//	public static void main(String[] args) {
-//		launch(args);
-//	}
-	
 }

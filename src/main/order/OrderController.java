@@ -22,6 +22,7 @@ public class OrderController implements Initializable {
 	Login_Main login;
 	PayMain pay;
 	int sum;
+	OrderImpl od;
 
 	public void setRoot(Parent root) {
 		this.root = root;
@@ -34,6 +35,8 @@ public class OrderController implements Initializable {
 		db = new OrderDB();
 		login = new Login_Main();
 		pay = new PayMain();
+		od = new OrderImpl();
+
 	}
 
 	public void clickAmericano() {
@@ -75,6 +78,8 @@ public class OrderController implements Initializable {
 	}
 
 	public void clickAdmin() {
+		// 메뉴 선택 중 관리자 모드 갔다가 다시 주문창으로 돌아오면 전에 주문했던 값 남아있어서 값 초기화 시켜줌
+		od.ZeroCnt();
 		try {
 			stage.close();
 			stage = new Stage();
