@@ -25,9 +25,9 @@ public class Order_ChkStock {
 		boolean flag;
 
 		if (dto.getBean() < sum) {
-			alert = new Alert(AlertType.ERROR);
+			alert = new Alert(AlertType.INFORMATION);
 			alert.setTitle("재료 부족");
-			alert.setHeaderText(" ");
+			alert.setHeaderText("");
 			alert.setContentText("원두가 부족합니다.");
 			alert.show();
 			flag = true;
@@ -44,9 +44,9 @@ public class Order_ChkStock {
 		boolean flag;
 
 		if (dto.getMilk() < sum) {
-			alert = new Alert(AlertType.ERROR);
+			alert = new Alert(AlertType.INFORMATION);
 			alert.setTitle("재료 부족");
-			alert.setHeaderText(" ");
+			alert.setHeaderText("");
 			alert.setContentText("우유가 부족합니다.");
 			alert.show();
 
@@ -65,9 +65,9 @@ public class Order_ChkStock {
 		boolean flag;
 
 		if (dto.getVanilaSyrup() < sum) {
-			alert = new Alert(AlertType.ERROR);
+			alert = new Alert(AlertType.INFORMATION);
 			alert.setTitle("재료 부족");
-			alert.setHeaderText(" ");
+			alert.setHeaderText("");
 			alert.setContentText("시럽이 부족합니다.");
 			alert.show();
 
@@ -86,9 +86,9 @@ public class Order_ChkStock {
 		boolean flag;
 
 		if (dto.getWater() < sum) {
-			alert = new Alert(AlertType.ERROR);
+			alert = new Alert(AlertType.INFORMATION);
 			alert.setTitle("재료 부족");
-			alert.setHeaderText(" ");
+			alert.setHeaderText("");
 			alert.setContentText("물이 부족합니다.");
 			alert.show();
 

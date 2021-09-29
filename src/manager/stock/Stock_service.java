@@ -11,5 +11,7 @@ public interface Stock_service {
 	public void updateMilk(Parent root);
 
 	public void updateVanila(Parent root);
+	
+	public void updateIce(Parent root);
 
 }

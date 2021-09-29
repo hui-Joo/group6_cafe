@@ -42,5 +42,8 @@ public class Stock_Controller implements Initializable {
 	public void syrupbtn() {
 		sv.updateVanila(root);
 	}
+	public void icebtn() {
+		sv.updateIce(root);
+	}
 
 }

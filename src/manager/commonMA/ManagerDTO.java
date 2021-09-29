@@ -10,6 +10,16 @@ public class ManagerDTO {
 	private int capucino;
 	private int vanilaLatte;
 	private String pass;
+	private int stock_ice;
+
+
+	public int getStock_ice() {
+		return stock_ice;
+	}
+
+	public void setStock_ice(int stock_ice) {
+		this.stock_ice = stock_ice;
+	}
 
 	public int getBean() {
 		return bean;
