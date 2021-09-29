@@ -18,7 +18,7 @@
             <Font name="Segoe UI Black" size="14.0" />
          </font>
       </Label>
-      <Label fx:id="labelCupsCa" layoutX="126.0" layoutY="360.0" text="Cappuccino">
+      <Label layoutX="126.0" layoutY="360.0" text="Cappuccino">
          <font>
             <Font name="Segoe UI Black" size="14.0" />
          </font>
@@ -28,7 +28,7 @@
             <Font name="Segoe UI Black" size="14.0" />
          </font>
       </Label>
-      <Label fx:id="labelCupsVa" layoutX="273.0" layoutY="360.0" text="Vanila Latte">
+      <Label layoutX="273.0" layoutY="360.0" text="Vanila Latte">
          <font>
             <Font name="Segoe UI Black" size="14.0" />
          </font>
@@ -43,7 +43,7 @@
             <Font name="Segoe UI Black" size="14.0" />
          </font>
       </Label>
-      <Label layoutX="222.0" layoutY="360.0" text="0ea">
+      <Label fx:id="labelCupsCa" layoutX="222.0" layoutY="360.0" text="0ea">
          <font>
             <Font name="Segoe UI Black" size="14.0" />
          </font>
@@ -53,7 +53,7 @@
             <Font name="Segoe UI Black" size="14.0" />
          </font>
       </Label>
-      <Label layoutX="374.0" layoutY="360.0" text="0ea">
+      <Label fx:id="labelCupsVa" layoutX="374.0" layoutY="360.0" text="0ea">
          <font>
             <Font name="Segoe UI Black" size="14.0" />
          </font>

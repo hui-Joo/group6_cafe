@@ -11,8 +11,6 @@ import manager.commonMA.ManagerDTO;
 public class Chart_Impl implements Chart {
 
 	private Chart_DB db;
-	
-	Parent root;
 
 	private int price_americano = 2000;
 	private int price_latte = 3000;
@@ -98,7 +96,7 @@ public class Chart_Impl implements Chart {
 		labelPriceCa.setText(capucino*price_capucino+"won");
 		labelPriceVa = (Label)root.lookup("#labelPriceVa");
 		labelPriceVa.setText(vanilaLatte*price_vanilaLatte+"won");
-		labelPriceIce = (Label)root.lookup("labelPriceIce");
+		labelPriceIce = (Label)root.lookup("#labelPriceIce");
 		labelPriceIce.setText(ice*price_ice+"won");
 		labelPriceReg = (Label)root.lookup("#labelPriceReg");
 		labelPriceReg.setText(regular*price_regular+"won");;
@@ -144,10 +142,7 @@ public class Chart_Impl implements Chart {
 		labelLarge.setText(large+"ea");
 	}
 
-	@Override
-	public void setRoot(Parent root) {
-		this.root=root;
-	}
+
 
 
 }

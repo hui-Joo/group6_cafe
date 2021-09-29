@@ -11,7 +11,6 @@ public class Chart_DB {
 	
 	public ManagerDTO getTotalMenu() {
 		String sql = "select * from \"MENUDB\" where num=1";
-		ManagerDTO dto = null;
 		
 		try {
 			PreparedStatement ps = common.commonDB.DBClass.conn.prepareStatement(sql);

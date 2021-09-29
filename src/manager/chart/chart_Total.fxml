@@ -22,22 +22,22 @@
           <NumberAxis side="LEFT" />
         </yAxis>
       </BarChart>
-      <Label layoutX="132.0" layoutY="316.0" text="Americano">
+      <Label layoutX="126.0" layoutY="316.0" text="Americano">
          <font>
             <Font name="Segoe UI Black" size="14.0" />
          </font>
       </Label>
-      <Label layoutX="132.0" layoutY="336.0" text="Cafe Latte">
+      <Label layoutX="126.0" layoutY="336.0" text="Cafe Latte">
          <font>
             <Font name="Segoe UI Black" size="14.0" />
          </font>
       </Label>
-      <Label layoutX="132.0" layoutY="376.0" text="Vanila Latte">
+      <Label layoutX="126.0" layoutY="376.0" text="Vanila Latte">
          <font>
             <Font name="Segoe UI Black" size="14.0" />
          </font>
       </Label>
-      <Label layoutX="132.0" layoutY="356.0" text="Cappuccino">
+      <Label layoutX="126.0" layoutY="356.0" text="Cappuccino">
          <font>
             <Font name="Segoe UI Black" size="14.0" />
          </font>
@@ -57,27 +57,27 @@
             <Font name="Segoe UI Black" size="14.0" />
          </font>
       </Label>
-      <Label fx:id="labelPriceAm" layoutX="262.0" layoutY="316.0" text="0won">
+      <Label fx:id="labelPriceAm" layoutX="244.0" layoutY="316.0" text="0won">
          <font>
             <Font name="Segoe UI Black" size="14.0" />
          </font>
       </Label>
-      <Label fx:id="labelPriceLa" layoutX="262.0" layoutY="336.0" text="0won">
+      <Label fx:id="labelPriceLa" layoutX="244.0" layoutY="336.0" text="0won">
          <font>
             <Font name="Segoe UI Black" size="14.0" />
          </font>
       </Label>
-      <Label fx:id="labelPriceCa" layoutX="262.0" layoutY="356.0" text="0won">
+      <Label fx:id="labelPriceCa" layoutX="244.0" layoutY="356.0" text="0won">
          <font>
             <Font name="Segoe UI Black" size="14.0" />
          </font>
       </Label>
-      <Label fx:id="labelPriceVa" layoutX="262.0" layoutY="376.0" text="0won">
+      <Label fx:id="labelPriceVa" layoutX="244.0" layoutY="376.0" text="0won">
          <font>
             <Font name="Segoe UI Black" size="14.0" />
          </font>
       </Label>
-      <Label fx:id="labelPirceIce" layoutX="463.0" layoutY="316.0" text="0won">
+      <Label fx:id="labelPriceIce" layoutX="463.0" layoutY="316.0" text="0won">
          <font>
             <Font name="Segoe UI Black" size="14.0" />
          </font>

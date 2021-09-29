@@ -3,14 +3,12 @@ package manager.chart;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-import common.commonDB.DBClass;
 import common.commonStage.StageStore;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import manager.commonMA.ManagerDTO;
 
 public class Chart_Controller implements Initializable {
 
@@ -27,7 +25,6 @@ public class Chart_Controller implements Initializable {
 
 	public void setRoot(Parent root) {
 		this.root = root;
-		chartImpl.setRoot(root);
 	}
 
 	@Override
@@ -37,50 +34,47 @@ public class Chart_Controller implements Initializable {
 		chartImpl = new Chart_Impl();
 		
 	}
-
-	public void clickOpen() {
+	
+	public void clickMenuChart() {
+		FXMLLoader loader = new FXMLLoader(getClass().getResource("chart_Menu.fxml"));
 		try {
-			FXMLLoader loader = new FXMLLoader(getClass().getResource(fxmlName));
-			Parent clickRoot = loader.load();
-			Scene scene = new Scene(clickRoot);
-			
-			stage=StageStore.stage;
+			root=loader.load();
+			chartImpl.menuChart(root);
+			Scene scene = new Scene(root);
+			stage= new Stage();
 			stage.setScene(scene);
+			stage.setTitle("chart_Menu");
 			stage.show();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
 	
-	public void clickMenuChart() {
-
-		try {
-			fxmlName="chart_Menu.fxml";
-			stage = new Stage();
-			clickOpen();	
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-		
-	}
-	
 	public void clickHISChart() {
+		FXMLLoader loader = new FXMLLoader(getClass().getResource("chart_HIS.fxml"));
 		try {
-			fxmlName="chart_HIS.fxml";
-			stage=new Stage();
+			root=loader.load();
 			chartImpl.HISChart(root);
-			clickOpen();
-			
+			Scene scene = new Scene(root);
+			stage = new Stage();
+			stage.setScene(scene);
+			stage.setTitle("chart_Hot/Ice,Size");
+			stage.show();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
 	
 	public void clickTotalChart() {
+		FXMLLoader loader = new FXMLLoader(getClass().getResource("chart_Total.fxml"));
 		try {
-			fxmlName = "chart_Total.fxml";
-			stage=new Stage();
-			clickOpen();
+			root=loader.load();
+			chartImpl.totalChart(root);
+			Scene scene = new Scene(root);
+			stage = new Stage();
+			stage.setScene(scene);
+			stage.setTitle("chart_Total");
+			stage.show();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
