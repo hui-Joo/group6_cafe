@@ -13,15 +13,15 @@
    <children>
       <Pane prefHeight="715.0" prefWidth="500.0">
          <children>
-            <Button layoutX="117.0" layoutY="482.0" mnemonicParsing="false" onMouseDragged="#choose" style="-fx-background-color:#976625" text="smaill" textFill="WHITE" />
-            <Button layoutX="329.0" layoutY="482.0" mnemonicParsing="false" onMouseDragged="#choose" style="-fx-background-color:#976625" text="large" textFill="WHITE" />
-            <Button layoutX="223.0" layoutY="482.0" mnemonicParsing="false" onMouseDragged="#choose" style="-fx-background-color:#976625" text="regular" textFill="WHITE" />
-            <ImageView fitHeight="40.0" fitWidth="97.0" layoutX="349.0" layoutY="577.0" onMouseDragged="#button" pickOnBounds="true" preserveRatio="true">
+            <Button layoutX="117.0" layoutY="482.0" mnemonicParsing="false" onMouseDragged="#small" style="-fx-background-color:#976625" text="smaill" textFill="WHITE" />
+            <Button layoutX="329.0" layoutY="482.0" mnemonicParsing="false" onMouseDragged="#reguler" style="-fx-background-color:#976625" text="large" textFill="WHITE" />
+            <Button layoutX="223.0" layoutY="482.0" mnemonicParsing="false" onMouseDragged="#large" style="-fx-background-color:#976625" text="regular" textFill="WHITE" />
+            <ImageView fitHeight="40.0" fitWidth="97.0" layoutX="349.0" layoutY="577.0"  pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../img/choose_pay.jpg" />
                </image>
             </ImageView>
-            <ImageView fitHeight="40.0" fitWidth="97.0" layoutX="349.0" layoutY="629.0" onMouseDragged="#button" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="40.0" fitWidth="97.0" layoutX="349.0" layoutY="629.0"  pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../img/choose_back.jpg" />
                </image>
@@ -31,21 +31,21 @@
                   <Image url="@../img/choose_img.jpg" />
                </image>
             </ImageView>
-            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="103.0" layoutY="312.0" onMouseDragged="#choose" pickOnBounds="true" preserveRatio="true">
+            <ImageView accessibleRole="BUTTON" fitHeight="150.0" fitWidth="200.0" layoutX="103.0" layoutY="312.0" onMouseDragged="#hot" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../img/hot.jpg" />
                </image>
             </ImageView>
-            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="315.0" layoutY="312.0" onMouseDragged="#choose" pickOnBounds="true" preserveRatio="true">
+            <ImageView accessibleRole="BUTTON" fitHeight="150.0" fitWidth="200.0" layoutX="315.0" layoutY="312.0" onMouseDragged="#ice" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../img/ICE.jpg" />
                </image>
             </ImageView>
             <Separator layoutX="152.0" layoutY="241.0" prefWidth="200.0" />
             <Separator layoutX="151.0" layoutY="243.0" prefWidth="200.0" />
-            <Button layoutX="224.0" layoutY="512.0" mnemonicParsing="false" style="-fx-background-color: transparent" text="+100" textFill="#906021" />
-            <Button layoutX="329.0" layoutY="512.0" mnemonicParsing="false" style="-fx-background-color: transparent" text="+1000" textFill="#906021" />
-            <TextField layoutX="63.0" layoutY="631.0" prefHeight="12.0" prefWidth="55.0" text="금액:">
+            <Button layoutX="228.0" layoutY="501.0" mnemonicParsing="false" style="-fx-background-color: transparent" text="+500" textFill="#906021" />
+            <Button layoutX="326.0" layoutY="501.0" mnemonicParsing="false" style="-fx-background-color: transparent" text="+1000" textFill="#906021" />
+            <TextField layoutX="63.0" layoutY="602.0" prefHeight="45.0" prefWidth="259.0" text="금액:">
                <font>
                   <Font size="24.0" />
                </font>
@@ -55,6 +55,7 @@
                   <Image url="@../img/choose_thury.jpg" />
                </image>
             </ImageView>
+            <Button layoutX="334.0" layoutY="456.0" mnemonicParsing="false" style="-fx-background-color: transparent" text="+500" textFill="#4797c3" />
          </children></Pane>
    </children>
 </AnchorPane>

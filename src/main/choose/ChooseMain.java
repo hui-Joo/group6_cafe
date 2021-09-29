@@ -10,7 +10,7 @@ import javafx.stage.Stage;
 public class ChooseMain extends Application {
 	public void start(Stage primaryStage) throws Exception {
 		StageStore.stage = primaryStage;
-		FXMLLoader loader = new FXMLLoader(getClass().getResource("Choose.fxml"));
+		FXMLLoader loader = new FXMLLoader(getClass().getResource("ChooseA.fxml"));
 		Parent root = loader.load();
 		Scene scene = new Scene(root);
 		ChooseController ctl = loader.getController();
@@ -21,4 +21,5 @@ public class ChooseMain extends Application {
 		primaryStage.show();
 		
 	}
+
 }

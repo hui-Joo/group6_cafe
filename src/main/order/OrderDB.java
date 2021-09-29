@@ -81,7 +81,7 @@ public class OrderDB {
 	public int stockUpdate(ManagerDTO dto, OrderDTO orderDto) {
 		int result = 0;
 
-		String sql = "update STOCKDB set bean=?,water=?,milk=?,vanilasyrup=? where num=1 ";
+		String sql = "update STOCKDB set bean=?,water=?,milk=?,vanilasyrup=?,ice=? where num=1 ";
 
 		int beanI = (orderDto.getCntA() + orderDto.getCntL() + orderDto.getCntC() + orderDto.getCntV()) * orderDto.bean;
 
@@ -90,6 +90,8 @@ public class OrderDB {
 		int milkI = (orderDto.getCntL() + orderDto.getCntC() + orderDto.getCntV()) * orderDto.milk;
 
 		int vanilaI = orderDto.getCntV() * orderDto.VanilaSyrup;
+		
+		int iceI = orderDto.getCntI() * orderDto.ice;
 
 		try {
 			PreparedStatement ps = DBClass.conn.prepareStatement(sql);
@@ -97,6 +99,7 @@ public class OrderDB {
 			ps.setInt(2, dto.getWater() - waterI);
 			ps.setInt(3, dto.getMilk() - milkI);
 			ps.setInt(4, dto.getVanilaSyrup() - vanilaI);
+			ps.setInt(4, dto.getIce() - iceI);
 
 			result = ps.executeUpdate();
 

@@ -1,8 +1,13 @@
 package main.order;
 
+import common.commonStage.StageStore;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
+import javafx.stage.Stage;
+import main.choose.ChooseMain;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import manager.commonMA.ManagerDTO;
@@ -13,6 +18,9 @@ public class OrderImpl implements Order {
 	OrderDTO orderDto;
 	ManagerDTO managerDto;
 	Parent root;
+	ChooseMain choose;
+	Stage stage = StageStore.stage;
+	String fxmlName;
 
 	public OrderImpl() {
 		db = new OrderDB();
@@ -37,9 +45,29 @@ public class OrderImpl implements Order {
 		minC.setDisable(true);
 		minV.setDisable(true);
 	}
+	
+	public void choose() {
+		
+		try {
+			FXMLLoader loader = new FXMLLoader(getClass().getResource(fxmlName));
+			Parent clickRoot = loader.load();
+			Scene scene = new Scene(clickRoot);
+			stage = StageStore.stage;
+			
+			stage.setTitle("옵션 선택");
+			stage.setScene(scene);
+			stage.show();
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		
+	}
 
 	@Override
 	public void clickAmericano() {
+		
+		fxmlName = "/main/choose/chooseA.fxml";
+		choose();
 
 		orderDto.cntA++;
 
@@ -65,6 +93,8 @@ public class OrderImpl implements Order {
 
 	@Override
 	public void clickLatte() {
+		
+		fxmlName = "/main/choose/chooseL.fxml";
 
 		orderDto.cntL++;
 
@@ -90,6 +120,8 @@ public class OrderImpl implements Order {
 
 	@Override
 	public void clickCapuccino() {
+		
+		fxmlName = "/main/choose/chooseC.fxml";
 
 		orderDto.cntC++;
 
@@ -114,6 +146,8 @@ public class OrderImpl implements Order {
 
 	@Override
 	public void clickVanilaLatte() {
+		
+		fxmlName = "/main/choose/chooseV.fxml";
 
 		orderDto.cntV++;
 

@@ -10,6 +10,15 @@ public class ManagerDTO {
 	private int capucino;
 	private int vanilaLatte;
 	private String pass;
+	private int ice;
+
+	public int getIce() {
+		return ice;
+	}
+
+	public void setIce(int ice) {
+		this.ice = ice;
+	}
 
 	public int getBean() {
 		return bean;
