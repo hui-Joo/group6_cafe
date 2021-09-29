@@ -5,10 +5,57 @@ public class ManagerDTO {
 	private int water;
 	private int milk;
 	private int vanilaSyrup;
+	
+	private int menu_ice;
+	private int hot;
 	private int americano;
 	private int latte;
 	private int capucino;
 	private int vanilaLatte;
+	private int small;
+	private int regular;
+	private int large;
+	
+	public int getMenu_ice() {
+		return menu_ice;
+	}
+
+	public void setMenu_ice(int menu_ice) {
+		this.menu_ice = menu_ice;
+	}
+
+	public int getHot() {
+		return hot;
+	}
+
+	public void setHot(int hot) {
+		this.hot = hot;
+	}
+
+	public int getSmall() {
+		return small;
+	}
+
+	public void setSmall(int small) {
+		this.small = small;
+	}
+
+	public int getRegular() {
+		return regular;
+	}
+
+	public void setRegular(int regular) {
+		this.regular = regular;
+	}
+
+	public int getLarge() {
+		return large;
+	}
+
+	public void setLarge(int large) {
+		this.large = large;
+	}
+
 	private String pass;
 	private int stock_ice;
 

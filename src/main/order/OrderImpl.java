@@ -46,7 +46,6 @@ public class OrderImpl implements Order {
 		Button minA = (Button) root.lookup("#minA");
 		minA.setDisable(false);
 
-		Label LabelCntA = (Label) root.lookup("#LabelCntA");
 		boolean AmeBean = StChk.ChkBean();
 		boolean AmeWater = StChk.ChkWater();
 
@@ -56,7 +55,8 @@ public class OrderImpl implements Order {
 				minA.setDisable(true);
 			}
 		}
-
+		
+		Label LabelCntA = (Label) root.lookup("#LabelCntA");
 		LabelCntA.setText(orderDto.getCntA() + "ea");
 
 		total();
@@ -264,4 +264,4 @@ public class OrderImpl implements Order {
 		total();
 	}
 
-}///
+}
