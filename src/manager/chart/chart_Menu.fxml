@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="620.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="234.0" layoutY="23.0" text="MENU CHART">
+         <font>
+            <Font name="Segoe UI Black" size="22.0" />
+         </font>
+      </Label>
+      <PieChart fx:id="menuChart" layoutX="111.0" layoutY="73.0" prefHeight="255.0" prefWidth="395.0" />
+      <Label layoutX="126.0" layoutY="340.0" text="Americano">
+         <font>
+            <Font name="Segoe UI Black" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelCupsCa" layoutX="126.0" layoutY="360.0" text="Cappuccino">
+         <font>
+            <Font name="Segoe UI Black" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="273.0" layoutY="340.0" text="Cafe Latte">
+         <font>
+            <Font name="Segoe UI Black" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelCupsVa" layoutX="273.0" layoutY="360.0" text="Vanila Latte">
+         <font>
+            <Font name="Segoe UI Black" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="433.0" layoutY="350.0" text="Total">
+         <font>
+            <Font name="Segoe UI Black" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelCupsAm" layoutX="222.0" layoutY="340.0" text="0ea">
+         <font>
+            <Font name="Segoe UI Black" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="222.0" layoutY="360.0" text="0ea">
+         <font>
+            <Font name="Segoe UI Black" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelCupsLa" layoutX="374.0" layoutY="340.0" text="0ea">
+         <font>
+            <Font name="Segoe UI Black" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="374.0" layoutY="360.0" text="0ea">
+         <font>
+            <Font name="Segoe UI Black" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelCupsSum" layoutX="494.0" layoutY="350.0" text="0ea">
+         <font>
+            <Font name="Segoe UI Black" size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

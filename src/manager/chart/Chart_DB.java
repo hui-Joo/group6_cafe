@@ -7,6 +7,8 @@ import manager.commonMA.ManagerDTO;
 
 public class Chart_DB {
 
+	ManagerDTO dto;
+	
 	public ManagerDTO getTotalMenu() {
 		String sql = "select * from \"MENUDB\" where num=1";
 		ManagerDTO dto = null;
@@ -17,10 +19,15 @@ public class Chart_DB {
 			
 			if(rs.next()) {
 				dto = new ManagerDTO();
+				dto.setMenu_ice(rs.getInt("ice"));
+				dto.setHot(rs.getInt("hot"));
 				dto.setAmericano(rs.getInt("americano"));
 				dto.setLatte(rs.getInt("latte"));
-				dto.setCapucino(rs.getInt("capucino"));
+				dto.setCapucino(rs.getInt("cappuccino"));
 				dto.setVanilaLatte(rs.getInt("vanilaLatte"));
+				dto.setSmall(rs.getInt("small"));
+				dto.setRegular(rs.getInt("regular"));
+				dto.setLarge(rs.getInt("large"));
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
