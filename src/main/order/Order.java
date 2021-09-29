@@ -15,6 +15,5 @@ public interface Order {
 	public void clickMinL();
 	public void clickMinC();
 	public void clickMinV();
-	public void errorAlert();
 	
 }

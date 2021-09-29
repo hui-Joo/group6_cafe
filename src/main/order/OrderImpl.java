@@ -43,13 +43,10 @@ public class OrderImpl implements Order {
 	public void clickAmericano() {
 		
 		orderDto.cntA++;
-
 		
 		Button minA = (Button)root.lookup("#minA");
 		minA.setDisable(false);
 		
-		
-
 		boolean AmeBean = StChk.ChkBean();
 		boolean AmeWater = StChk.ChkWater();
 
@@ -225,5 +222,4 @@ public class OrderImpl implements Order {
 		total();
 	}
 
-	
-}///
+}
