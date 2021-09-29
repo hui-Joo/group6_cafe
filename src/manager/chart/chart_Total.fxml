@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="409.0" prefWidth="620.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="232.0" layoutY="20.0" text="TOTAL CHART">
+         <font>
+            <Font name="Segoe UI Black" size="22.0" />
+         </font>
+      </Label>
+      <BarChart fx:id="totalChart" layoutX="113.0" layoutY="61.0" prefHeight="255.0" prefWidth="395.0">
+        <xAxis>
+          <CategoryAxis side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis side="LEFT" />
+        </yAxis>
+      </BarChart>
+      <Label layoutX="126.0" layoutY="316.0" text="Americano">
+         <font>
+            <Font name="Segoe UI Black" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="126.0" layoutY="336.0" text="Cafe Latte">
+         <font>
+            <Font name="Segoe UI Black" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="126.0" layoutY="376.0" text="Vanila Latte">
+         <font>
+            <Font name="Segoe UI Black" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="126.0" layoutY="356.0" text="Cappuccino">
+         <font>
+            <Font name="Segoe UI Black" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="340.0" layoutY="316.0" text="Ice Option">
+         <font>
+            <Font name="Segoe UI Black" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="340.0" layoutY="336.0" text="Regular Size">
+         <font>
+            <Font name="Segoe UI Black" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="341.0" layoutY="356.0" text="Large Size">
+         <font>
+            <Font name="Segoe UI Black" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelPriceAm" layoutX="244.0" layoutY="316.0" text="0won">
+         <font>
+            <Font name="Segoe UI Black" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelPriceLa" layoutX="244.0" layoutY="336.0" text="0won">
+         <font>
+            <Font name="Segoe UI Black" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelPriceCa" layoutX="244.0" layoutY="356.0" text="0won">
+         <font>
+            <Font name="Segoe UI Black" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelPriceVa" layoutX="244.0" layoutY="376.0" text="0won">
+         <font>
+            <Font name="Segoe UI Black" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelPriceIce" layoutX="463.0" layoutY="316.0" text="0won">
+         <font>
+            <Font name="Segoe UI Black" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelPriceReg" layoutX="463.0" layoutY="336.0" text="0won">
+         <font>
+            <Font name="Segoe UI Black" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelPriceLar" layoutX="463.0" layoutY="356.0" text="0won">
+         <font>
+            <Font name="Segoe UI Black" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="341.0" layoutY="376.0" text="Total">
+         <font>
+            <Font name="Segoe UI Black" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelPriceTotal" layoutX="463.0" layoutY="376.0" text="0won">
+         <font>
+            <Font name="Segoe UI Black" size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

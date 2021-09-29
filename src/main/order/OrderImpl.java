@@ -4,12 +4,11 @@ import common.commonStage.StageStore;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Alert.AlertType;
-import javafx.stage.Stage;
-import main.choose.ChooseMain;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.stage.Stage;
+import main.choose.ChooseController;
+import main.choose.ChooseMain;
 import manager.commonMA.ManagerDTO;
 
 public class OrderImpl implements Order {
@@ -21,12 +20,15 @@ public class OrderImpl implements Order {
 	ChooseMain choose;
 	Stage stage = StageStore.stage;
 	String fxmlName;
+	ChooseController chooseCont;
+	Parent clickRoot;
 
 	public OrderImpl() {
 		db = new OrderDB();
 		orderDto = new OrderDTO();
 		managerDto = new ManagerDTO();
 		StChk = new Order_ChkStock();
+		chooseCont = new ChooseController();
 	}
 
 	@Override
@@ -50,9 +52,10 @@ public class OrderImpl implements Order {
 		
 		try {
 			FXMLLoader loader = new FXMLLoader(getClass().getResource(fxmlName));
-			Parent clickRoot = loader.load();
+			clickRoot = loader.load();
 			Scene scene = new Scene(clickRoot);
 			stage = StageStore.stage;
+			chooseCont.setRoot(clickRoot);
 			
 			stage.setTitle("옵션 선택");
 			stage.setScene(scene);
@@ -69,25 +72,25 @@ public class OrderImpl implements Order {
 		fxmlName = "/main/choose/chooseA.fxml";
 		choose();
 
-		orderDto.cntA++;
-
-		Button minA = (Button) root.lookup("#minA");
-		minA.setDisable(false);
-
-		Label LabelCntA = (Label) root.lookup("#LabelCntA");
-		boolean AmeBean = StChk.ChkBean();
-		boolean AmeWater = StChk.ChkWater();
-
-		if (AmeBean == true || AmeWater == true) {
-			OrderDTO.cntA--;
-			if (orderDto.cntA == 0) {
-				minA.setDisable(true);
-			}
-		}
-
-		LabelCntA.setText(orderDto.getCntA() + "ea");
-
-		total();
+//		orderDto.cntA++;
+//
+//		Button minA = (Button) root.lookup("#minA");
+//		minA.setDisable(false);
+//
+//		boolean AmeBean = StChk.ChkBean();
+//		boolean AmeWater = StChk.ChkWater();
+//
+//		if (AmeBean == true || AmeWater == true) {
+//			OrderDTO.cntA--;
+//			if (orderDto.cntA == 0) {
+//				minA.setDisable(true);
+//			}
+//		}
+//		
+//		Label LabelCntA = (Label) root.lookup("#LabelCntA");
+//		LabelCntA.setText(orderDto.getCntA() + "ea");
+//
+//		total();
 
 	}
 
@@ -122,26 +125,27 @@ public class OrderImpl implements Order {
 	public void clickCapuccino() {
 		
 		fxmlName = "/main/choose/chooseC.fxml";
-
-		orderDto.cntC++;
-
-		Button minC = (Button) root.lookup("#minC");
-		minC.setDisable(false);
-		Label LabelCntC = (Label) root.lookup("#LabelCntC");
-		boolean CapuBean = StChk.ChkBean();
-		boolean CapuMilk = StChk.ChkMilk();
-
-		if (CapuBean == true || CapuMilk == true) {
-			OrderDTO.cntC--;
-			if (orderDto.cntC == 0) {
-				minC.setDisable(true);
-			}
-
-		}
-
-		LabelCntC.setText(orderDto.getCntC() + "ea");
-
-		total();
+		choose();
+		
+//		orderDto.cntC++;
+//
+//		Button minC = (Button) root.lookup("#minC");
+//		minC.setDisable(false);
+//		Label LabelCntC = (Label) root.lookup("#LabelCntC");
+//		boolean CapuBean = StChk.ChkBean();
+//		boolean CapuMilk = StChk.ChkMilk();
+//
+//		if (CapuBean == true || CapuMilk == true) {
+//			OrderDTO.cntC--;
+//			if (orderDto.cntC == 0) {
+//				minC.setDisable(true);
+//			}
+//
+//		}
+//
+//		LabelCntC.setText(orderDto.getCntC() + "ea");
+//
+//		total();
 	}
 
 	@Override
@@ -295,4 +299,4 @@ public class OrderImpl implements Order {
 		total();
 	}
 
-}///
+}

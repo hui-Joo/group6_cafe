@@ -12,7 +12,7 @@
 
 <AnchorPane prefHeight="783.0" prefWidth="785.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.order.OrderController">
    <children>
-      <Pane prefHeight="783.0" prefWidth="786.0"  style="-fx-border-radius: 30; -fx-background-color: #FFFFFF;"/>
+      <Pane prefHeight="783.0" prefWidth="786.0" style="-fx-border-radius: 30; -fx-background-color: #FFFFFF;" />
       <ImageView fitHeight="257.0" fitWidth="361.0" layoutX="22.0" layoutY="83.0" onMouseClicked="#clickAmericano" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../img/AmericanoButton.jpg" />
@@ -88,16 +88,6 @@
          </font>
       </Label>
       <Label fx:id="LabelCntV" layoutX="276.0" layoutY="728.0" text="0ea">
-         <font>
-            <Font name="Segoe UI Black" size="18.0" />
-         </font>
-      </Label>
-      <Label layoutX="428.0" layoutY="682.0" text="total">
-         <font>
-            <Font name="Segoe UI Black" size="21.0" />
-         </font>
-      </Label>
-      <Label fx:id="LabelPrice" layoutX="542.0" layoutY="685.0" text="0 won">
          <font>
             <Font name="Segoe UI Black" size="18.0" />
          </font>

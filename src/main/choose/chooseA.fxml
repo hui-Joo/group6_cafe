@@ -13,15 +13,15 @@
    <children>
       <Pane prefHeight="715.0" prefWidth="500.0">
          <children>
-            <Button layoutX="117.0" layoutY="482.0" mnemonicParsing="false" onMouseDragged="#small" style="-fx-background-color:#976625" text="smaill" textFill="WHITE" />
-            <Button layoutX="329.0" layoutY="482.0" mnemonicParsing="false" onMouseDragged="#reguler" style="-fx-background-color:#976625" text="large" textFill="WHITE" />
-            <Button layoutX="223.0" layoutY="482.0" mnemonicParsing="false" onMouseDragged="#large" style="-fx-background-color:#976625" text="regular" textFill="WHITE" />
-            <ImageView fitHeight="40.0" fitWidth="97.0" layoutX="349.0" layoutY="577.0"  pickOnBounds="true" preserveRatio="true">
+            <Button layoutX="117.0" layoutY="482.0" mnemonicParsing="false" onMouseDragged="#choose" style="-fx-background-color:#976625" text="smaill" textFill="WHITE" />
+            <Button layoutX="334.0" layoutY="482.0" mnemonicParsing="false" onMouseDragged="#choose" style="-fx-background-color:#976625" text="large" textFill="WHITE" />
+            <Button layoutX="226.0" layoutY="481.0" mnemonicParsing="false" onMouseDragged="#choose" style="-fx-background-color:#976625" text="regular" textFill="WHITE" />
+            <ImageView fitHeight="40.0" fitWidth="97.0" layoutX="349.0" layoutY="577.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../img/choose_pay.jpg" />
                </image>
             </ImageView>
-            <ImageView fitHeight="40.0" fitWidth="97.0" layoutX="349.0" layoutY="629.0"  pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="40.0" fitWidth="97.0" layoutX="349.0" layoutY="629.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../img/choose_back.jpg" />
                </image>
@@ -44,8 +44,8 @@
             <Separator layoutX="152.0" layoutY="241.0" prefWidth="200.0" />
             <Separator layoutX="151.0" layoutY="243.0" prefWidth="200.0" />
             <Button layoutX="228.0" layoutY="501.0" mnemonicParsing="false" style="-fx-background-color: transparent" text="+500" textFill="#906021" />
-            <Button layoutX="326.0" layoutY="501.0" mnemonicParsing="false" style="-fx-background-color: transparent" text="+1000" textFill="#906021" />
-            <TextField layoutX="63.0" layoutY="602.0" prefHeight="45.0" prefWidth="259.0" text="금액:">
+            <Button layoutX="331.0" layoutY="501.0" mnemonicParsing="false" style="-fx-background-color: transparent" text="+1000" textFill="#906021" />
+            <TextField layoutX="51.0" layoutY="598.0" prefHeight="45.0" prefWidth="259.0" text="금액:">
                <font>
                   <Font size="24.0" />
                </font>
