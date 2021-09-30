@@ -35,7 +35,6 @@ public class OrderController implements Initializable {
 		db = new OrderDB();
 		login = new Login_Main();
 		pay = new PayMain();
-		od = new OrderImpl();
 
 	}
 
@@ -63,7 +62,9 @@ public class OrderController implements Initializable {
 
 		if (sum == 0) {
 			// 장바구니가 비었다는 경고창
-			Alert alert = new Alert(AlertType.CONFIRMATION);
+			Alert alert = new Alert(AlertType.INFORMATION);
+			alert.setTitle("주문 오류");
+			alert.setHeaderText("");
 			alert.setContentText("메뉴를 선택 해주세요");
 			alert.show();
 		} else {
@@ -79,7 +80,7 @@ public class OrderController implements Initializable {
 
 	public void clickAdmin() {
 		// 메뉴 선택 중 관리자 모드 갔다가 다시 주문창으로 돌아오면 전에 주문했던 값 남아있어서 값 초기화 시켜줌
-		od.ZeroCnt();
+		order.ZeroCnt();
 		try {
 			stage.close();
 			stage = new Stage();
@@ -93,19 +94,4 @@ public class OrderController implements Initializable {
 		order.resetMenu();
 	}
 
-	public void clickMinA() {
-		order.clickMinA();
-	}
-
-	public void clickMinL() {
-		order.clickMinL();
-	}
-
-	public void clickMinC() {
-		order.clickMinC();
-	}
-
-	public void clickMinV() {
-		order.clickMinV();
-	}
 }

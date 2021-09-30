@@ -99,6 +99,7 @@ public class Stock_serviceimpl implements Stock_service {
 		Label waterlabel = (Label) root.lookup("#waterlabel");
 		Label milklabel = (Label) root.lookup("#milklabel");
 		Label vanilalabel = (Label) root.lookup("#vanilalabel");
+		Label icelabel = (Label) root.lookup("#icelabel");
 
 		dto = db.selectstock();
 
@@ -110,6 +111,8 @@ public class Stock_serviceimpl implements Stock_service {
 		milklabel.setText(milk.toString());
 		Integer vanila = dto.getVanilaSyrup();
 		vanilalabel.setText(vanila.toString());
+		Integer ice = dto.getStock_ice();
+		icelabel.setText(ice.toString());
 
 	}
 
@@ -143,6 +146,27 @@ public class Stock_serviceimpl implements Stock_service {
 			alert.setContentText("바닐라 시럽이 얼마 남지 않았습니다");
 			alert.show();
 		}
+	}
+
+	@Override
+	public void updateIce(Parent root) {
+
+		TextField icetext = (TextField) root.lookup("#icetext");
+		Label icelabel = (Label) root.lookup("#icelabel");
+
+		Integer iceTx = Integer.parseInt(icetext.getText());
+		Integer iceLa = Integer.parseInt(icelabel.getText());
+		Integer ice = iceTx + iceLa;
+		icelabel.setText(Integer.toString(ice));
+		dto.setStock_ice(ice);
+
+		int resultice = db.update(dto);
+		if (resultice == 0) {
+			System.out.println("얼음 추가 실패");
+		} else {
+			icetext.clear();
+		}
+
 	}
 
 }

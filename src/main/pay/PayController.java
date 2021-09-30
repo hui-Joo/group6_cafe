@@ -92,6 +92,7 @@ public class PayController implements Initializable {
 	
 	public void clickLoading() {
 		
+		
 		db.setManagerDTO();
 		db.selectStock();
 		
