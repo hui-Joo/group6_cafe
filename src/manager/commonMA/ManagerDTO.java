@@ -5,6 +5,7 @@ public class ManagerDTO {
 	private int water;
 	private int milk;
 	private int vanilaSyrup;
+	private int ice;
 	
 	private int menu_ice;
 	private int hot;
@@ -15,6 +16,8 @@ public class ManagerDTO {
 	private int small;
 	private int regular;
 	private int large;
+	
+	private String pass;
 	
 	public int getMenu_ice() {
 		return menu_ice;
@@ -55,9 +58,6 @@ public class ManagerDTO {
 	public void setLarge(int large) {
 		this.large = large;
 	}
-
-	private String pass;
-	private int ice;
 
 	public int getIce() {
 		return ice;

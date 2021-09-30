@@ -18,12 +18,12 @@
             <Button layoutX="107.0" layoutY="492.0" mnemonicParsing="false" style="-fx-background-color:#976625" text="small" textFill="WHITE" />
             <Button layoutX="357.0" layoutY="491.0" mnemonicParsing="false" style="-fx-background-color:#976625" text="large" textFill="WHITE" />
             <Button layoutX="228.0" layoutY="491.0" mnemonicParsing="false" style="-fx-background-color:#976625" text="regular" textFill="WHITE" />
-            <ImageView fitHeight="40.0" fitWidth="97.0" layoutX="349.0" layoutY="577.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="40.0" fitWidth="97.0" layoutX="349.0" layoutY="577.0" onMouseClicked="#clickPay" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../img/choose_pay.jpg" />
                </image>
             </ImageView>
-            <ImageView fitHeight="40.0" fitWidth="97.0" layoutX="349.0" layoutY="629.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="40.0" fitWidth="97.0" layoutX="349.0" layoutY="629.0" onMouseClicked="#clickReset" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../img/choose_back.jpg" />
                </image>
