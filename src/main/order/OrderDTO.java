@@ -44,5 +44,4 @@ public class OrderDTO {
 		this.cntV = cntV;
 	}
 
-
 }

@@ -110,8 +110,10 @@ public class Stock_serviceimpl implements Stock_service {
 
 	// 경고창 타이밍
 	public void warning() {
-		Alert alert = new Alert(AlertType.WARNING);
-		if (db.selectstock().getBean() < 200) {
+		Alert alert;
+
+		if (db.selectstock().getBean() < 100) {
+			alert = new Alert(AlertType.WARNING);
 			alert.setTitle("잔여 재고 경고");
 			alert.setHeaderText("잔여 원두 경고");
 			alert.setContentText("원두가 얼마 남지 않았습니다");
@@ -119,6 +121,7 @@ public class Stock_serviceimpl implements Stock_service {
 
 		}
 		if (db.selectstock().getWater() < 200) {
+			alert = new Alert(AlertType.WARNING);
 			alert.setTitle("잔여 재고 경고");
 			alert.setHeaderText("잔여 물 경고");
 			alert.setContentText("물이 얼마 남지 않았습니다");
@@ -126,13 +129,15 @@ public class Stock_serviceimpl implements Stock_service {
 
 		}
 		if (db.selectstock().getMilk() < 200) {
+			alert = new Alert(AlertType.WARNING);
 			alert.setTitle("잔여 재고 경고");
 			alert.setHeaderText("잔여 우유 경고");
 			alert.setContentText("우유가 얼마 남지 않았습니다");
 			alert.show();
 
 		}
-		if (db.selectstock().getVanilaSyrup() < 200) {
+		if (db.selectstock().getVanilaSyrup() < 100) {
+			alert = new Alert(AlertType.WARNING);
 			alert.setTitle("잔여 재고 경고");
 			alert.setHeaderText("잔여 시럽 경고");
 			alert.setContentText("바닐라 시럽이 얼마 남지 않았습니다");
