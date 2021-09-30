@@ -56,7 +56,7 @@ public class OrderDB {
 				dto.setWater(rs.getInt("water"));
 				dto.setMilk(rs.getInt("milk"));
 				dto.setVanilaSyrup(rs.getInt("vanilaSyrup"));
-				dto.setIce(rs.getInt("ice"));
+				dto.setStock_ice(rs.getInt("ice"));
 
 				OrderDTO.dto = dto;
 
@@ -130,7 +130,7 @@ public class OrderDB {
 			ps.setInt(2, dto.getWater() - waterI);
 			ps.setInt(3, dto.getMilk() - milkI);
 			ps.setInt(4, dto.getVanilaSyrup() - vanilaI);
-			ps.setInt(5, dto.getIce() - iceI);
+			ps.setInt(5, dto.getStock_ice() - iceI);
 
 			result = ps.executeUpdate();
 

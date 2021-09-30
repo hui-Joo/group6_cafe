@@ -51,13 +51,13 @@ public class ChooseController implements Initializable {
 	private RadioButton large;
 
 	int ame;
-	int iceI = orderDto.iceI;
+
 	int sizeI = orderDto.sizeI;
 	int totalI = 0;
 
-	int cost = 0 ;
-	int hi = 0 ;
-	int si = 0 ;
+	int cost = 0;
+	int hi = 0;
+	int si = 0;
 	int oi = 0;
 
 	public void setRoot(Parent root) {
@@ -69,14 +69,15 @@ public class ChooseController implements Initializable {
 	public void initialize(URL location, ResourceBundle resources) {
 		pay = new PayMain();
 		order = new main.MainClass();
+		StChk = new Order_ChkStock();
 	}
-	
+
 	public void price() {
 		orderDto = new OrderDTO();
 		sort();
-		if (iceI == 1) {
+		if (OrderDTO.iceI == 1) {
 			hi = 500;
-		} else if (iceI ==0) {
+		} else if (OrderDTO.iceI == 0) {
 			hi = 0;
 		}
 		if (sizeI == 1) {
@@ -90,7 +91,7 @@ public class ChooseController implements Initializable {
 		hi = 0;
 		si = 0;
 	}
-	
+
 	public void sort() {
 		if (orderDto.cntA == 1) {
 			oi = orderDto.americano;
@@ -115,14 +116,23 @@ public class ChooseController implements Initializable {
 	public void selectHotIce(ActionEvent event) {
 
 		if (hot.isSelected()) {
-			iceI = 0 ;
+			OrderDTO.iceI = 0;
 			price();
 			label();
 
 		} else if (ice.isSelected()) {
-			iceI = 1 ;
-			price();
-			label();
+			OrderDTO.iceI = 1;
+
+			boolean ice = StChk.Chkice();
+
+			if (!ice) {
+				price();
+				label();
+			} else {
+				hot.setSelected(true);
+				OrderDTO.iceI = 0;
+
+			}
 
 		}
 	}
@@ -145,17 +155,17 @@ public class ChooseController implements Initializable {
 			label();
 		}
 	}
-	
+
 	public void reset() {
-		orderDto.cntA =0;
-		orderDto.cntL =0;
-		orderDto.cntC =0;
-		orderDto.cntV =0;
-		orderDto.sum =0;
+		orderDto.cntA = 0;
+		orderDto.cntL = 0;
+		orderDto.cntC = 0;
+		orderDto.cntV = 0;
+		orderDto.sum = 0;
 		orderDto.iceI = 0;
 		orderDto.sizeI = 0;
 	}
-	
+
 	public void clickReset() {
 		try {
 			stage.close();
@@ -166,12 +176,12 @@ public class ChooseController implements Initializable {
 			e.printStackTrace();
 		}
 	}
-	
+
 	public void clickPay() {
 		try {
-			orderDto.iceI = iceI;
+//			orderDto.iceI = iceI;
 			orderDto.sizeI = sizeI;
-			orderDto.sum =cost;
+			orderDto.sum = cost;
 			stage.close();
 			stage = new Stage();
 			pay.start(stage);
