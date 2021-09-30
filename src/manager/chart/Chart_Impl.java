@@ -9,7 +9,6 @@ import javafx.scene.control.Label;
 import manager.commonMA.ManagerDTO;
 
 public class Chart_Impl implements Chart {
-	ManagerDTO dto;
 
 	private Chart_DB db;
 
@@ -36,16 +35,12 @@ public class Chart_Impl implements Chart {
 	@Override
 	public void menuChart(Parent root) {
 
-		dto = db.getTotalMenu();
+		ManagerDTO dto = db.getTotalMenu();
 
 		int americano = dto.getAmericano();
 		int latte = dto.getLatte();
 		int capucino = dto.getCapucino();
 		int vanilaLatte = dto.getVanilaLatte();
-		System.out.println("asdfasdf:::" + americano);
-		System.out.println("asdfasdf:::" + latte);
-		System.out.println("asdfasdf:::" + capucino);
-		System.out.println("asdfasdf:::" + vanilaLatte);
 
 		menuChart = (PieChart) root.lookup("#menuChart");
 		menuChart.setData(FXCollections.observableArrayList(new PieChart.Data("Americano", americano),
@@ -98,7 +93,7 @@ public class Chart_Impl implements Chart {
 		labelPriceCa.setText(capucino * price_capucino + "won");
 		labelPriceVa = (Label) root.lookup("#labelPriceVa");
 		labelPriceVa.setText(vanilaLatte * price_vanilaLatte + "won");
-		labelPriceIce = (Label) root.lookup("labelPriceIce");
+		labelPriceIce = (Label) root.lookup("#labelPriceIce");
 		labelPriceIce.setText(ice * price_ice + "won");
 		labelPriceReg = (Label) root.lookup("#labelPriceReg");
 		labelPriceReg.setText(regular * price_regular + "won");

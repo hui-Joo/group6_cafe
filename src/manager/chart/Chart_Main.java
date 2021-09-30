@@ -1,12 +1,11 @@
 package manager.chart;
 
-import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-public class Chart_Main extends Application {
+public class Chart_Main {
 
 	public void start(Stage arg0) throws Exception {
 
@@ -22,7 +21,4 @@ public class Chart_Main extends Application {
 		arg0.show();
 	}
 
-	public static void main(String[] args) {
-		launch(args);
-	}
 }
