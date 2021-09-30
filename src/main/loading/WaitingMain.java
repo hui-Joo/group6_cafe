@@ -24,7 +24,9 @@ public class WaitingMain extends Application {
 		primaryStage.setScene(scene);
 		primaryStage.show();
 		
+		
 	}
+
 	
 
 }

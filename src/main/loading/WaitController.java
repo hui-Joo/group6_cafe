@@ -4,10 +4,12 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 import common.commonStage.StageStore;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.ProgressBar;
 import javafx.stage.Stage;
 import main.*;
 import main.order.*;
@@ -19,6 +21,8 @@ public class WaitController implements Initializable {
 	WaitingMain main;
 	main.MainClass order;
 	OrderDTO orderDto;
+	
+	
 
 	public void setRoot(Parent root) {
 		this.root = root;
