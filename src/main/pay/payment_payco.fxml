@@ -7,7 +7,7 @@
 
 <AnchorPane prefHeight="546.0" prefWidth="436.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.pay.PayController">
    <children>
-<Pane layoutX="440.0" layoutY="560.0" prefHeight="0.0" prefWidth="10.0" />
+<Pane layoutX="12.0" layoutY="-6.0" prefHeight="560.0" prefWidth="440.0" />
       <ImageView fitHeight="560.0" fitWidth="440.0" layoutX="12.0" layoutY="-5.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../img/pay_completion_payco.jpg" />

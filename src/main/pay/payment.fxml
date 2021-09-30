@@ -7,12 +7,14 @@
 
 <AnchorPane prefHeight="550.0" prefWidth="421.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.pay.PayController">
    <children>
-      <Pane layoutX="440.0" layoutY="560.0" prefHeight="0.0" prefWidth="7.0" />
-      <ImageView fitHeight="560.0" fitWidth="440.0" layoutX="13.0" layoutY="-6.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../img/pay_completion_card.jpg" />
-         </image>
-      </ImageView>
+      <Pane layoutX="13.0" layoutY="-7.0" prefHeight="560.0" prefWidth="440.0">
+         <children>
+            <ImageView fitHeight="560.0" fitWidth="440.0" layoutX="-5.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/pay_completion_card.jpg" />
+               </image>
+            </ImageView>
+         </children></Pane>
     <ImageView accessibleRole="BUTTON" fitHeight="40.0" fitWidth="463.0" layoutX="22.0" layoutY="492.0" onMouseClicked="#clickLoading" pickOnBounds="true" preserveRatio="true">  
 	  <image>
             <Image url="@../img/close.jpg" />
