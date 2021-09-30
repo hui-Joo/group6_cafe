@@ -113,7 +113,7 @@ public class Order_ChkStock {
 			alert.setContentText("얼음이 부족합니다.");
 			alert.show();
 			flag = true;
-			
+
 		} else {
 			System.out.println("어름어름어름 있음");
 			flag = false;
