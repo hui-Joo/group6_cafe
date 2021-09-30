@@ -15,6 +15,7 @@ import javafx.stage.Stage;
 import main.loading.WaitingMain;
 import main.order.OrderDB;
 import main.order.OrderDTO;
+import main.order.Order_ChkStock;
 import main.pay.PayMain;
 import manager.commonMA.ManagerDTO;
 import manager.stock.Stock_DB;
@@ -31,6 +32,7 @@ public class ChooseController implements Initializable {
 	ManagerDTO dto = OrderDTO.dto;
 	Stock_DB stock;
 	String fxmlName;
+	Order_ChkStock StChk;
 
 	@FXML
 	private ToggleGroup hotIce;

@@ -20,4 +20,5 @@ public class Chart_Main {
 		arg0.setTitle("카페 차트");
 		arg0.show();
 	}
+
 }

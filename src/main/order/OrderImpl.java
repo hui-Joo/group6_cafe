@@ -137,7 +137,6 @@ public class OrderImpl implements Order {
 		orderDto.cntC =1;
 		chooseCont.price();
 		chooseCont.label();
-
 		
 //		orderDto.cntC++;
 //
@@ -158,6 +157,7 @@ public class OrderImpl implements Order {
 //		LabelCntC.setText(orderDto.getCntC() + "ea");
 //
 //		total();
+		
 	}
 
 	@Override
@@ -197,11 +197,13 @@ public class OrderImpl implements Order {
 		LabelPrice.setText(orderDto.getSum() + "won");
 	}
 
-	public void ZeroCnt() {// 메뉴 선택 중 관리자 모드 갔다가 다시 주문창으로 돌아오면 전에 주문했던 값 남아있어서 값 초기화 시켜줌
+	@Override
+	public void ZeroCnt() {
 		orderDto.setCntA(0);
 		orderDto.setCntL(0);
 		orderDto.setCntC(0);
 		orderDto.setCntV(0);
+
 	}
 
 	@Override
@@ -224,7 +226,7 @@ public class OrderImpl implements Order {
 		LabelCntV.setText(orderDto.getCntV() + "ea");
 
 		total();
-		buttonSetting();
+		//buttonSetting();
 	}
 
 	@Override

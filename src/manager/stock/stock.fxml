@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="606.0" prefWidth="373.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="manager.stock.Stock_Controller">
+<AnchorPane prefHeight="724.0" prefWidth="373.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="manager.stock.Stock_Controller">
 	<children>
 		<ImageView fitHeight="61.0" fitWidth="50.0" layoutX="38.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true">
 			<image>
@@ -73,7 +73,7 @@
 				<Font size="17.0" />
 			</font>
 		</Label>
-		<Label layoutX="9.0" layoutY="557.0" text="보유중 :">
+		<Label layoutX="19.0" layoutY="557.0" text="보유중 :">
 			<font>
 				<Font size="17.0" />
 			</font>
@@ -98,5 +98,27 @@
 				<Font size="20.0" />
 			</font>
 		</Label>
+      <ImageView fitHeight="70.0" fitWidth="81.0" layoutX="31.0" layoutY="592.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@ice.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="19.0" layoutY="681.0" text="보유중 :">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label fx:id="icelabel" layoutX="85.0" layoutY="679.0" prefHeight="24.0" prefWidth="54.0" text="값">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="143.0" layoutY="679.0" text="g">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="icetext" layoutX="142.0" layoutY="616.0" prefHeight="22.0" prefWidth="94.0" />
+      <Button layoutX="264.0" layoutY="616.0" mnemonicParsing="false" onAction="#icebtn" prefHeight="17.0" prefWidth="96.0" text="채우기" />
 	</children>
 </AnchorPane>
