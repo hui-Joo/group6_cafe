@@ -34,19 +34,19 @@ public class OrderImpl implements Order {
 	@Override
 	public void setRoot(Parent root) {
 		this.root = root;
-		buttonSetting();
+//		buttonSetting();
 	}
 
-	public void buttonSetting() {
-		Button minA = (Button) root.lookup("#minA");
-		Button minL = (Button) root.lookup("#minL");
-		Button minC = (Button) root.lookup("#minC");
-		Button minV = (Button) root.lookup("#minV");
-		minA.setDisable(true);
-		minL.setDisable(true);
-		minC.setDisable(true);
-		minV.setDisable(true);
-	}
+//	public void buttonSetting() {
+//		Button minA = (Button) root.lookup("#minA");
+//		Button minL = (Button) root.lookup("#minL");
+//		Button minC = (Button) root.lookup("#minC");
+//		Button minV = (Button) root.lookup("#minV");
+//		minA.setDisable(true);
+//		minL.setDisable(true);
+//		minC.setDisable(true);
+//		minV.setDisable(true);
+//	}
 	
 	public void choose() {
 		

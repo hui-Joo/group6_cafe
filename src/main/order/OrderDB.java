@@ -30,7 +30,7 @@ public class OrderDB {
 				dto.setHot(rs.getInt("hot"));
 				dto.setAmericano(rs.getInt("americano"));
 				dto.setLatte(rs.getInt("latte"));
-				dto.setCapucino(rs.getInt("capucino"));
+				dto.setCapucino(rs.getInt("cappuccino"));
 				dto.setVanilaLatte(rs.getInt("vanilaLatte"));
 				dto.setSmall(rs.getInt("small"));
 				dto.setRegular(rs.getInt("regular"));
@@ -85,7 +85,7 @@ public class OrderDB {
 
 	public int updateMenu(ManagerDTO dto, OrderDTO orderDto) {
 
-		String sql = "update \"MENUDB\" set ice=?, hot=?, americano=?, latte=?, capucino=?, vanilaLatte=?, small=?, regular=?, large=? where num=1";
+		String sql = "update \"MENUDB\" set ice=?, hot=?, americano=?, latte=?, cappuccino=?, vanilaLatte=?, small=?, regular=?, large=? where num=1";
 		int result = 0;
 		sort();
 
