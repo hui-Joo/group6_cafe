@@ -15,12 +15,15 @@ import javafx.stage.Stage;
 import main.loading.WaitingMain;
 import main.order.OrderDB;
 import main.order.OrderDTO;
+import main.pay.PayMain;
 import manager.commonMA.ManagerDTO;
 import manager.stock.Stock_DB;
 
 public class ChooseController implements Initializable {
 
-	Parent root;
+	PayMain pay;
+	main.MainClass order;
+	Parent root = StageStore.root;
 	Stage stage = StageStore.stage;
 	WaitingMain loading;
 	OrderDB db;
@@ -46,39 +49,33 @@ public class ChooseController implements Initializable {
 	private RadioButton large;
 
 	int ame;
-	int iceI = 0;
-	int sizeI = 0;
+	int iceI = orderDto.iceI;
+	int sizeI = orderDto.sizeI;
 	int totalI = 0;
 
-	int c = 0 ;
-	int la = 0 ;
+	int cost = 0 ;
+	int hi = 0 ;
 	int si = 0 ;
+	int oi = 0;
 
 	public void setRoot(Parent root) {
 		this.root = root;
-		total();
+		StageStore.root = root;
 	}
 
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
-
+		pay = new PayMain();
+		order = new main.MainClass();
 	}
-
-	public void total() {
-		orderDto = new OrderDTO();
-		c = orderDto.getCapuccino();
-		System.out.println(c);
-		price();
-		label();
-		System.out.println(c);
-
-	}
-
+	
 	public void price() {
+		orderDto = new OrderDTO();
+		sort();
 		if (iceI == 1) {
-			la = 500;
+			hi = 500;
 		} else if (iceI ==0) {
-			la = 0;
+			hi = 0;
 		}
 		if (sizeI == 1) {
 			si = 500;
@@ -87,15 +84,30 @@ public class ChooseController implements Initializable {
 		} else if (sizeI == 0) {
 			si = 0;
 		}
-		c = c+ la + si;
-		la = 0;
+		cost = oi + hi + si;
+		hi = 0;
 		si = 0;
-		System.out.println(c);
+	}
+	
+	public void sort() {
+		if (orderDto.cntA == 1) {
+			oi = orderDto.americano;
+		}
+		if (orderDto.cntL == 1) {
+			oi = orderDto.latte;
+		}
+		if (orderDto.cntC == 1) {
+			oi = orderDto.capuccino;
+		}
+		if (orderDto.cntV == 1) {
+			oi = orderDto.vanilaLatte;
+		}
 	}
 
 	public void label() {
+		root = StageStore.root;
 		Label LabelPrice = (Label) root.lookup("#LabelPrice");
-		LabelPrice.setText(c + " won");
+		LabelPrice.setText(cost + " won");
 	}
 
 	public void selectHotIce(ActionEvent event) {
@@ -118,17 +130,51 @@ public class ChooseController implements Initializable {
 		if (small.isSelected()) {
 			sizeI = 0;
 			price();
-			//label();
+			label();
 
 		} else if (regular.isSelected()) {
 			sizeI = 1;
 			price();
-			//label();
+			label();
 
 		} else if (large.isSelected()) {
 			sizeI = 2;
 			price();
-			//label();
+			label();
+		}
+	}
+	
+	public void reset() {
+		orderDto.cntA =0;
+		orderDto.cntL =0;
+		orderDto.cntC =0;
+		orderDto.cntV =0;
+		orderDto.sum =0;
+		orderDto.iceI = 0;
+		orderDto.sizeI = 0;
+	}
+	
+	public void clickReset() {
+		try {
+			stage.close();
+			reset();
+			stage = new Stage();
+			order.start(stage);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+	public void clickPay() {
+		try {
+			orderDto.iceI = iceI;
+			orderDto.sizeI = sizeI;
+			orderDto.sum =cost;
+			stage.close();
+			stage = new Stage();
+			pay.start(stage);
+		} catch (Exception e) {
+			e.printStackTrace();
 		}
 	}
 

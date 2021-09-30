@@ -9,6 +9,7 @@ public class OrderDTO {
 	public static int cntA = 0, cntL = 0, cntC = 0, cntV = 0, cntI = 0 ;
 	public static int bean = 100, water = 100, milk = 100, VanilaSyrup = 100, ice = 100;
 	public static int sum = 0;
+	public static int iceI = 0, sizeI = 0;
 	public static ManagerDTO dto;
 
 	public Parent getRoot() {

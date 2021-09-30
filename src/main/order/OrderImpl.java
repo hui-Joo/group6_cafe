@@ -34,19 +34,19 @@ public class OrderImpl implements Order {
 	@Override
 	public void setRoot(Parent root) {
 		this.root = root;
-		buttonSetting();
+//		buttonSetting();
 	}
 
-	public void buttonSetting() {
-		Button minA = (Button) root.lookup("#minA");
-		Button minL = (Button) root.lookup("#minL");
-		Button minC = (Button) root.lookup("#minC");
-		Button minV = (Button) root.lookup("#minV");
-		minA.setDisable(true);
-		minL.setDisable(true);
-		minC.setDisable(true);
-		minV.setDisable(true);
-	}
+//	public void buttonSetting() {
+//		Button minA = (Button) root.lookup("#minA");
+//		Button minL = (Button) root.lookup("#minL");
+//		Button minC = (Button) root.lookup("#minC");
+//		Button minV = (Button) root.lookup("#minV");
+//		minA.setDisable(true);
+//		minL.setDisable(true);
+//		minC.setDisable(true);
+//		minV.setDisable(true);
+//	}
 	
 	public void choose() {
 		
@@ -56,6 +56,7 @@ public class OrderImpl implements Order {
 			Scene scene = new Scene(clickRoot);
 			stage = StageStore.stage;
 			chooseCont.setRoot(clickRoot);
+			
 			
 			stage.setTitle("옵션 선택");
 			stage.setScene(scene);
@@ -71,7 +72,10 @@ public class OrderImpl implements Order {
 		
 		fxmlName = "/main/choose/chooseA.fxml";
 		choose();
-
+		orderDto.cntA =1;
+		chooseCont.price();
+		chooseCont.label();
+		
 //		orderDto.cntA++;
 //
 //		Button minA = (Button) root.lookup("#minA");
@@ -98,26 +102,30 @@ public class OrderImpl implements Order {
 	public void clickLatte() {
 		
 		fxmlName = "/main/choose/chooseL.fxml";
+		choose();
+		orderDto.cntL =1;
+		chooseCont.price();
+		chooseCont.label();
 
-		orderDto.cntL++;
+//		orderDto.cntL++;
 
-		Button minL = (Button) root.lookup("#minL");
-		minL.setDisable(false);
-
-		Label LabelCntL = (Label) root.lookup("#LabelCntL");
-		boolean LatteBean = StChk.ChkBean();
-		boolean LatteMilk = StChk.ChkMilk();
-
-		if (LatteBean == true || LatteMilk == true) {
-			OrderDTO.cntL--;
-			if (orderDto.cntL == 0) {
-				minL.setDisable(true);
-			}
-		}
-
-		LabelCntL.setText(orderDto.getCntL() + "ea");
-
-		total();
+//		Button minL = (Button) root.lookup("#minL");
+//		minL.setDisable(false);
+//
+//		Label LabelCntL = (Label) root.lookup("#LabelCntL");
+//		boolean LatteBean = StChk.ChkBean();
+//		boolean LatteMilk = StChk.ChkMilk();
+//
+//		if (LatteBean == true || LatteMilk == true) {
+//			OrderDTO.cntL--;
+//			if (orderDto.cntL == 0) {
+//				minL.setDisable(true);
+//			}
+//		}
+//
+//		LabelCntL.setText(orderDto.getCntL() + "ea");
+//
+//		total();
 
 	}
 
@@ -126,6 +134,10 @@ public class OrderImpl implements Order {
 		
 		fxmlName = "/main/choose/chooseC.fxml";
 		choose();
+		orderDto.cntC =1;
+		chooseCont.price();
+		chooseCont.label();
+
 		
 //		orderDto.cntC++;
 //
@@ -152,25 +164,29 @@ public class OrderImpl implements Order {
 	public void clickVanilaLatte() {
 		
 		fxmlName = "/main/choose/chooseV.fxml";
+		choose();
+		orderDto.cntV =1;
+		chooseCont.price();
+		chooseCont.label();
 
-		orderDto.cntV++;
-
-		Button minV = (Button) root.lookup("#minV");
-		minV.setDisable(false);
-
-		Label LabelCntV = (Label) root.lookup("#LabelCntV");
-		boolean VaBean = StChk.ChkBean();
-		boolean VaMilk = StChk.ChkMilk();
-		boolean VaSyrup = StChk.ChkVanilaSyrup();
-		if (VaBean == true || VaMilk == true || VaSyrup == true) {
-			OrderDTO.cntV--;
-			if (orderDto.cntV == 0) {
-				minV.setDisable(true);
-			}
-		}
-
-		LabelCntV.setText(orderDto.getCntV() + "ea");
-		total();
+//		orderDto.cntV++;
+//
+//		Button minV = (Button) root.lookup("#minV");
+//		minV.setDisable(false);
+//
+//		Label LabelCntV = (Label) root.lookup("#LabelCntV");
+//		boolean VaBean = StChk.ChkBean();
+//		boolean VaMilk = StChk.ChkMilk();
+//		boolean VaSyrup = StChk.ChkVanilaSyrup();
+//		if (VaBean == true || VaMilk == true || VaSyrup == true) {
+//			OrderDTO.cntV--;
+//			if (orderDto.cntV == 0) {
+//				minV.setDisable(true);
+//			}
+//		}
+//
+//		LabelCntV.setText(orderDto.getCntV() + "ea");
+//		total();
 	}
 
 	@Override
