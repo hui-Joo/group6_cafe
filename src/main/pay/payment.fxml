@@ -5,16 +5,16 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 
-<AnchorPane xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.pay.PayController">
+<AnchorPane prefHeight="550.0" prefWidth="421.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.pay.PayController">
    <children>
-      <Pane layoutX="440.0" layoutY="560.0" prefHeight="200.0" prefWidth="200.0" />
-      <ImageView fitHeight="773.0" fitWidth="610.0" layoutX="14.0" layoutY="-6.0" pickOnBounds="true" preserveRatio="true">
+      <Pane layoutX="440.0" layoutY="560.0" prefHeight="0.0" prefWidth="7.0" />
+      <ImageView fitHeight="560.0" fitWidth="440.0" layoutX="13.0" layoutY="-6.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../img/pay_completion_card.jpg" />
          </image>
       </ImageView>
-      <ImageView accessibleRole="BUTTON" fitHeight="48.0" fitWidth="492.0" layoutX="74.0" layoutY="674.0" onMouseClicked="#clickLoading" pickOnBounds="true" preserveRatio="true">
-         <image>
+    <ImageView accessibleRole="BUTTON" fitHeight="40.0" fitWidth="463.0" layoutX="22.0" layoutY="492.0" onMouseClicked="#clickLoading" pickOnBounds="true" preserveRatio="true">  
+	  <image>
             <Image url="@../img/close.jpg" />
          </image>
       </ImageView>
