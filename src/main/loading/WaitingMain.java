@@ -12,7 +12,6 @@ import javafx.stage.Stage;
 
 public class WaitingMain extends Application {
 
-	//로딩화면 디자인 개선
 	public void start(Stage primaryStage) throws Exception {
 		StageStore.stage = primaryStage;
 		FXMLLoader loader = new FXMLLoader(getClass().getResource("loading.fxml"));

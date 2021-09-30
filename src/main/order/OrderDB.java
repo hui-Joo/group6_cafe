@@ -11,7 +11,6 @@ public class OrderDB {
 
 	OrderDTO orderDto;
 	ManagerDTO dto = OrderDTO.dto;
-	int beanI;
 	int hot=0;
 	int ice=0;
 	int small=0;
@@ -115,13 +114,9 @@ public class OrderDB {
 		String sql = "update STOCKDB set bean=?,water=?,milk=?,vanilasyrup=?,ice=? where num=1 ";
 
 		int beanI = (orderDto.getCntA() + orderDto.getCntL() + orderDto.getCntC() + orderDto.getCntV()) * orderDto.bean;
-
 		int waterI = orderDto.getCntA() * orderDto.water;
-
 		int milkI = (orderDto.getCntL() + orderDto.getCntC() + orderDto.getCntV()) * orderDto.milk;
-
 		int vanilaI = orderDto.getCntV() * orderDto.VanilaSyrup;
-		
 		int iceI = orderDto.iceI * orderDto.ice;
 
 		try {

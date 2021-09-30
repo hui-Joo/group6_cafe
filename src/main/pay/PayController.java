@@ -10,12 +10,10 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import javafx.stage.Window;
 import main.loading.WaitingMain;
 import main.order.OrderDB;
 import main.order.OrderDTO;
 import manager.commonMA.ManagerDTO;
-import manager.stock.Stock_DB;
 
 public class PayController implements Initializable {
 	
@@ -25,7 +23,6 @@ public class PayController implements Initializable {
 	OrderDB db;
 	OrderDTO orderDto ;
 	ManagerDTO dto = OrderDTO.dto;
-	Stock_DB stock;
 	String fxmlName;
 	
 	public void setRoot(Parent root) {
@@ -35,7 +32,6 @@ public class PayController implements Initializable {
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		loading = new WaitingMain();
 		db = new OrderDB();
-		stock = new Stock_DB();
 		orderDto = new OrderDTO();
 
 	}
@@ -54,8 +50,7 @@ public class PayController implements Initializable {
 			e.printStackTrace();
 		}
 	}
-	
-	//결제수단에 따라 팝업 내용 변경?
+
 	public void clickCard() {
 		try {
 			fxmlName = "payment.fxml";
@@ -92,26 +87,13 @@ public class PayController implements Initializable {
 	
 	public void clickLoading() {
 		
-		
 		db.setManagerDTO();
 		db.selectStock();
 		
 		dto = OrderDTO.dto;
 	
-		
-		int result = db.updateMenu(dto,orderDto);
-		if (result == 1) {
-			System.out.println("DB연동 성공");
-		} else {
-			System.out.println("DB연동 실패");
-		}
-		
-		result = db.stockUpdate(dto,orderDto);
-		if (result == 1) {
-			System.out.println("DB연동 성공");
-		} else {
-			System.out.println("DB연동 실패");
-		}
+		db.updateMenu(dto,orderDto);
+		db.stockUpdate(dto,orderDto);
 		
 		try {
 			stage = StageStore.stage;

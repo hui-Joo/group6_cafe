@@ -32,7 +32,6 @@ public class Order_ChkStock {
 			alert.show();
 			flag = true;
 		} else {
-			System.out.println("커피 있음");
 			flag = false;
 		}
 		return flag;
@@ -53,7 +52,6 @@ public class Order_ChkStock {
 			flag = true;
 
 		} else {
-			System.out.println("우유 있음");
 			flag = false;
 		}
 		return flag;
@@ -74,7 +72,6 @@ public class Order_ChkStock {
 			flag = true;
 
 		} else {
-			System.out.println("시럽 있음");
 			flag = false;
 		}
 		return flag;
@@ -95,7 +92,6 @@ public class Order_ChkStock {
 			flag = true;
 
 		} else {
-			System.out.println("물 있음");
 			flag = false;
 		}
 		return flag;
@@ -115,10 +111,7 @@ public class Order_ChkStock {
 			flag = true;
 
 		} else {
-			System.out.println("어름어름어름 있음");
 			flag = false;
-			System.out.println(OrderDTO.iceI);
-			System.out.println(sum);
 		}
 		return flag;
 	}

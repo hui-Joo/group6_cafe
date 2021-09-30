@@ -12,12 +12,9 @@ import javafx.scene.control.Label;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.ToggleGroup;
 import javafx.stage.Stage;
-import main.loading.WaitingMain;
-import main.order.OrderDB;
 import main.order.OrderDTO;
 import main.order.Order_ChkStock;
 import main.pay.PayMain;
-import manager.commonMA.ManagerDTO;
 import manager.stock.Stock_DB;
 
 public class ChooseController implements Initializable {
@@ -26,12 +23,8 @@ public class ChooseController implements Initializable {
 	main.MainClass order;
 	Parent root = StageStore.root;
 	Stage stage = StageStore.stage;
-	WaitingMain loading;
-	OrderDB db;
 	OrderDTO orderDto;
-	ManagerDTO dto = OrderDTO.dto;
 	Stock_DB stock;
-	String fxmlName;
 	Order_ChkStock StChk;
 
 	@FXML
@@ -49,11 +42,6 @@ public class ChooseController implements Initializable {
 	private RadioButton regular;
 	@FXML
 	private RadioButton large;
-
-	int ame;
-
-	int sizeI = orderDto.sizeI;
-	int totalI = 0;
 
 	int cost = 0;
 	int hi = 0;
@@ -80,11 +68,11 @@ public class ChooseController implements Initializable {
 		} else if (OrderDTO.iceI == 0) {
 			hi = 0;
 		}
-		if (sizeI == 1) {
+		if (orderDto.sizeI == 1) {
 			si = 500;
-		} else if (sizeI == 2) {
+		} else if (orderDto.sizeI == 2) {
 			si = 1000;
-		} else if (sizeI == 0) {
+		} else if (orderDto.sizeI == 0) {
 			si = 0;
 		}
 		cost = oi + hi + si;
@@ -140,17 +128,17 @@ public class ChooseController implements Initializable {
 	public void selectSize(ActionEvent event) {
 
 		if (small.isSelected()) {
-			sizeI = 0;
+			orderDto.sizeI = 0;
 			price();
 			label();
 
 		} else if (regular.isSelected()) {
-			sizeI = 1;
+			orderDto.sizeI = 1;
 			price();
 			label();
 
 		} else if (large.isSelected()) {
-			sizeI = 2;
+			orderDto.sizeI = 2;
 			price();
 			label();
 		}
@@ -161,7 +149,6 @@ public class ChooseController implements Initializable {
 		orderDto.cntL = 0;
 		orderDto.cntC = 0;
 		orderDto.cntV = 0;
-		orderDto.sum = 0;
 		orderDto.iceI = 0;
 		orderDto.sizeI = 0;
 	}
@@ -179,9 +166,6 @@ public class ChooseController implements Initializable {
 
 	public void clickPay() {
 		try {
-//			orderDto.iceI = iceI;
-			orderDto.sizeI = sizeI;
-			orderDto.sum = cost;
 			stage.close();
 			stage = new Stage();
 			pay.start(stage);

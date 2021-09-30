@@ -4,25 +4,20 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 import common.commonStage.StageStore;
-import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.ProgressBar;
 import javafx.stage.Stage;
-import main.*;
 import main.order.*;
 
 public class WaitController implements Initializable {
+	
 	private Stage stage = StageStore.stage;
 	Parent root;
 	WaitingMediaService ms;
-	WaitingMain main;
 	main.MainClass order;
 	OrderDTO orderDto;
-	
-	
 
 	public void setRoot(Parent root) {
 		this.root = root;
@@ -40,7 +35,6 @@ public class WaitController implements Initializable {
 	public void setNewStage() {
 
 		try {
-			
 			FXMLLoader loader = new FXMLLoader(getClass().getResource("completion.fxml"));
 			Parent comproot = loader.load();
 			
@@ -56,14 +50,14 @@ public class WaitController implements Initializable {
 	}
 	
 	public void reset() {
-		orderDto.cntA =0;
-		orderDto.cntL =0;
-		orderDto.cntC =0;
-		orderDto.cntV =0;
-		orderDto.sum =0;
+		orderDto.cntA = 0;
+		orderDto.cntL = 0;
+		orderDto.cntC = 0;
+		orderDto.cntV = 0;
+		orderDto.iceI = 0;
+		orderDto.sizeI = 0;
 	}
 	
- // 버튼 멘트 수정
 	public void restart() {
 		try {
 			stage.close();

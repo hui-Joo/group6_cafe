@@ -52,7 +52,6 @@ public class LoginController implements Initializable {
 		pwf.requestFocus();
 		if (pw.equals(pwf.getText())) {
 			try {
-				System.out.println("로그인 성공");
 				stage.close();
 				stage = new Stage();
 				am.start(stage);

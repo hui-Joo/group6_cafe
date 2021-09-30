@@ -26,9 +26,7 @@ public class Stock_serviceimpl implements Stock_service {
 
 		dto.setBean(bean);
 		int result = db.update(dto);
-		if (result == 0) {
-			System.out.println("원두 추가 실패");
-		} else {
+		if (result == 1) {
 			beantext.clear();
 		}
 
@@ -46,9 +44,7 @@ public class Stock_serviceimpl implements Stock_service {
 		dto.setWater(water);
 
 		int resultwater = db.update(dto);
-		if (resultwater == 0) {
-			System.out.println("물 추가 실패");
-		} else {
+		if (resultwater == 1) {
 			watertext.clear();
 		}
 
@@ -66,9 +62,7 @@ public class Stock_serviceimpl implements Stock_service {
 		dto.setMilk(milk);
 
 		int resultmilk = db.update(dto);
-		if (resultmilk == 0) {
-			System.out.println("우유 추가 실패");
-		} else {
+		if (resultmilk == 1) {
 			milktext.clear();
 		}
 
@@ -85,9 +79,7 @@ public class Stock_serviceimpl implements Stock_service {
 		dto.setVanilaSyrup(vanila);
 
 		int resultvanila = db.update(dto);
-		if (resultvanila == 0) {
-			System.out.println("바닐라시럽 추가 실패");
-		} else {
+		if (resultvanila == 1) {
 			vanilatext.clear();
 		}
 
@@ -161,9 +153,7 @@ public class Stock_serviceimpl implements Stock_service {
 		dto.setStock_ice(ice);
 
 		int resultice = db.update(dto);
-		if (resultice == 0) {
-			System.out.println("얼음 추가 실패");
-		} else {
+		if (resultice == 1) {
 			icetext.clear();
 		}
 

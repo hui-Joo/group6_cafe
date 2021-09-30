@@ -14,10 +14,6 @@ public interface Order {
 
 	public void clickVanilaLatte();
 
-	public void total();
-
-	public void resetMenu();
-
 	public void ZeroCnt();
 
 }
